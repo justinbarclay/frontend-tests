@@ -1,0 +1,33 @@
+.root {
+  padding: var(--mantine-spacing-xl);
+  border-radius: var(--mantine-radius-md);
+  background: linear-gradient(
+    135deg,
+    var(--mantine-color-blue-filled) 0%,
+    var(--mantine-color-cyan-filled) 100%
+  );
+  color: var(--mantine-color-white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+.statLabel {
+  font-size: var(--mantine-font-size-xs);
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  font-size: rem(32px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.divider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: rem(40px);
+}
