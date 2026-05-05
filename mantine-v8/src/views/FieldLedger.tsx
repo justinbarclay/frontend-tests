@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
   Table,
   Checkbox,
@@ -33,6 +33,7 @@ import {
   useSortable,
 } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+
 import { useFieldStore } from "../store/useFieldStore";
 import type { FieldSchema } from "../types/schema";
 import { BuilderDrawer } from "../components/BuilderDrawer";
@@ -113,7 +114,14 @@ export const FieldLedger = () => {
     deactivateSelected,
     setSort,
     reorderFields,
+    setFields,
   } = useFieldStore();
+
+  useEffect(() => {
+    fetch("/mock-fields.json")
+      .then((res) => res.json())
+      .then((data) => setFields(data));
+  }, [setFields]);
 
   const [page, setPage] = useState(1);
   const [deleteModalOpened, { open: openDeleteModal, close: closeDeleteModal }] =

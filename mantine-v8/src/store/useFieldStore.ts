@@ -1,6 +1,5 @@
 import { create } from "zustand";
-import { faker } from "@faker-js/faker";
-import type { FieldSchema, FieldType } from "../types/schema";
+import type { FieldSchema } from "../types/schema";
 
 interface FieldState {
   fields: FieldSchema[];
@@ -9,6 +8,7 @@ interface FieldState {
   sortBy: keyof FieldSchema | undefined;
   sortOrder: "asc" | "desc";
 
+  setFields: (fields: FieldSchema[]) => void;
   setSearchQuery: (query: string) => void;
   toggleSelection: (id: string) => void;
   selectAll: () => void;
@@ -20,43 +20,14 @@ interface FieldState {
   setSort: (key: keyof FieldSchema) => void;
 }
 
-const generateMockFields = (count: number): FieldSchema[] => {
-  const types: FieldType[] = ["text", "number", "boolean", "select"];
-
-  return Array.from({ length: count }, () => {
-    const type = faker.helpers.arrayElement(types);
-    const label = faker.commerce.productName();
-    return {
-      id: faker.string.uuid(),
-      label,
-      name: faker.helpers.slugify(label).toLowerCase(),
-      type,
-      validation: {
-        required: faker.datatype.boolean(),
-        min: type === "number" ? faker.number.int({ min: 0, max: 100 }) : undefined,
-        max: type === "number" ? faker.number.int({ min: 101, max: 1000 }) : undefined,
-      },
-      config: {
-        placeholder: faker.lorem.sentence(),
-        options:
-          type === "select"
-            ? [faker.word.adjective(), faker.word.adjective(), faker.word.adjective()]
-            : undefined,
-      },
-      logic: {},
-      status: faker.helpers.arrayElement(["active", "inactive"]),
-      usageCount: faker.number.int({ min: 0, max: 500 }),
-    };
-  });
-};
-
 export const useFieldStore = create<FieldState>((set) => ({
-  fields: generateMockFields(1000),
+  fields: [],
   selectedIds: new Set(),
   searchQuery: "",
   sortBy: undefined,
   sortOrder: "asc",
 
+  setFields: (fields) => set({ fields }),
   setSearchQuery: (query) => set({ searchQuery: query }),
 
   toggleSelection: (id) =>
