@@ -1,12 +1,11 @@
 "use client"
 
-import * as React from "react"
 import { Check, Minus } from "lucide-react"
 import {
   Checkbox as AriaCheckbox,
   CheckboxGroup as AriaCheckboxGroup,
-  CheckboxGroupProps as AriaCheckboxGroupProps,
-  ValidationResult as AriaValidationResult,
+  type CheckboxGroupProps as AriaCheckboxGroupProps,
+  type ValidationResult as AriaValidationResult,
   composeRenderProps,
   Text,
   type CheckboxProps as AriaCheckboxProps,

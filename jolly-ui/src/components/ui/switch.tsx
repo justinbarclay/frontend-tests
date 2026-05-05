@@ -1,19 +1,18 @@
-"use client"
-
-import * as React from "react"
 import {
   Switch as AriaSwitch,
-  SwitchProps as AriaSwitchProps,
   composeRenderProps,
 } from "react-aria-components"
+import type { SwitchProps as AriaSwitchProps } from "react-aria-components"
 
 import { cn } from "@/lib/utils"
 
-const Switch = ({ children, className, ...props }: AriaSwitchProps) => (
+const Switch = ({ className, children, ...props }: AriaSwitchProps) => (
   <AriaSwitch
     className={composeRenderProps(className, (className) =>
       cn(
-        "group inline-flex items-center gap-2 text-sm font-medium leading-none data-[disabled]:cursor-not-allowed data-[disabled]:opacity-70",
+        "group inline-flex items-center gap-2 text-sm font-medium leading-none transition-colors",
+        /* Disabled */
+        "data-[disabled]:cursor-not-allowed data-[disabled]:opacity-70",
         className
       )
     )}
@@ -21,28 +20,8 @@ const Switch = ({ children, className, ...props }: AriaSwitchProps) => (
   >
     {composeRenderProps(children, (children) => (
       <>
-        <div
-          className={cn(
-            "peer inline-flex h-6 w-11 shrink-0 cursor-pointer items-center rounded-full border-2 border-transparent transition-colors",
-            /* Focus Visible */
-            "group-data-[focus-visible]:outline-none group-data-[focus-visible]:ring-2 group-data-[focus-visible]:ring-ring group-data-[focus-visible]:ring-offset-2 group-data-[focus-visible]:ring-offset-background",
-            /* Disabled */
-            "group-data-[disabled]:cursor-not-allowed group-data-[disabled]:opacity-50",
-            /* Selected */
-            "bg-input group-data-[selected]:bg-primary",
-            /* Readonly */
-            "group-data-[readonly]:cursor-default",
-            /* Resets */
-            "focus-visible:outline-none"
-          )}
-        >
-          <div
-            className={cn(
-              "pointer-events-none block size-5 rounded-full bg-background shadow-lg ring-0 transition-transform",
-              /* Selected */
-              "translate-x-0 group-data-[selected]:translate-x-5"
-            )}
-          />
+        <div className="h-5 w-9 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-input transition-colors group-data-[selected]:bg-primary group-data-[focus-visible]:outline-none group-data-[focus-visible]:ring-2 group-data-[focus-visible]:ring-ring group-data-[focus-visible]:ring-offset-2 group-data-[focus-visible]:ring-offset-background">
+          <div className="pointer-events-none block h-4 w-4 rounded-full bg-background shadow-lg ring-0 transition-transform group-data-[selected]:translate-x-4" />
         </div>
         {children}
       </>

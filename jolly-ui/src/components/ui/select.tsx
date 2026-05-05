@@ -1,17 +1,19 @@
 import { ChevronDown } from "lucide-react"
 import {
   Button as AriaButton,
-  ButtonProps as AriaButtonProps,
   ListBox as AriaListBox,
-  ListBoxProps as AriaListBoxProps,
-  PopoverProps as AriaPopoverProps,
   Select as AriaSelect,
-  SelectProps as AriaSelectProps,
   SelectValue as AriaSelectValue,
-  SelectValueProps as AriaSelectValueProps,
-  ValidationResult as AriaValidationResult,
   composeRenderProps,
   Text,
+} from "react-aria-components"
+import type {
+  ButtonProps as AriaButtonProps,
+  ListBoxProps as AriaListBoxProps,
+  PopoverProps as AriaPopoverProps,
+  SelectProps as AriaSelectProps,
+  SelectValueProps as AriaSelectValueProps,
+  ValidationResult as AriaValidationResult,
 } from "react-aria-components"
 
 import { cn } from "@/lib/utils"
@@ -60,7 +62,7 @@ const SelectTrigger = ({ className, children, ...props }: AriaButtonProps) => (
         /* Disabled */
         "data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
         /* Focused */
-        "data-[focus-visible]:outline-none data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2",
+        "data-[focused]:outline-none data-[focused]:ring-2 data-[focused]:ring-ring data-[focused]:ring-offset-2",
         /* Resets */
         "focus-visible:outline-none",
         className

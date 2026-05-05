@@ -1,35 +1,19 @@
-"use client"
-
-import * as React from "react"
 import {
   Tab as AriaTab,
   TabList as AriaTabList,
-  TabListProps as AriaTabListProps,
   TabPanel as AriaTabPanel,
+  Tabs as AriaTabs,
+  composeRenderProps,
+} from "react-aria-components"
+import type {
+  TabListProps as AriaTabListProps,
   TabPanelProps as AriaTabPanelProps,
   TabProps as AriaTabProps,
-  Tabs as AriaTabs,
-  TabsProps as AriaTabsProps,
-  composeRenderProps,
 } from "react-aria-components"
 
 import { cn } from "@/lib/utils"
 
-function Tabs({ className, ...props }: AriaTabsProps) {
-  return (
-    <AriaTabs
-      className={composeRenderProps(className, (className) =>
-        cn(
-          "group flex flex-col gap-2",
-          /* Orientation */
-          "data-[orientation=vertical]:flex-row",
-          className
-        )
-      )}
-      {...props}
-    />
-  )
-}
+const Tabs = AriaTabs
 
 const TabList = <T extends object>({
   className,
@@ -39,8 +23,6 @@ const TabList = <T extends object>({
     className={composeRenderProps(className, (className) =>
       cn(
         "inline-flex h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground",
-        /* Orientation */
-        "data-[orientation=vertical]:h-auto data-[orientation=vertical]:flex-col",
         className
       )
     )}
@@ -52,15 +34,7 @@ const Tab = ({ className, ...props }: AriaTabProps) => (
   <AriaTab
     className={composeRenderProps(className, (className) =>
       cn(
-        "inline-flex cursor-pointer justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium outline-none ring-offset-background transition-all",
-        /* Focus Visible */
-        "data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2",
-        /* Disabled */
-        "data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-        /* Selected */
-        "data-[selected]:bg-background data-[selected]:text-foreground data-[selected]:shadow-sm ",
-        /* Orientation */
-        "group-data-[orientation=vertical]:w-full",
+        "inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[selected]:bg-background data-[selected]:text-foreground data-[selected]:shadow-sm",
         className
       )
     )}
@@ -72,9 +46,7 @@ const TabPanel = ({ className, ...props }: AriaTabPanelProps) => (
   <AriaTabPanel
     className={composeRenderProps(className, (className) =>
       cn(
-        "mt-2 ring-offset-background",
-        /* Focus Visible */
-        "data-[focus-visible]:outline-none data-[focus-visible]:ring-2 data-[focus-visible]:ring-ring data-[focus-visible]:ring-offset-2",
+        "mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2",
         className
       )
     )}
@@ -82,4 +54,4 @@ const TabPanel = ({ className, ...props }: AriaTabPanelProps) => (
   />
 )
 
-export { Tabs, TabList, TabPanel, Tab }
+export { Tabs, TabList, Tab, TabPanel }

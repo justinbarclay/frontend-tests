@@ -9,7 +9,6 @@ export default defineConfig({
     react(),
     analyzer({
       analyzerMode: "json",
-      openAnalyzer: false,
     }),
   ],
   resolve: {

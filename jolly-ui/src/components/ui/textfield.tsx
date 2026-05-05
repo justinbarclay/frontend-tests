@@ -1,14 +1,15 @@
-import * as React from "react"
 import {
   Input as AriaInput,
-  InputProps as AriaInputProps,
   TextArea as AriaTextArea,
-  TextAreaProps as AriaTextAreaProps,
   TextField as AriaTextField,
-  TextFieldProps as AriaTextFieldProps,
-  ValidationResult as AriaValidationResult,
   composeRenderProps,
   Text,
+} from "react-aria-components"
+import type {
+  InputProps as AriaInputProps,
+  TextAreaProps as AriaTextAreaProps,
+  TextFieldProps as AriaTextFieldProps,
+  ValidationResult as AriaValidationResult,
 } from "react-aria-components"
 
 import { cn } from "@/lib/utils"
@@ -62,6 +63,7 @@ interface JollyTextFieldProps extends AriaTextFieldProps {
   description?: string
   errorMessage?: string | ((validation: AriaValidationResult) => string)
   textArea?: boolean
+  placeholder?: string
 }
 
 function JollyTextField({
@@ -69,6 +71,7 @@ function JollyTextField({
   description,
   errorMessage,
   textArea,
+  placeholder,
   className,
   ...props
 }: JollyTextFieldProps) {
@@ -80,7 +83,11 @@ function JollyTextField({
       {...props}
     >
       <Label>{label}</Label>
-      {textArea ? <TextArea /> : <Input />}
+      {textArea ? (
+        <TextArea placeholder={placeholder} />
+      ) : (
+        <Input placeholder={placeholder} />
+      )}
       {description && (
         <Text className="text-sm text-muted-foreground" slot="description">
           {description}

@@ -22,7 +22,7 @@ export function FieldBuilder() {
             Configure your custom field properties and validation rules.
           </SheetDescription>
         </SheetHeader>
-        
+
         <Separator className="mt-4" />
 
         <div className="flex flex-1 overflow-hidden">
@@ -35,6 +35,7 @@ export function FieldBuilder() {
               <div className="rounded-lg border-2 border-dashed p-12 text-center">
                 <p className="text-muted-foreground italic">
                   TODO: Developer Implementation [manual]
+
                 </p>
                 <p className="text-xs text-muted-foreground mt-2">
                   Implement conditional form state for Label, Name, Type, etc.

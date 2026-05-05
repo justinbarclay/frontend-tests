@@ -2,17 +2,18 @@ import { ArrowUpDown } from "lucide-react"
 import {
   Cell as AriaCell,
   Column as AriaColumn,
-  ColumnProps as AriaColumnProps,
   ResizableTableContainer as AriaResizableTableContainer,
   Row as AriaRow,
   Table as AriaTable,
   TableBody as AriaTableBody,
   TableHeader as AriaTableHeader,
-  CellProps,
   ColumnResizer,
   composeRenderProps,
   Group,
-  ResizableTableContainerProps,
+} from "react-aria-components"
+import type {
+  ColumnProps as AriaColumnProps,
+  CellProps,
   RowProps,
   TableBodyProps,
   TableHeaderProps,
@@ -20,8 +21,6 @@ import {
 } from "react-aria-components"
 
 import { cn } from "@/lib/utils"
-
-import { buttonVariants } from "./button"
 
 const ResizableTableContainer = AriaResizableTableContainer
 
