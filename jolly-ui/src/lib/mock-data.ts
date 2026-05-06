@@ -20,7 +20,8 @@ export function generateMockFields(count: number): FieldSchema[] {
       },
       config: {
         placeholder: faker.lorem.sentence(3),
-        options: type === "select" ? [faker.word.noun(), faker.word.noun(), faker.word.noun()] : undefined,
+        options:
+          type === "select" ? [faker.word.noun(), faker.word.noun(), faker.word.noun()] : undefined,
       },
       logic: {},
       status: faker.helpers.arrayElement(["active", "inactive"]),

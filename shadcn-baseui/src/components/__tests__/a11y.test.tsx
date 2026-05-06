@@ -12,7 +12,7 @@ const AXE_OPTIONS: axe.RunOptions = {
     "html-has-lang": { enabled: false },
     "landmark-one-main": { enabled: false },
     "page-has-heading-one": { enabled: false },
-    "region": { enabled: false },
+    region: { enabled: false },
     "document-title": { enabled: false },
   },
 };
@@ -23,8 +23,7 @@ async function checkA11y(container: HTMLElement) {
   const message = results.violations
     .map(
       (v) =>
-        `[${v.impact}] ${v.id}: ${v.description}\n` +
-        v.nodes.map((n) => `  ${n.html}`).join("\n")
+        `[${v.impact}] ${v.id}: ${v.description}\n` + v.nodes.map((n) => `  ${n.html}`).join("\n"),
     )
     .join("\n\n");
   expect.fail(`Accessibility violations:\n\n${message}`);
@@ -48,14 +47,21 @@ beforeEach(() => {
 
 describe("ConfigurationForm", () => {
   test("text type", async () => {
-    useBuilderStore.setState({ field: { ...base, type: "text", validation: { required: false, pattern: ".*" } } });
+    useBuilderStore.setState({
+      field: { ...base, type: "text", validation: { required: false, pattern: ".*" } },
+    });
     const { container } = render(<ConfigurationForm />);
     await checkA11y(container);
   });
 
   test("number type", async () => {
     useBuilderStore.setState({
-      field: { ...base, type: "number", validation: { required: false, min: 0, max: 100 }, config: { decimalPlaces: 2 } },
+      field: {
+        ...base,
+        type: "number",
+        validation: { required: false, min: 0, max: 100 },
+        config: { decimalPlaces: 2 },
+      },
     });
     const { container } = render(<ConfigurationForm />);
     await checkA11y(container);
@@ -63,7 +69,11 @@ describe("ConfigurationForm", () => {
 
   test("select type", async () => {
     useBuilderStore.setState({
-      field: { ...base, type: "select", config: { options: ["Option A", "Option B"], placeholder: "Pick one" } },
+      field: {
+        ...base,
+        type: "select",
+        config: { options: ["Option A", "Option B"], placeholder: "Pick one" },
+      },
     });
     const { container } = render(<ConfigurationForm />);
     await checkA11y(container);
@@ -78,14 +88,21 @@ describe("ConfigurationForm", () => {
 
 describe("PreviewField", () => {
   test("text field", async () => {
-    useBuilderStore.setState({ field: { ...base, type: "text", validation: { required: true, pattern: "^[a-zA-Z]+$" } } });
+    useBuilderStore.setState({
+      field: { ...base, type: "text", validation: { required: true, pattern: "^[a-zA-Z]+$" } },
+    });
     const { container } = render(<Preview />);
     await checkA11y(container);
   });
 
   test("number field", async () => {
     useBuilderStore.setState({
-      field: { ...base, type: "number", validation: { required: true, min: 1, max: 99 }, config: { decimalPlaces: 2 } },
+      field: {
+        ...base,
+        type: "number",
+        validation: { required: true, min: 1, max: 99 },
+        config: { decimalPlaces: 2 },
+      },
     });
     const { container } = render(<Preview />);
     await checkA11y(container);
@@ -93,7 +110,11 @@ describe("PreviewField", () => {
 
   test("select field", async () => {
     useBuilderStore.setState({
-      field: { ...base, type: "select", config: { options: ["Red", "Green", "Blue"], placeholder: "Pick a colour" } },
+      field: {
+        ...base,
+        type: "select",
+        config: { options: ["Red", "Green", "Blue"], placeholder: "Pick a colour" },
+      },
     });
     const { container } = render(<Preview />);
     await checkA11y(container);

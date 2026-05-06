@@ -13,46 +13,47 @@ const NumberPreview = ({ field }: { field: FieldSchema }) => {
   // Handle required error
   const error = field.validation.required && value === "" ? "This field is required" : undefined;
 
-  return <div className="flex flex-col gap-1">
-    <JollyNumberField
-      label={field.label}
-      description={field.config.placeholder || "Enter a number"}
-      maxValue={field.validation.max}
-      minValue={field.validation.min}
-      formatOptions={{
-        minimumFractionDigits: field.config.decimalPlaces || 0,
-        maximumFractionDigits: field.config.decimalPlaces || 0,
-      }}
-      isInvalid={!!error}
-      onChange={(val) => setValue(val.toString())}
-      errorMessage={error}
-    />
-  </div>
+  return (
+    <div className="flex flex-col gap-1">
+      <JollyNumberField
+        label={field.label}
+        description={field.config.placeholder || "Enter a number"}
+        maxValue={field.validation.max}
+        minValue={field.validation.min}
+        formatOptions={{
+          minimumFractionDigits: field.config.decimalPlaces || 0,
+          maximumFractionDigits: field.config.decimalPlaces || 0,
+        }}
+        isInvalid={!!error}
+        onChange={(val) => setValue(val.toString())}
+        errorMessage={error}
+      />
+    </div>
+  );
 };
 
 const TextPreview = ({ field }: { field: FieldSchema }) => {
   const [value, setValue] = useState<string>("");
   let error = false;
-    if(value && field.validation.pattern && !new RegExp(field.validation.pattern).test(value)){
-      error = true;
-    }
-  return <div className="flex flex-col gap-1">
-    <JollyTextField
-      label={field.label}
-      placeholder={field.config.placeholder || "Enter text"}
-      onChange={(val) => setValue(val)}
-      value={value}
-      isInvalid={error}
-      errorMessage={"Invalid format"}
-    />
-  </div>;
+  if (value && field.validation.pattern && !new RegExp(field.validation.pattern).test(value)) {
+    error = true;
+  }
+  return (
+    <div className="flex flex-col gap-1">
+      <JollyTextField
+        label={field.label}
+        placeholder={field.config.placeholder || "Enter text"}
+        onChange={(val) => setValue(val)}
+        value={value}
+        isInvalid={error}
+        errorMessage={"Invalid format"}
+      />
+    </div>
+  );
 };
 
 const SelectPreview = ({ field }: { field: FieldSchema }) => (
-  <JollySelect
-    label={field.label}
-    placeholder={field.config.placeholder || "Select an option"}
-  >
+  <JollySelect label={field.label} placeholder={field.config.placeholder || "Select an option"}>
     {(field.config.options || []).map((option) => (
       <SelectItem key={option} id={option}>
         {option}
@@ -63,9 +64,7 @@ const SelectPreview = ({ field }: { field: FieldSchema }) => (
 const BooleanPreview = ({ field }: { field: FieldSchema }) => (
   <div className="flex items-center space-x-2">
     <Label>{field.label}</Label>
-  <Switch
-    onChange={() => {}}
-  />
+    <Switch onChange={() => {}} />
   </div>
 );
 const preview = {

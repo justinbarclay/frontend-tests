@@ -18,10 +18,10 @@ export function Login() {
     const newErrors: typeof errors = {};
     if (!email) newErrors.email = "Email is required";
     else if (!/\S+@\S+\.\S+/.test(email)) newErrors.email = "Invalid email format";
-    
+
     if (!password) newErrors.password = "Password is required";
     else if (password.length < 6) newErrors.password = "Password must be at least 6 characters";
-    
+
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -33,7 +33,7 @@ export function Login() {
     setIsLoading(true);
     // Mock API call
     await new Promise((resolve) => setTimeout(resolve, 1500));
-    
+
     if (email === "admin@example.com" && password === "password") {
       toast("Welcome back!", "success");
       login();
@@ -83,11 +83,7 @@ export function Login() {
           </Button>
         </div>
 
-        <Button
-          type="submit"
-          className="w-full font-bold"
-          isDisabled={isLoading}
-        >
+        <Button type="submit" className="w-full font-bold" isDisabled={isLoading}>
           {isLoading ? (
             <>
               <Loader2 className="mr-2 size-4 animate-spin" />
@@ -98,7 +94,7 @@ export function Login() {
           )}
         </Button>
       </form>
-      
+
       <div className="text-center text-xs text-muted-foreground">
         Hint: admin@example.com / password
       </div>

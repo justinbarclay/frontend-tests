@@ -20,9 +20,7 @@ const generateMockFields = (count) => {
       config: {
         placeholder: faker.lorem.sentence(3),
         options:
-          type === "select"
-            ? [faker.word.noun(), faker.word.noun(), faker.word.noun()]
-            : undefined,
+          type === "select" ? [faker.word.noun(), faker.word.noun(), faker.word.noun()] : undefined,
       },
       logic: {},
       status: faker.helpers.arrayElement(["active", "inactive"]),

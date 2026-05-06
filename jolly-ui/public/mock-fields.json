@@ -122,11 +122,7 @@
     },
     "config": {
       "placeholder": "Voluptatibus tepesco varietas.",
-      "options": [
-        "pneumonia",
-        "monster",
-        "sustenance"
-      ]
+      "options": ["pneumonia", "monster", "sustenance"]
     },
     "logic": {},
     "status": "active",
@@ -219,11 +215,7 @@
     },
     "config": {
       "placeholder": "Velit vulariter depono.",
-      "options": [
-        "crocodile",
-        "peninsula",
-        "fraudster"
-      ]
+      "options": ["crocodile", "peninsula", "fraudster"]
     },
     "logic": {},
     "status": "inactive",
@@ -337,11 +329,7 @@
     },
     "config": {
       "placeholder": "Adsuesco caveo voluntarius.",
-      "options": [
-        "necklace",
-        "peninsula",
-        "peony"
-      ]
+      "options": ["necklace", "peninsula", "peony"]
     },
     "logic": {},
     "status": "inactive",
@@ -372,11 +360,7 @@
     },
     "config": {
       "placeholder": "Tolero tenax pauci.",
-      "options": [
-        "version",
-        "gradient",
-        "paintwork"
-      ]
+      "options": ["version", "gradient", "paintwork"]
     },
     "logic": {},
     "status": "inactive",
@@ -392,11 +376,7 @@
     },
     "config": {
       "placeholder": "Tergum occaecati timidus.",
-      "options": [
-        "hundred",
-        "outlaw",
-        "ribbon"
-      ]
+      "options": ["hundred", "outlaw", "ribbon"]
     },
     "logic": {},
     "status": "active",
@@ -412,11 +392,7 @@
     },
     "config": {
       "placeholder": "Itaque considero virgo.",
-      "options": [
-        "invite",
-        "hepatitis",
-        "understanding"
-      ]
+      "options": ["invite", "hepatitis", "understanding"]
     },
     "logic": {},
     "status": "active",
@@ -447,11 +423,7 @@
     },
     "config": {
       "placeholder": "Adstringo suadeo cetera.",
-      "options": [
-        "gerbil",
-        "lounge",
-        "stump"
-      ]
+      "options": ["gerbil", "lounge", "stump"]
     },
     "logic": {},
     "status": "inactive",
@@ -649,11 +621,7 @@
     },
     "config": {
       "placeholder": "Succurro adversus vaco.",
-      "options": [
-        "ignorance",
-        "minister",
-        "icebreaker"
-      ]
+      "options": ["ignorance", "minister", "icebreaker"]
     },
     "logic": {},
     "status": "active",
@@ -669,11 +637,7 @@
     },
     "config": {
       "placeholder": "Depopulo demo congregatio.",
-      "options": [
-        "meal",
-        "vista",
-        "mountain"
-      ]
+      "options": ["meal", "vista", "mountain"]
     },
     "logic": {},
     "status": "active",
@@ -849,11 +813,7 @@
     },
     "config": {
       "placeholder": "Adsuesco sui ipsum.",
-      "options": [
-        "gastropod",
-        "integer",
-        "bungalow"
-      ]
+      "options": ["gastropod", "integer", "bungalow"]
     },
     "logic": {},
     "status": "active",
@@ -948,11 +908,7 @@
     },
     "config": {
       "placeholder": "Numquam tenetur demitto.",
-      "options": [
-        "metal",
-        "nectarine",
-        "folklore"
-      ]
+      "options": ["metal", "nectarine", "folklore"]
     },
     "logic": {},
     "status": "inactive",
@@ -968,11 +924,7 @@
     },
     "config": {
       "placeholder": "Ulciscor dolor optio.",
-      "options": [
-        "bob",
-        "papa",
-        "poppy"
-      ]
+      "options": ["bob", "papa", "poppy"]
     },
     "logic": {},
     "status": "active",
@@ -1033,11 +985,7 @@
     },
     "config": {
       "placeholder": "Acsi coadunatio vorax.",
-      "options": [
-        "catalyst",
-        "chainstay",
-        "extension"
-      ]
+      "options": ["catalyst", "chainstay", "extension"]
     },
     "logic": {},
     "status": "inactive",
@@ -1132,11 +1080,7 @@
     },
     "config": {
       "placeholder": "Arx ullus comitatus.",
-      "options": [
-        "metal",
-        "lounge",
-        "custody"
-      ]
+      "options": ["metal", "lounge", "custody"]
     },
     "logic": {},
     "status": "active",
@@ -1152,11 +1096,7 @@
     },
     "config": {
       "placeholder": "Dolorem articulus vulgivagus.",
-      "options": [
-        "stranger",
-        "merit",
-        "thorn"
-      ]
+      "options": ["stranger", "merit", "thorn"]
     },
     "logic": {},
     "status": "inactive",
@@ -1219,11 +1159,7 @@
     },
     "config": {
       "placeholder": "Vomica crebro solutio.",
-      "options": [
-        "pressure",
-        "decryption",
-        "attraction"
-      ]
+      "options": ["pressure", "decryption", "attraction"]
     },
     "logic": {},
     "status": "inactive",
@@ -1269,11 +1205,7 @@
     },
     "config": {
       "placeholder": "Vulpes cupiditate absque.",
-      "options": [
-        "airman",
-        "going",
-        "captain"
-      ]
+      "options": ["airman", "going", "captain"]
     },
     "logic": {},
     "status": "inactive",
@@ -1289,11 +1221,7 @@
     },
     "config": {
       "placeholder": "Terminatio conduco incidunt.",
-      "options": [
-        "lieu",
-        "supplier",
-        "metal"
-      ]
+      "options": ["lieu", "supplier", "metal"]
     },
     "logic": {},
     "status": "inactive",
@@ -1341,11 +1269,7 @@
     },
     "config": {
       "placeholder": "Aliquam arbitro amo.",
-      "options": [
-        "meal",
-        "drive",
-        "shoulder"
-      ]
+      "options": ["meal", "drive", "shoulder"]
     },
     "logic": {},
     "status": "inactive",
@@ -1408,11 +1332,7 @@
     },
     "config": {
       "placeholder": "Adflicto sursum cinis.",
-      "options": [
-        "pillow",
-        "glider",
-        "quart"
-      ]
+      "options": ["pillow", "glider", "quart"]
     },
     "logic": {},
     "status": "active",
@@ -1590,11 +1510,7 @@
     },
     "config": {
       "placeholder": "Creator ventus vetus.",
-      "options": [
-        "rust",
-        "cop-out",
-        "sailor"
-      ]
+      "options": ["rust", "cop-out", "sailor"]
     },
     "logic": {},
     "status": "inactive",
@@ -1610,11 +1526,7 @@
     },
     "config": {
       "placeholder": "Aeger venio summopere.",
-      "options": [
-        "guide",
-        "airline",
-        "obedience"
-      ]
+      "options": ["guide", "airline", "obedience"]
     },
     "logic": {},
     "status": "active",
@@ -1677,11 +1589,7 @@
     },
     "config": {
       "placeholder": "Spes demum defessus.",
-      "options": [
-        "outlaw",
-        "membership",
-        "bug"
-      ]
+      "options": ["outlaw", "membership", "bug"]
     },
     "logic": {},
     "status": "inactive",
@@ -1714,11 +1622,7 @@
     },
     "config": {
       "placeholder": "Velociter aestivus perspiciatis.",
-      "options": [
-        "daddy",
-        "amnesty",
-        "bathrobe"
-      ]
+      "options": ["daddy", "amnesty", "bathrobe"]
     },
     "logic": {},
     "status": "inactive",
@@ -1749,11 +1653,7 @@
     },
     "config": {
       "placeholder": "Cito denique concedo.",
-      "options": [
-        "thongs",
-        "publicity",
-        "grandpa"
-      ]
+      "options": ["thongs", "publicity", "grandpa"]
     },
     "logic": {},
     "status": "active",
@@ -1769,11 +1669,7 @@
     },
     "config": {
       "placeholder": "Benevolentia porro deorsum.",
-      "options": [
-        "roadway",
-        "adaptation",
-        "barge"
-      ]
+      "options": ["roadway", "adaptation", "barge"]
     },
     "logic": {},
     "status": "inactive",
@@ -1821,11 +1717,7 @@
     },
     "config": {
       "placeholder": "Vomica pecus spiculum.",
-      "options": [
-        "subexpression",
-        "lawmaker",
-        "laughter"
-      ]
+      "options": ["subexpression", "lawmaker", "laughter"]
     },
     "logic": {},
     "status": "active",
@@ -1937,11 +1829,7 @@
     },
     "config": {
       "placeholder": "Amor exercitationem desino.",
-      "options": [
-        "obligation",
-        "density",
-        "backburn"
-      ]
+      "options": ["obligation", "density", "backburn"]
     },
     "logic": {},
     "status": "inactive",
@@ -1991,11 +1879,7 @@
     },
     "config": {
       "placeholder": "Uredo acervus qui.",
-      "options": [
-        "angle",
-        "flood",
-        "iridescence"
-      ]
+      "options": ["angle", "flood", "iridescence"]
     },
     "logic": {},
     "status": "inactive",
@@ -2011,11 +1895,7 @@
     },
     "config": {
       "placeholder": "Doloremque apto pariatur.",
-      "options": [
-        "yeast",
-        "piglet",
-        "fellow"
-      ]
+      "options": ["yeast", "piglet", "fellow"]
     },
     "logic": {},
     "status": "inactive",
@@ -2155,11 +2035,7 @@
     },
     "config": {
       "placeholder": "Admoneo considero cruentus.",
-      "options": [
-        "cake",
-        "papa",
-        "minority"
-      ]
+      "options": ["cake", "papa", "minority"]
     },
     "logic": {},
     "status": "inactive",
@@ -2265,11 +2141,7 @@
     },
     "config": {
       "placeholder": "Concido attonbitus tabernus.",
-      "options": [
-        "abacus",
-        "sustenance",
-        "window"
-      ]
+      "options": ["abacus", "sustenance", "window"]
     },
     "logic": {},
     "status": "active",
@@ -2345,11 +2217,7 @@
     },
     "config": {
       "placeholder": "Vallum caput solum.",
-      "options": [
-        "tenement",
-        "provision",
-        "vibration"
-      ]
+      "options": ["tenement", "provision", "vibration"]
     },
     "logic": {},
     "status": "active",
@@ -2380,11 +2248,7 @@
     },
     "config": {
       "placeholder": "Voluptas defungo urbs.",
-      "options": [
-        "mobility",
-        "lotion",
-        "blowgun"
-      ]
+      "options": ["mobility", "lotion", "blowgun"]
     },
     "logic": {},
     "status": "inactive",
@@ -2432,11 +2296,7 @@
     },
     "config": {
       "placeholder": "Acer aegrotatio recusandae.",
-      "options": [
-        "synergy",
-        "knickers",
-        "transom"
-      ]
+      "options": ["synergy", "knickers", "transom"]
     },
     "logic": {},
     "status": "active",
@@ -2514,11 +2374,7 @@
     },
     "config": {
       "placeholder": "Speciosus vivo tibi.",
-      "options": [
-        "invite",
-        "igloo",
-        "lamp"
-      ]
+      "options": ["invite", "igloo", "lamp"]
     },
     "logic": {},
     "status": "inactive",
@@ -2566,11 +2422,7 @@
     },
     "config": {
       "placeholder": "Vox beneficium claro.",
-      "options": [
-        "switchboard",
-        "roadway",
-        "mousse"
-      ]
+      "options": ["switchboard", "roadway", "mousse"]
     },
     "logic": {},
     "status": "inactive",
@@ -2603,11 +2455,7 @@
     },
     "config": {
       "placeholder": "Denique veritatis doloribus.",
-      "options": [
-        "ice-cream",
-        "galoshes",
-        "monasticism"
-      ]
+      "options": ["ice-cream", "galoshes", "monasticism"]
     },
     "logic": {},
     "status": "active",
@@ -2655,11 +2503,7 @@
     },
     "config": {
       "placeholder": "Atrox coniecto optio.",
-      "options": [
-        "cross-contamination",
-        "disadvantage",
-        "nougat"
-      ]
+      "options": ["cross-contamination", "disadvantage", "nougat"]
     },
     "logic": {},
     "status": "inactive",
@@ -2690,11 +2534,7 @@
     },
     "config": {
       "placeholder": "Utilis eos accedo.",
-      "options": [
-        "coordination",
-        "instructor",
-        "devastation"
-      ]
+      "options": ["coordination", "instructor", "devastation"]
     },
     "logic": {},
     "status": "active",
@@ -2806,11 +2646,7 @@
     },
     "config": {
       "placeholder": "Tergo careo velit.",
-      "options": [
-        "electronics",
-        "piglet",
-        "jet"
-      ]
+      "options": ["electronics", "piglet", "jet"]
     },
     "logic": {},
     "status": "inactive",
@@ -2903,11 +2739,7 @@
     },
     "config": {
       "placeholder": "Voluptas vorago ullus.",
-      "options": [
-        "clamp",
-        "onset",
-        "disadvantage"
-      ]
+      "options": ["clamp", "onset", "disadvantage"]
     },
     "logic": {},
     "status": "active",
@@ -2985,11 +2817,7 @@
     },
     "config": {
       "placeholder": "Audax cornu sufficio.",
-      "options": [
-        "singing",
-        "lashes",
-        "understanding"
-      ]
+      "options": ["singing", "lashes", "understanding"]
     },
     "logic": {},
     "status": "active",
@@ -3163,11 +2991,7 @@
     },
     "config": {
       "placeholder": "Attonbitus debitis aperiam.",
-      "options": [
-        "fun",
-        "hawk",
-        "digit"
-      ]
+      "options": ["fun", "hawk", "digit"]
     },
     "logic": {},
     "status": "active",
@@ -3260,11 +3084,7 @@
     },
     "config": {
       "placeholder": "Verecundia vespillo suffragium.",
-      "options": [
-        "signature",
-        "divine",
-        "grandpa"
-      ]
+      "options": ["signature", "divine", "grandpa"]
     },
     "logic": {},
     "status": "active",
@@ -3601,11 +3421,7 @@
     },
     "config": {
       "placeholder": "Basium tendo pecco.",
-      "options": [
-        "polarisation",
-        "perp",
-        "disposer"
-      ]
+      "options": ["polarisation", "perp", "disposer"]
     },
     "logic": {},
     "status": "inactive",
@@ -3730,11 +3546,7 @@
     },
     "config": {
       "placeholder": "Illum allatus advenio.",
-      "options": [
-        "begonia",
-        "platter",
-        "colon"
-      ]
+      "options": ["begonia", "platter", "colon"]
     },
     "logic": {},
     "status": "active",
@@ -3750,11 +3562,7 @@
     },
     "config": {
       "placeholder": "Valeo victus varietas.",
-      "options": [
-        "intent",
-        "boulevard",
-        "duffel"
-      ]
+      "options": ["intent", "boulevard", "duffel"]
     },
     "logic": {},
     "status": "active",
@@ -3785,11 +3593,7 @@
     },
     "config": {
       "placeholder": "Minus arca deduco.",
-      "options": [
-        "lox",
-        "recommendation",
-        "innovation"
-      ]
+      "options": ["lox", "recommendation", "innovation"]
     },
     "logic": {},
     "status": "active",
@@ -3927,11 +3731,7 @@
     },
     "config": {
       "placeholder": "Centum audeo accedo.",
-      "options": [
-        "deer",
-        "hammock",
-        "flight"
-      ]
+      "options": ["deer", "hammock", "flight"]
     },
     "logic": {},
     "status": "inactive",
@@ -3947,11 +3747,7 @@
     },
     "config": {
       "placeholder": "Cibus voluptatem utrum.",
-      "options": [
-        "request",
-        "help",
-        "desk"
-      ]
+      "options": ["request", "help", "desk"]
     },
     "logic": {},
     "status": "inactive",
@@ -3982,11 +3778,7 @@
     },
     "config": {
       "placeholder": "Pectus verumtamen denuncio.",
-      "options": [
-        "assist",
-        "toaster",
-        "hornet"
-      ]
+      "options": ["assist", "toaster", "hornet"]
     },
     "logic": {},
     "status": "active",
@@ -4079,11 +3871,7 @@
     },
     "config": {
       "placeholder": "Culpa sophismata vito.",
-      "options": [
-        "sarong",
-        "kit",
-        "footrest"
-      ]
+      "options": ["sarong", "kit", "footrest"]
     },
     "logic": {},
     "status": "inactive",
@@ -4114,11 +3902,7 @@
     },
     "config": {
       "placeholder": "Pectus sublime ex.",
-      "options": [
-        "pilot",
-        "flood",
-        "jet"
-      ]
+      "options": ["pilot", "flood", "jet"]
     },
     "logic": {},
     "status": "inactive",
@@ -4151,11 +3935,7 @@
     },
     "config": {
       "placeholder": "Solium templum neque.",
-      "options": [
-        "minion",
-        "injunction",
-        "taxicab"
-      ]
+      "options": ["minion", "injunction", "taxicab"]
     },
     "logic": {},
     "status": "active",
@@ -4248,11 +4028,7 @@
     },
     "config": {
       "placeholder": "Titulus aduro animadverto.",
-      "options": [
-        "ruin",
-        "discourse",
-        "cross-contamination"
-      ]
+      "options": ["ruin", "discourse", "cross-contamination"]
     },
     "logic": {},
     "status": "active",
@@ -4302,11 +4078,7 @@
     },
     "config": {
       "placeholder": "Assentator tollo suppono.",
-      "options": [
-        "parsnip",
-        "premeditation",
-        "jogging"
-      ]
+      "options": ["parsnip", "premeditation", "jogging"]
     },
     "logic": {},
     "status": "inactive",
@@ -4431,11 +4203,7 @@
     },
     "config": {
       "placeholder": "Temeritas totam numquam.",
-      "options": [
-        "flat",
-        "safe",
-        "priesthood"
-      ]
+      "options": ["flat", "safe", "priesthood"]
     },
     "logic": {},
     "status": "active",
@@ -4515,11 +4283,7 @@
     },
     "config": {
       "placeholder": "Cumque cicuta carcer.",
-      "options": [
-        "lid",
-        "resolve",
-        "pillow"
-      ]
+      "options": ["lid", "resolve", "pillow"]
     },
     "logic": {},
     "status": "inactive",
@@ -4535,11 +4299,7 @@
     },
     "config": {
       "placeholder": "Quae adipisci angulus.",
-      "options": [
-        "outlaw",
-        "newsstand",
-        "bonnet"
-      ]
+      "options": ["outlaw", "newsstand", "bonnet"]
     },
     "logic": {},
     "status": "inactive",
@@ -4711,11 +4471,7 @@
     },
     "config": {
       "placeholder": "Voluptatum cupressus deludo.",
-      "options": [
-        "following",
-        "gym",
-        "pear"
-      ]
+      "options": ["following", "gym", "pear"]
     },
     "logic": {},
     "status": "active",
@@ -4731,11 +4487,7 @@
     },
     "config": {
       "placeholder": "Enim depopulo aut.",
-      "options": [
-        "secrecy",
-        "minion",
-        "interchange"
-      ]
+      "options": ["secrecy", "minion", "interchange"]
     },
     "logic": {},
     "status": "inactive",
@@ -4751,11 +4503,7 @@
     },
     "config": {
       "placeholder": "Adulatio condico cavus.",
-      "options": [
-        "confusion",
-        "king",
-        "toothpick"
-      ]
+      "options": ["confusion", "king", "toothpick"]
     },
     "logic": {},
     "status": "active",
@@ -4771,11 +4519,7 @@
     },
     "config": {
       "placeholder": "A candidus vilitas.",
-      "options": [
-        "ravioli",
-        "annual",
-        "hamburger"
-      ]
+      "options": ["ravioli", "annual", "hamburger"]
     },
     "logic": {},
     "status": "active",
@@ -5007,11 +4751,7 @@
     },
     "config": {
       "placeholder": "Tersus cavus valens.",
-      "options": [
-        "festival",
-        "glider",
-        "horst"
-      ]
+      "options": ["festival", "glider", "horst"]
     },
     "logic": {},
     "status": "inactive",
@@ -5108,11 +4848,7 @@
     },
     "config": {
       "placeholder": "Depono degero corroboro.",
-      "options": [
-        "cinema",
-        "fibre",
-        "elevation"
-      ]
+      "options": ["cinema", "fibre", "elevation"]
     },
     "logic": {},
     "status": "active",
@@ -5128,11 +4864,7 @@
     },
     "config": {
       "placeholder": "Sophismata contra urbanus.",
-      "options": [
-        "management",
-        "chops",
-        "concentration"
-      ]
+      "options": ["management", "chops", "concentration"]
     },
     "logic": {},
     "status": "inactive",
@@ -5310,11 +5042,7 @@
     },
     "config": {
       "placeholder": "Defero apto bos.",
-      "options": [
-        "newsletter",
-        "sonar",
-        "integer"
-      ]
+      "options": ["newsletter", "sonar", "integer"]
     },
     "logic": {},
     "status": "active",
@@ -5345,11 +5073,7 @@
     },
     "config": {
       "placeholder": "Arbor aestas viscus.",
-      "options": [
-        "whack",
-        "density",
-        "settler"
-      ]
+      "options": ["whack", "density", "settler"]
     },
     "logic": {},
     "status": "inactive",
@@ -5365,11 +5089,7 @@
     },
     "config": {
       "placeholder": "Sub adsum minima.",
-      "options": [
-        "insolence",
-        "blossom",
-        "siege"
-      ]
+      "options": ["insolence", "blossom", "siege"]
     },
     "logic": {},
     "status": "inactive",
@@ -5385,11 +5105,7 @@
     },
     "config": {
       "placeholder": "Aliquid validus advenio.",
-      "options": [
-        "newsstand",
-        "utilization",
-        "testing"
-      ]
+      "options": ["newsstand", "utilization", "testing"]
     },
     "logic": {},
     "status": "inactive",
@@ -5531,11 +5247,7 @@
     },
     "config": {
       "placeholder": "Collum velut cattus.",
-      "options": [
-        "wedding",
-        "captain",
-        "offset"
-      ]
+      "options": ["wedding", "captain", "offset"]
     },
     "logic": {},
     "status": "active",
@@ -5692,11 +5404,7 @@
     },
     "config": {
       "placeholder": "Argumentum statim nihil.",
-      "options": [
-        "cuckoo",
-        "testing",
-        "overload"
-      ]
+      "options": ["cuckoo", "testing", "overload"]
     },
     "logic": {},
     "status": "active",
@@ -5836,11 +5544,7 @@
     },
     "config": {
       "placeholder": "Substantia celo fugit.",
-      "options": [
-        "topsail",
-        "soybean",
-        "chapel"
-      ]
+      "options": ["topsail", "soybean", "chapel"]
     },
     "logic": {},
     "status": "active",
@@ -5856,11 +5560,7 @@
     },
     "config": {
       "placeholder": "Clibanus adulatio vilicus.",
-      "options": [
-        "thyme",
-        "integer",
-        "premier"
-      ]
+      "options": ["thyme", "integer", "premier"]
     },
     "logic": {},
     "status": "inactive",
@@ -5953,11 +5653,7 @@
     },
     "config": {
       "placeholder": "Perferendis cura quod.",
-      "options": [
-        "acquaintance",
-        "ocelot",
-        "rationale"
-      ]
+      "options": ["acquaintance", "ocelot", "rationale"]
     },
     "logic": {},
     "status": "active",
@@ -6020,11 +5716,7 @@
     },
     "config": {
       "placeholder": "Cunctatio reprehenderit temeritas.",
-      "options": [
-        "riser",
-        "individual",
-        "aircraft"
-      ]
+      "options": ["riser", "individual", "aircraft"]
     },
     "logic": {},
     "status": "inactive",
@@ -6070,11 +5762,7 @@
     },
     "config": {
       "placeholder": "Cavus aeneus tumultus.",
-      "options": [
-        "institute",
-        "fund",
-        "trash"
-      ]
+      "options": ["institute", "fund", "trash"]
     },
     "logic": {},
     "status": "inactive",
@@ -6107,11 +5795,7 @@
     },
     "config": {
       "placeholder": "Terga sapiente cunctatio.",
-      "options": [
-        "pacemaker",
-        "sideboard",
-        "hospitalization"
-      ]
+      "options": ["pacemaker", "sideboard", "hospitalization"]
     },
     "logic": {},
     "status": "inactive",
@@ -6206,11 +5890,7 @@
     },
     "config": {
       "placeholder": "Ver brevis defaeco.",
-      "options": [
-        "marten",
-        "hydrant",
-        "numeric"
-      ]
+      "options": ["marten", "hydrant", "numeric"]
     },
     "logic": {},
     "status": "inactive",
@@ -6243,11 +5923,7 @@
     },
     "config": {
       "placeholder": "Trado cresco adinventitias.",
-      "options": [
-        "stock",
-        "publicity",
-        "archaeology"
-      ]
+      "options": ["stock", "publicity", "archaeology"]
     },
     "logic": {},
     "status": "active",
@@ -6263,11 +5939,7 @@
     },
     "config": {
       "placeholder": "Aegrotatio vis pecco.",
-      "options": [
-        "charlatan",
-        "obesity",
-        "minor"
-      ]
+      "options": ["charlatan", "obesity", "minor"]
     },
     "logic": {},
     "status": "active",
@@ -6347,11 +6019,7 @@
     },
     "config": {
       "placeholder": "Carus pecco degero.",
-      "options": [
-        "elevator",
-        "valentine",
-        "yin"
-      ]
+      "options": ["elevator", "valentine", "yin"]
     },
     "logic": {},
     "status": "active",
@@ -6382,11 +6050,7 @@
     },
     "config": {
       "placeholder": "Ager aggero colo.",
-      "options": [
-        "coliseum",
-        "dash",
-        "switchboard"
-      ]
+      "options": ["coliseum", "dash", "switchboard"]
     },
     "logic": {},
     "status": "inactive",
@@ -6464,11 +6128,7 @@
     },
     "config": {
       "placeholder": "Trepide odio ipsa.",
-      "options": [
-        "fog",
-        "publication",
-        "barracks"
-      ]
+      "options": ["fog", "publication", "barracks"]
     },
     "logic": {},
     "status": "active",
@@ -6499,11 +6159,7 @@
     },
     "config": {
       "placeholder": "Cribro curtus in.",
-      "options": [
-        "wafer",
-        "lamp",
-        "colonialism"
-      ]
+      "options": ["wafer", "lamp", "colonialism"]
     },
     "logic": {},
     "status": "active",
@@ -6551,11 +6207,7 @@
     },
     "config": {
       "placeholder": "Audeo thymum sodalitas.",
-      "options": [
-        "tectonics",
-        "monocle",
-        "tool"
-      ]
+      "options": ["tectonics", "monocle", "tool"]
     },
     "logic": {},
     "status": "active",
@@ -6601,11 +6253,7 @@
     },
     "config": {
       "placeholder": "Quaerat adimpleo corrigo.",
-      "options": [
-        "flood",
-        "extent",
-        "offset"
-      ]
+      "options": ["flood", "extent", "offset"]
     },
     "logic": {},
     "status": "active",
@@ -6621,11 +6269,7 @@
     },
     "config": {
       "placeholder": "Vapulus maiores suspendo.",
-      "options": [
-        "bracelet",
-        "reservation",
-        "appliance"
-      ]
+      "options": ["bracelet", "reservation", "appliance"]
     },
     "logic": {},
     "status": "active",
@@ -6671,11 +6315,7 @@
     },
     "config": {
       "placeholder": "Valde sapiente atqui.",
-      "options": [
-        "mortise",
-        "charm",
-        "soup"
-      ]
+      "options": ["mortise", "charm", "soup"]
     },
     "logic": {},
     "status": "active",
@@ -6691,11 +6331,7 @@
     },
     "config": {
       "placeholder": "Vinum volutabrum tabesco.",
-      "options": [
-        "median",
-        "yeast",
-        "igloo"
-      ]
+      "options": ["median", "yeast", "igloo"]
     },
     "logic": {},
     "status": "active",
@@ -6726,11 +6362,7 @@
     },
     "config": {
       "placeholder": "Conservo spiculum vulgaris.",
-      "options": [
-        "transom",
-        "flu",
-        "operating"
-      ]
+      "options": ["transom", "flu", "operating"]
     },
     "logic": {},
     "status": "inactive",
@@ -6827,11 +6459,7 @@
     },
     "config": {
       "placeholder": "Succurro terreo desparatus.",
-      "options": [
-        "cash",
-        "haircut",
-        "tenement"
-      ]
+      "options": ["cash", "haircut", "tenement"]
     },
     "logic": {},
     "status": "inactive",
@@ -6969,11 +6597,7 @@
     },
     "config": {
       "placeholder": "Arto assumenda reprehenderit.",
-      "options": [
-        "minister",
-        "captain",
-        "allocation"
-      ]
+      "options": ["minister", "captain", "allocation"]
     },
     "logic": {},
     "status": "inactive",
@@ -7006,11 +6630,7 @@
     },
     "config": {
       "placeholder": "Conspergo utilis contigo.",
-      "options": [
-        "sprinkles",
-        "airbus",
-        "scratch"
-      ]
+      "options": ["sprinkles", "airbus", "scratch"]
     },
     "logic": {},
     "status": "active",
@@ -7150,11 +6770,7 @@
     },
     "config": {
       "placeholder": "Congregatio angustus acceptus.",
-      "options": [
-        "nucleotidase",
-        "siege",
-        "concentration"
-      ]
+      "options": ["nucleotidase", "siege", "concentration"]
     },
     "logic": {},
     "status": "inactive",
@@ -7170,11 +6786,7 @@
     },
     "config": {
       "placeholder": "Terebro bestia velociter.",
-      "options": [
-        "nudge",
-        "turret",
-        "event"
-      ]
+      "options": ["nudge", "turret", "event"]
     },
     "logic": {},
     "status": "active",
@@ -7190,11 +6802,7 @@
     },
     "config": {
       "placeholder": "Caterva praesentium ager.",
-      "options": [
-        "underpants",
-        "cassava",
-        "passport"
-      ]
+      "options": ["underpants", "cassava", "passport"]
     },
     "logic": {},
     "status": "inactive",
@@ -7210,11 +6818,7 @@
     },
     "config": {
       "placeholder": "Volva ulterius dolorum.",
-      "options": [
-        "baritone",
-        "foodstuffs",
-        "section"
-      ]
+      "options": ["baritone", "foodstuffs", "section"]
     },
     "logic": {},
     "status": "inactive",
@@ -7382,11 +6986,7 @@
     },
     "config": {
       "placeholder": "Textor voluptates cattus.",
-      "options": [
-        "majority",
-        "corporation",
-        "pop"
-      ]
+      "options": ["majority", "corporation", "pop"]
     },
     "logic": {},
     "status": "inactive",
@@ -7434,11 +7034,7 @@
     },
     "config": {
       "placeholder": "Conitor solvo tredecim.",
-      "options": [
-        "promise",
-        "straw",
-        "procurement"
-      ]
+      "options": ["promise", "straw", "procurement"]
     },
     "logic": {},
     "status": "active",
@@ -7501,11 +7097,7 @@
     },
     "config": {
       "placeholder": "Tepesco cuius aeger.",
-      "options": [
-        "vicinity",
-        "couch",
-        "affiliate"
-      ]
+      "options": ["vicinity", "couch", "affiliate"]
     },
     "logic": {},
     "status": "active",
@@ -7634,11 +7226,7 @@
     },
     "config": {
       "placeholder": "Provident tollo centum.",
-      "options": [
-        "rule",
-        "swath",
-        "meander"
-      ]
+      "options": ["rule", "swath", "meander"]
     },
     "logic": {},
     "status": "active",
@@ -7714,11 +7302,7 @@
     },
     "config": {
       "placeholder": "Cupio est virtus.",
-      "options": [
-        "planula",
-        "information",
-        "flu"
-      ]
+      "options": ["planula", "information", "flu"]
     },
     "logic": {},
     "status": "inactive",
@@ -7734,11 +7318,7 @@
     },
     "config": {
       "placeholder": "Desipio tamen ipsam.",
-      "options": [
-        "expansion",
-        "graffiti",
-        "colonialism"
-      ]
+      "options": ["expansion", "graffiti", "colonialism"]
     },
     "logic": {},
     "status": "inactive",
@@ -7805,11 +7385,7 @@
     },
     "config": {
       "placeholder": "Cerno advenio voluptatem.",
-      "options": [
-        "boyfriend",
-        "loyalty",
-        "babushka"
-      ]
+      "options": ["boyfriend", "loyalty", "babushka"]
     },
     "logic": {},
     "status": "active",
@@ -7825,11 +7401,7 @@
     },
     "config": {
       "placeholder": "Demum possimus vae.",
-      "options": [
-        "grouper",
-        "ribbon",
-        "governance"
-      ]
+      "options": ["grouper", "ribbon", "governance"]
     },
     "logic": {},
     "status": "inactive",
@@ -7845,11 +7417,7 @@
     },
     "config": {
       "placeholder": "Thymbra vox viduo.",
-      "options": [
-        "cruelty",
-        "rubric",
-        "poppy"
-      ]
+      "options": ["cruelty", "rubric", "poppy"]
     },
     "logic": {},
     "status": "inactive",
@@ -7897,11 +7465,7 @@
     },
     "config": {
       "placeholder": "Tonsor bardus cupressus.",
-      "options": [
-        "redesign",
-        "quinoa",
-        "anticodon"
-      ]
+      "options": ["redesign", "quinoa", "anticodon"]
     },
     "logic": {},
     "status": "inactive",
@@ -7917,11 +7481,7 @@
     },
     "config": {
       "placeholder": "Somnus alter degusto.",
-      "options": [
-        "pliers",
-        "clamp",
-        "complication"
-      ]
+      "options": ["pliers", "clamp", "complication"]
     },
     "logic": {},
     "status": "inactive",
@@ -8018,11 +7578,7 @@
     },
     "config": {
       "placeholder": "Velut delectus cruciamentum.",
-      "options": [
-        "wedding",
-        "coal",
-        "ad"
-      ]
+      "options": ["wedding", "coal", "ad"]
     },
     "logic": {},
     "status": "inactive",
@@ -8085,11 +7641,7 @@
     },
     "config": {
       "placeholder": "Dolore voluptatum coniecto.",
-      "options": [
-        "fat",
-        "decision",
-        "slime"
-      ]
+      "options": ["fat", "decision", "slime"]
     },
     "logic": {},
     "status": "active",
@@ -8105,11 +7657,7 @@
     },
     "config": {
       "placeholder": "Cado praesentium trans.",
-      "options": [
-        "rationale",
-        "switchboard",
-        "backbone"
-      ]
+      "options": ["rationale", "switchboard", "backbone"]
     },
     "logic": {},
     "status": "active",
@@ -8189,11 +7737,7 @@
     },
     "config": {
       "placeholder": "Cuius acervus distinctio.",
-      "options": [
-        "longboat",
-        "pepper",
-        "finer"
-      ]
+      "options": ["longboat", "pepper", "finer"]
     },
     "logic": {},
     "status": "inactive",
@@ -8318,11 +7862,7 @@
     },
     "config": {
       "placeholder": "Cupiditas temperantia cognomen.",
-      "options": [
-        "veto",
-        "shipper",
-        "pinstripe"
-      ]
+      "options": ["veto", "shipper", "pinstripe"]
     },
     "logic": {},
     "status": "inactive",
@@ -8355,11 +7895,7 @@
     },
     "config": {
       "placeholder": "Culpa dicta despecto.",
-      "options": [
-        "accelerator",
-        "guacamole",
-        "handle"
-      ]
+      "options": ["accelerator", "guacamole", "handle"]
     },
     "logic": {},
     "status": "inactive",
@@ -8405,11 +7941,7 @@
     },
     "config": {
       "placeholder": "Temeritas angelus communis.",
-      "options": [
-        "community",
-        "trash",
-        "saw"
-      ]
+      "options": ["community", "trash", "saw"]
     },
     "logic": {},
     "status": "inactive",
@@ -8489,11 +8021,7 @@
     },
     "config": {
       "placeholder": "Ara sint sum.",
-      "options": [
-        "kinase",
-        "angle",
-        "recovery"
-      ]
+      "options": ["kinase", "angle", "recovery"]
     },
     "logic": {},
     "status": "active",
@@ -8509,11 +8037,7 @@
     },
     "config": {
       "placeholder": "Uterque aliquam ad.",
-      "options": [
-        "kielbasa",
-        "swine",
-        "essence"
-      ]
+      "options": ["kielbasa", "swine", "essence"]
     },
     "logic": {},
     "status": "active",
@@ -8546,11 +8070,7 @@
     },
     "config": {
       "placeholder": "Auctus comprehendo caecus.",
-      "options": [
-        "premium",
-        "simple",
-        "skyline"
-      ]
+      "options": ["premium", "simple", "skyline"]
     },
     "logic": {},
     "status": "inactive",
@@ -8628,11 +8148,7 @@
     },
     "config": {
       "placeholder": "Consequatur quisquam ab.",
-      "options": [
-        "reboot",
-        "underneath",
-        "responsibility"
-      ]
+      "options": ["reboot", "underneath", "responsibility"]
     },
     "logic": {},
     "status": "inactive",
@@ -8648,11 +8164,7 @@
     },
     "config": {
       "placeholder": "Sponte quam tam.",
-      "options": [
-        "diver",
-        "decision",
-        "bog"
-      ]
+      "options": ["diver", "decision", "bog"]
     },
     "logic": {},
     "status": "inactive",
@@ -8839,11 +8351,7 @@
     },
     "config": {
       "placeholder": "Nihil capitulus coadunatio.",
-      "options": [
-        "birth",
-        "mainstream",
-        "stranger"
-      ]
+      "options": ["birth", "mainstream", "stranger"]
     },
     "logic": {},
     "status": "inactive",
@@ -8859,11 +8367,7 @@
     },
     "config": {
       "placeholder": "Vorago dolorum trepide.",
-      "options": [
-        "hydrant",
-        "linseed",
-        "guacamole"
-      ]
+      "options": ["hydrant", "linseed", "guacamole"]
     },
     "logic": {},
     "status": "inactive",
@@ -8894,11 +8398,7 @@
     },
     "config": {
       "placeholder": "Animus defetiscor arto.",
-      "options": [
-        "sarong",
-        "dash",
-        "giant"
-      ]
+      "options": ["sarong", "dash", "giant"]
     },
     "logic": {},
     "status": "active",
@@ -8946,11 +8446,7 @@
     },
     "config": {
       "placeholder": "Ambitus tenetur vesper.",
-      "options": [
-        "cannon",
-        "pocket-watch",
-        "couch"
-      ]
+      "options": ["cannon", "pocket-watch", "couch"]
     },
     "logic": {},
     "status": "active",
@@ -9026,11 +8522,7 @@
     },
     "config": {
       "placeholder": "Pecto degenero curiositas.",
-      "options": [
-        "obligation",
-        "beret",
-        "pile"
-      ]
+      "options": ["obligation", "beret", "pile"]
     },
     "logic": {},
     "status": "active",
@@ -9078,11 +8570,7 @@
     },
     "config": {
       "placeholder": "Crinis pel molestiae.",
-      "options": [
-        "drive",
-        "loyalty",
-        "handle"
-      ]
+      "options": ["drive", "loyalty", "handle"]
     },
     "logic": {},
     "status": "inactive",
@@ -9113,11 +8601,7 @@
     },
     "config": {
       "placeholder": "Ut thalassinus antiquus.",
-      "options": [
-        "tentacle",
-        "premium",
-        "numeric"
-      ]
+      "options": ["tentacle", "premium", "numeric"]
     },
     "logic": {},
     "status": "inactive",
@@ -9163,11 +8647,7 @@
     },
     "config": {
       "placeholder": "Attonbitus tristis civis.",
-      "options": [
-        "gymnast",
-        "meatloaf",
-        "pile"
-      ]
+      "options": ["gymnast", "meatloaf", "pile"]
     },
     "logic": {},
     "status": "active",
@@ -9275,11 +8755,7 @@
     },
     "config": {
       "placeholder": "Combibo textus carus.",
-      "options": [
-        "resource",
-        "casement",
-        "allegation"
-      ]
+      "options": ["resource", "casement", "allegation"]
     },
     "logic": {},
     "status": "active",
@@ -9327,11 +8803,7 @@
     },
     "config": {
       "placeholder": "Amitto curiositas vel.",
-      "options": [
-        "ice-cream",
-        "newsletter",
-        "impostor"
-      ]
+      "options": ["ice-cream", "newsletter", "impostor"]
     },
     "logic": {},
     "status": "active",
@@ -9409,11 +8881,7 @@
     },
     "config": {
       "placeholder": "Vobis cunae pecto.",
-      "options": [
-        "cemetery",
-        "vol",
-        "waist"
-      ]
+      "options": ["cemetery", "vol", "waist"]
     },
     "logic": {},
     "status": "active",
@@ -9493,11 +8961,7 @@
     },
     "config": {
       "placeholder": "Volva sed suffoco.",
-      "options": [
-        "creator",
-        "receptor",
-        "self-confidence"
-      ]
+      "options": ["creator", "receptor", "self-confidence"]
     },
     "logic": {},
     "status": "inactive",
@@ -9530,11 +8994,7 @@
     },
     "config": {
       "placeholder": "Vesica tero temeritas.",
-      "options": [
-        "vibraphone",
-        "handover",
-        "handle"
-      ]
+      "options": ["vibraphone", "handover", "handle"]
     },
     "logic": {},
     "status": "inactive",
@@ -9708,11 +9168,7 @@
     },
     "config": {
       "placeholder": "Thymbra trans ea.",
-      "options": [
-        "majority",
-        "typewriter",
-        "willow"
-      ]
+      "options": ["majority", "typewriter", "willow"]
     },
     "logic": {},
     "status": "inactive",
@@ -9760,11 +9216,7 @@
     },
     "config": {
       "placeholder": "Minima cruentus triduana.",
-      "options": [
-        "patroller",
-        "chap",
-        "tuba"
-      ]
+      "options": ["patroller", "chap", "tuba"]
     },
     "logic": {},
     "status": "active",
@@ -9810,11 +9262,7 @@
     },
     "config": {
       "placeholder": "Suspendo vae tribuo.",
-      "options": [
-        "bowling",
-        "tennis",
-        "godfather"
-      ]
+      "options": ["bowling", "tennis", "godfather"]
     },
     "logic": {},
     "status": "inactive",
@@ -9830,11 +9278,7 @@
     },
     "config": {
       "placeholder": "Toties derideo allatus.",
-      "options": [
-        "perfection",
-        "hippodrome",
-        "amendment"
-      ]
+      "options": ["perfection", "hippodrome", "amendment"]
     },
     "logic": {},
     "status": "inactive",
@@ -9867,11 +9311,7 @@
     },
     "config": {
       "placeholder": "Rem verbera auxilium.",
-      "options": [
-        "diagram",
-        "ectoderm",
-        "league"
-      ]
+      "options": ["diagram", "ectoderm", "league"]
     },
     "logic": {},
     "status": "active",
@@ -9887,11 +9327,7 @@
     },
     "config": {
       "placeholder": "Paens victus adulatio.",
-      "options": [
-        "embossing",
-        "lieu",
-        "allegation"
-      ]
+      "options": ["embossing", "lieu", "allegation"]
     },
     "logic": {},
     "status": "active",
@@ -9954,11 +9390,7 @@
     },
     "config": {
       "placeholder": "Vinculum cicuta cerno.",
-      "options": [
-        "bran",
-        "obligation",
-        "premeditation"
-      ]
+      "options": ["bran", "obligation", "premeditation"]
     },
     "logic": {},
     "status": "active",
@@ -9974,11 +9406,7 @@
     },
     "config": {
       "placeholder": "Texo cras vulgaris.",
-      "options": [
-        "exploration",
-        "hepatitis",
-        "surface"
-      ]
+      "options": ["exploration", "hepatitis", "surface"]
     },
     "logic": {},
     "status": "active",
@@ -10026,11 +9454,7 @@
     },
     "config": {
       "placeholder": "Attollo ver vulticulus.",
-      "options": [
-        "metabolite",
-        "papa",
-        "trick"
-      ]
+      "options": ["metabolite", "papa", "trick"]
     },
     "logic": {},
     "status": "inactive",
@@ -10076,11 +9500,7 @@
     },
     "config": {
       "placeholder": "Velociter soleo eius.",
-      "options": [
-        "crocodile",
-        "wedding",
-        "patroller"
-      ]
+      "options": ["crocodile", "wedding", "patroller"]
     },
     "logic": {},
     "status": "inactive",
@@ -10096,11 +9516,7 @@
     },
     "config": {
       "placeholder": "Distinctio solitudo iusto.",
-      "options": [
-        "tackle",
-        "wear",
-        "subexpression"
-      ]
+      "options": ["tackle", "wear", "subexpression"]
     },
     "logic": {},
     "status": "active",
@@ -10146,11 +9562,7 @@
     },
     "config": {
       "placeholder": "Solitudo sulum exercitationem.",
-      "options": [
-        "hoof",
-        "celsius",
-        "plain"
-      ]
+      "options": ["hoof", "celsius", "plain"]
     },
     "logic": {},
     "status": "active",
@@ -10166,11 +9578,7 @@
     },
     "config": {
       "placeholder": "Benevolentia coniuratio consectetur.",
-      "options": [
-        "disk",
-        "offset",
-        "alliance"
-      ]
+      "options": ["disk", "offset", "alliance"]
     },
     "logic": {},
     "status": "inactive",
@@ -10233,11 +9641,7 @@
     },
     "config": {
       "placeholder": "Ullus thymum delectus.",
-      "options": [
-        "bidet",
-        "desk",
-        "ostrich"
-      ]
+      "options": ["bidet", "desk", "ostrich"]
     },
     "logic": {},
     "status": "inactive",
@@ -10283,11 +9687,7 @@
     },
     "config": {
       "placeholder": "At cuius minus.",
-      "options": [
-        "sermon",
-        "vanadyl",
-        "skyline"
-      ]
+      "options": ["sermon", "vanadyl", "skyline"]
     },
     "logic": {},
     "status": "active",
@@ -10395,11 +9795,7 @@
     },
     "config": {
       "placeholder": "Calamitas capillus ocer.",
-      "options": [
-        "spirit",
-        "pressure",
-        "bookcase"
-      ]
+      "options": ["spirit", "pressure", "bookcase"]
     },
     "logic": {},
     "status": "inactive",
@@ -10492,11 +9888,7 @@
     },
     "config": {
       "placeholder": "Voluptates nostrum curatio.",
-      "options": [
-        "cope",
-        "derby",
-        "lay"
-      ]
+      "options": ["cope", "derby", "lay"]
     },
     "logic": {},
     "status": "inactive",
@@ -10512,11 +9904,7 @@
     },
     "config": {
       "placeholder": "Beatus conduco aggredior.",
-      "options": [
-        "feather",
-        "e-mail",
-        "cop-out"
-      ]
+      "options": ["feather", "e-mail", "cop-out"]
     },
     "logic": {},
     "status": "inactive",
@@ -10532,11 +9920,7 @@
     },
     "config": {
       "placeholder": "Vito alius cuius.",
-      "options": [
-        "hepatitis",
-        "coliseum",
-        "conservative"
-      ]
+      "options": ["hepatitis", "coliseum", "conservative"]
     },
     "logic": {},
     "status": "active",
@@ -10584,11 +9968,7 @@
     },
     "config": {
       "placeholder": "Atavus conscendo ceno.",
-      "options": [
-        "information",
-        "information",
-        "crest"
-      ]
+      "options": ["information", "information", "crest"]
     },
     "logic": {},
     "status": "active",
@@ -10604,11 +9984,7 @@
     },
     "config": {
       "placeholder": "Crapula rerum administratio.",
-      "options": [
-        "willow",
-        "stool",
-        "gown"
-      ]
+      "options": ["willow", "stool", "gown"]
     },
     "logic": {},
     "status": "active",
@@ -10624,11 +10000,7 @@
     },
     "config": {
       "placeholder": "Adaugeo caterva depromo.",
-      "options": [
-        "tool",
-        "volleyball",
-        "exploration"
-      ]
+      "options": ["tool", "volleyball", "exploration"]
     },
     "logic": {},
     "status": "active",
@@ -10785,11 +10157,7 @@
     },
     "config": {
       "placeholder": "Velociter aperte demergo.",
-      "options": [
-        "hyphenation",
-        "hepatitis",
-        "ad"
-      ]
+      "options": ["hyphenation", "hepatitis", "ad"]
     },
     "logic": {},
     "status": "active",
@@ -10888,11 +10256,7 @@
     },
     "config": {
       "placeholder": "Vallum termes dolores.",
-      "options": [
-        "cod",
-        "fort",
-        "underneath"
-      ]
+      "options": ["cod", "fort", "underneath"]
     },
     "logic": {},
     "status": "inactive",
@@ -11021,11 +10385,7 @@
     },
     "config": {
       "placeholder": "Comptus eveniet arguo.",
-      "options": [
-        "self-confidence",
-        "spear",
-        "adviser"
-      ]
+      "options": ["self-confidence", "spear", "adviser"]
     },
     "logic": {},
     "status": "active",
@@ -11071,11 +10431,7 @@
     },
     "config": {
       "placeholder": "Crinis acidus depulso.",
-      "options": [
-        "advertisement",
-        "promise",
-        "negotiation"
-      ]
+      "options": ["advertisement", "promise", "negotiation"]
     },
     "logic": {},
     "status": "active",
@@ -11138,11 +10494,7 @@
     },
     "config": {
       "placeholder": "Non vesica demens.",
-      "options": [
-        "ethyl",
-        "step-mother",
-        "siege"
-      ]
+      "options": ["ethyl", "step-mother", "siege"]
     },
     "logic": {},
     "status": "active",
@@ -11188,11 +10540,7 @@
     },
     "config": {
       "placeholder": "Cupressus tantillus claro.",
-      "options": [
-        "shipper",
-        "ceramics",
-        "traditionalism"
-      ]
+      "options": ["shipper", "ceramics", "traditionalism"]
     },
     "logic": {},
     "status": "inactive",
@@ -11223,11 +10571,7 @@
     },
     "config": {
       "placeholder": "Defaeco voluptas tametsi.",
-      "options": [
-        "allocation",
-        "final",
-        "dead"
-      ]
+      "options": ["allocation", "final", "dead"]
     },
     "logic": {},
     "status": "active",
@@ -11290,11 +10634,7 @@
     },
     "config": {
       "placeholder": "Apostolus stipes delinquo.",
-      "options": [
-        "minor",
-        "turret",
-        "season"
-      ]
+      "options": ["minor", "turret", "season"]
     },
     "logic": {},
     "status": "active",
@@ -11374,11 +10714,7 @@
     },
     "config": {
       "placeholder": "Angelus vociferor theologus.",
-      "options": [
-        "forgery",
-        "membership",
-        "produce"
-      ]
+      "options": ["forgery", "membership", "produce"]
     },
     "logic": {},
     "status": "active",
@@ -11394,11 +10730,7 @@
     },
     "config": {
       "placeholder": "Aegrotatio tamquam victoria.",
-      "options": [
-        "traditionalism",
-        "silk",
-        "in-joke"
-      ]
+      "options": ["traditionalism", "silk", "in-joke"]
     },
     "logic": {},
     "status": "inactive",
@@ -11448,11 +10780,7 @@
     },
     "config": {
       "placeholder": "Benevolentia comburo conventus.",
-      "options": [
-        "representation",
-        "milestone",
-        "lobster"
-      ]
+      "options": ["representation", "milestone", "lobster"]
     },
     "logic": {},
     "status": "active",
@@ -11468,11 +10796,7 @@
     },
     "config": {
       "placeholder": "Universe depopulo vinco.",
-      "options": [
-        "guard",
-        "ad",
-        "priesthood"
-      ]
+      "options": ["guard", "ad", "priesthood"]
     },
     "logic": {},
     "status": "inactive",
@@ -11488,11 +10812,7 @@
     },
     "config": {
       "placeholder": "Texo stabilis causa.",
-      "options": [
-        "tribe",
-        "chow",
-        "atrium"
-      ]
+      "options": ["tribe", "chow", "atrium"]
     },
     "logic": {},
     "status": "active",
@@ -11508,11 +10828,7 @@
     },
     "config": {
       "placeholder": "Delicate adipiscor ager.",
-      "options": [
-        "hubris",
-        "glider",
-        "steeple"
-      ]
+      "options": ["hubris", "glider", "steeple"]
     },
     "logic": {},
     "status": "inactive",
@@ -11543,11 +10859,7 @@
     },
     "config": {
       "placeholder": "Dedecor amplus curatio.",
-      "options": [
-        "bran",
-        "heating",
-        "bourgeoisie"
-      ]
+      "options": ["bran", "heating", "bourgeoisie"]
     },
     "logic": {},
     "status": "inactive",
@@ -11689,11 +11001,7 @@
     },
     "config": {
       "placeholder": "Carus sublime tamen.",
-      "options": [
-        "humor",
-        "switch",
-        "ostrich"
-      ]
+      "options": ["humor", "switch", "ostrich"]
     },
     "logic": {},
     "status": "active",
@@ -11709,11 +11017,7 @@
     },
     "config": {
       "placeholder": "Copiose deficio suspendo.",
-      "options": [
-        "punctuation",
-        "amnesty",
-        "minister"
-      ]
+      "options": ["punctuation", "amnesty", "minister"]
     },
     "logic": {},
     "status": "active",
@@ -11729,11 +11033,7 @@
     },
     "config": {
       "placeholder": "Cogo iste aggero.",
-      "options": [
-        "representation",
-        "ice-cream",
-        "declaration"
-      ]
+      "options": ["representation", "ice-cream", "declaration"]
     },
     "logic": {},
     "status": "inactive",
@@ -11781,11 +11081,7 @@
     },
     "config": {
       "placeholder": "Acerbitas non utique.",
-      "options": [
-        "mallard",
-        "chow",
-        "signature"
-      ]
+      "options": ["mallard", "chow", "signature"]
     },
     "logic": {},
     "status": "active",
@@ -11801,11 +11097,7 @@
     },
     "config": {
       "placeholder": "Uter fuga acsi.",
-      "options": [
-        "appliance",
-        "peninsula",
-        "pocket-watch"
-      ]
+      "options": ["appliance", "peninsula", "pocket-watch"]
     },
     "logic": {},
     "status": "active",
@@ -11821,11 +11113,7 @@
     },
     "config": {
       "placeholder": "Officiis sophismata aer.",
-      "options": [
-        "sonar",
-        "tentacle",
-        "resolve"
-      ]
+      "options": ["sonar", "tentacle", "resolve"]
     },
     "logic": {},
     "status": "active",
@@ -11873,11 +11161,7 @@
     },
     "config": {
       "placeholder": "Contego corroboro urbanus.",
-      "options": [
-        "bar",
-        "avalanche",
-        "pine"
-      ]
+      "options": ["bar", "avalanche", "pine"]
     },
     "logic": {},
     "status": "active",
@@ -11908,11 +11192,7 @@
     },
     "config": {
       "placeholder": "Allatus summa soluta.",
-      "options": [
-        "fledgling",
-        "dulcimer",
-        "hospitalization"
-      ]
+      "options": ["fledgling", "dulcimer", "hospitalization"]
     },
     "logic": {},
     "status": "inactive",
@@ -11958,11 +11238,7 @@
     },
     "config": {
       "placeholder": "Officiis terminatio vilitas.",
-      "options": [
-        "toaster",
-        "alligator",
-        "pinstripe"
-      ]
+      "options": ["toaster", "alligator", "pinstripe"]
     },
     "logic": {},
     "status": "active",
@@ -12091,11 +11367,7 @@
     },
     "config": {
       "placeholder": "Tum tot articulus.",
-      "options": [
-        "haversack",
-        "juggernaut",
-        "sustenance"
-      ]
+      "options": ["haversack", "juggernaut", "sustenance"]
     },
     "logic": {},
     "status": "active",
@@ -12190,11 +11462,7 @@
     },
     "config": {
       "placeholder": "Defaeco decor testimonium.",
-      "options": [
-        "pigsty",
-        "linseed",
-        "puppet"
-      ]
+      "options": ["pigsty", "linseed", "puppet"]
     },
     "logic": {},
     "status": "active",
@@ -12225,11 +11493,7 @@
     },
     "config": {
       "placeholder": "Solium tredecim nesciunt.",
-      "options": [
-        "wilderness",
-        "nerve",
-        "bar"
-      ]
+      "options": ["wilderness", "nerve", "bar"]
     },
     "logic": {},
     "status": "inactive",
@@ -12245,11 +11509,7 @@
     },
     "config": {
       "placeholder": "Tredecim sonitus praesentium.",
-      "options": [
-        "wriggler",
-        "festival",
-        "sanity"
-      ]
+      "options": ["wriggler", "festival", "sanity"]
     },
     "logic": {},
     "status": "active",
@@ -12295,11 +11555,7 @@
     },
     "config": {
       "placeholder": "Temperantia sumo sto.",
-      "options": [
-        "habit",
-        "mixture",
-        "longboat"
-      ]
+      "options": ["habit", "mixture", "longboat"]
     },
     "logic": {},
     "status": "active",
@@ -12349,11 +11605,7 @@
     },
     "config": {
       "placeholder": "Arx necessitatibus vos.",
-      "options": [
-        "soybean",
-        "complication",
-        "typewriter"
-      ]
+      "options": ["soybean", "complication", "typewriter"]
     },
     "logic": {},
     "status": "active",
@@ -12369,11 +11621,7 @@
     },
     "config": {
       "placeholder": "Utroque varius adeptio.",
-      "options": [
-        "stir-fry",
-        "term",
-        "wallaby"
-      ]
+      "options": ["stir-fry", "term", "wallaby"]
     },
     "logic": {},
     "status": "inactive",
@@ -12481,11 +11729,7 @@
     },
     "config": {
       "placeholder": "Quae facilis aggero.",
-      "options": [
-        "produce",
-        "alliance",
-        "governance"
-      ]
+      "options": ["produce", "alliance", "governance"]
     },
     "logic": {},
     "status": "inactive",
@@ -12501,11 +11745,7 @@
     },
     "config": {
       "placeholder": "Patior cognomen appono.",
-      "options": [
-        "statue",
-        "executor",
-        "bungalow"
-      ]
+      "options": ["statue", "executor", "bungalow"]
     },
     "logic": {},
     "status": "active",
@@ -12581,11 +11821,7 @@
     },
     "config": {
       "placeholder": "Victoria viduo crapula.",
-      "options": [
-        "amendment",
-        "meadow",
-        "mentor"
-      ]
+      "options": ["amendment", "meadow", "mentor"]
     },
     "logic": {},
     "status": "inactive",
@@ -12631,11 +11867,7 @@
     },
     "config": {
       "placeholder": "Conor demoror urbanus.",
-      "options": [
-        "exploration",
-        "pacemaker",
-        "bowler"
-      ]
+      "options": ["exploration", "pacemaker", "bowler"]
     },
     "logic": {},
     "status": "inactive",
@@ -12685,11 +11917,7 @@
     },
     "config": {
       "placeholder": "Statua templum conforto.",
-      "options": [
-        "fort",
-        "airport",
-        "council"
-      ]
+      "options": ["fort", "airport", "council"]
     },
     "logic": {},
     "status": "active",
@@ -12705,11 +11933,7 @@
     },
     "config": {
       "placeholder": "Spectaculum tracto reiciendis.",
-      "options": [
-        "obedience",
-        "privilege",
-        "amnesty"
-      ]
+      "options": ["obedience", "privilege", "amnesty"]
     },
     "logic": {},
     "status": "active",
@@ -12804,11 +12028,7 @@
     },
     "config": {
       "placeholder": "Tendo tonsor cibus.",
-      "options": [
-        "brook",
-        "suspension",
-        "affiliate"
-      ]
+      "options": ["brook", "suspension", "affiliate"]
     },
     "logic": {},
     "status": "inactive",
@@ -12854,11 +12074,7 @@
     },
     "config": {
       "placeholder": "Temptatio curatio coruscus.",
-      "options": [
-        "ignorance",
-        "ownership",
-        "guide"
-      ]
+      "options": ["ignorance", "ownership", "guide"]
     },
     "logic": {},
     "status": "inactive",
@@ -12874,11 +12090,7 @@
     },
     "config": {
       "placeholder": "Arbitro ventus volaticus.",
-      "options": [
-        "label",
-        "unique",
-        "yarmulke"
-      ]
+      "options": ["label", "unique", "yarmulke"]
     },
     "logic": {},
     "status": "inactive",
@@ -12958,11 +12170,7 @@
     },
     "config": {
       "placeholder": "Exercitationem ducimus urbanus.",
-      "options": [
-        "charm",
-        "nectarine",
-        "hydrolyse"
-      ]
+      "options": ["charm", "nectarine", "hydrolyse"]
     },
     "logic": {},
     "status": "inactive",
@@ -12978,11 +12186,7 @@
     },
     "config": {
       "placeholder": "Adulatio aperte trans.",
-      "options": [
-        "ravioli",
-        "impostor",
-        "attraction"
-      ]
+      "options": ["ravioli", "impostor", "attraction"]
     },
     "logic": {},
     "status": "active",
@@ -13060,11 +12264,7 @@
     },
     "config": {
       "placeholder": "Cubicularis beatae accommodo.",
-      "options": [
-        "newsstand",
-        "cap",
-        "midwife"
-      ]
+      "options": ["newsstand", "cap", "midwife"]
     },
     "logic": {},
     "status": "inactive",
@@ -13095,11 +12295,7 @@
     },
     "config": {
       "placeholder": "Arca vigor ulciscor.",
-      "options": [
-        "dulcimer",
-        "accelerator",
-        "lotion"
-      ]
+      "options": ["dulcimer", "accelerator", "lotion"]
     },
     "logic": {},
     "status": "inactive",
@@ -13160,11 +12356,7 @@
     },
     "config": {
       "placeholder": "Patria avaritia cruentus.",
-      "options": [
-        "government",
-        "cassava",
-        "cinema"
-      ]
+      "options": ["government", "cassava", "cinema"]
     },
     "logic": {},
     "status": "active",
@@ -13287,11 +12479,7 @@
     },
     "config": {
       "placeholder": "Delego sustineo arx.",
-      "options": [
-        "nudge",
-        "grass",
-        "embarrassment"
-      ]
+      "options": ["nudge", "grass", "embarrassment"]
     },
     "logic": {},
     "status": "inactive",
@@ -13339,11 +12527,7 @@
     },
     "config": {
       "placeholder": "Autem fugit vesco.",
-      "options": [
-        "popularity",
-        "amendment",
-        "packaging"
-      ]
+      "options": ["popularity", "amendment", "packaging"]
     },
     "logic": {},
     "status": "active",
@@ -13391,11 +12575,7 @@
     },
     "config": {
       "placeholder": "Cohibeo temptatio vicinus.",
-      "options": [
-        "mountain",
-        "lashes",
-        "hoof"
-      ]
+      "options": ["mountain", "lashes", "hoof"]
     },
     "logic": {},
     "status": "inactive",
@@ -13411,11 +12591,7 @@
     },
     "config": {
       "placeholder": "Annus abscido soluta.",
-      "options": [
-        "minister",
-        "goat",
-        "pressure"
-      ]
+      "options": ["minister", "goat", "pressure"]
     },
     "logic": {},
     "status": "active",
@@ -13431,11 +12607,7 @@
     },
     "config": {
       "placeholder": "Aufero tubineus abduco.",
-      "options": [
-        "yeast",
-        "circumference",
-        "summary"
-      ]
+      "options": ["yeast", "circumference", "summary"]
     },
     "logic": {},
     "status": "inactive",
@@ -13675,11 +12847,7 @@
     },
     "config": {
       "placeholder": "Celebrer colo desolo.",
-      "options": [
-        "supplier",
-        "mentor",
-        "cappelletti"
-      ]
+      "options": ["supplier", "mentor", "cappelletti"]
     },
     "logic": {},
     "status": "active",
@@ -13695,11 +12863,7 @@
     },
     "config": {
       "placeholder": "Damnatio vapulus ad.",
-      "options": [
-        "brochure",
-        "scarification",
-        "forager"
-      ]
+      "options": ["brochure", "scarification", "forager"]
     },
     "logic": {},
     "status": "active",
@@ -13730,11 +12894,7 @@
     },
     "config": {
       "placeholder": "Magnam aliquid at.",
-      "options": [
-        "topsail",
-        "pecan",
-        "decongestant"
-      ]
+      "options": ["topsail", "pecan", "decongestant"]
     },
     "logic": {},
     "status": "active",
@@ -13750,11 +12910,7 @@
     },
     "config": {
       "placeholder": "Deduco adicio corrumpo.",
-      "options": [
-        "cardboard",
-        "surface",
-        "reconsideration"
-      ]
+      "options": ["cardboard", "surface", "reconsideration"]
     },
     "logic": {},
     "status": "active",
@@ -13770,11 +12926,7 @@
     },
     "config": {
       "placeholder": "Nemo hic aegre.",
-      "options": [
-        "jury",
-        "recommendation",
-        "passport"
-      ]
+      "options": ["jury", "recommendation", "passport"]
     },
     "logic": {},
     "status": "inactive",
@@ -13869,11 +13021,7 @@
     },
     "config": {
       "placeholder": "Spes abutor utrum.",
-      "options": [
-        "forage",
-        "sermon",
-        "hutch"
-      ]
+      "options": ["forage", "sermon", "hutch"]
     },
     "logic": {},
     "status": "inactive",
@@ -13936,11 +13084,7 @@
     },
     "config": {
       "placeholder": "Super uberrime cauda.",
-      "options": [
-        "airline",
-        "kinase",
-        "yin"
-      ]
+      "options": ["airline", "kinase", "yin"]
     },
     "logic": {},
     "status": "active",
@@ -13986,11 +13130,7 @@
     },
     "config": {
       "placeholder": "Villa decimus colligo.",
-      "options": [
-        "exhaust",
-        "shadowbox",
-        "cash"
-      ]
+      "options": ["exhaust", "shadowbox", "cash"]
     },
     "logic": {},
     "status": "inactive",
@@ -14006,11 +13146,7 @@
     },
     "config": {
       "placeholder": "Aureus tripudio contego.",
-      "options": [
-        "resolve",
-        "singing",
-        "clamp"
-      ]
+      "options": ["resolve", "singing", "clamp"]
     },
     "logic": {},
     "status": "active",
@@ -14101,11 +13237,7 @@
     },
     "config": {
       "placeholder": "Accommodo administratio tersus.",
-      "options": [
-        "jump",
-        "forgery",
-        "academics"
-      ]
+      "options": ["jump", "forgery", "academics"]
     },
     "logic": {},
     "status": "inactive",
@@ -14153,11 +13285,7 @@
     },
     "config": {
       "placeholder": "Adflicto accommodo textus.",
-      "options": [
-        "priesthood",
-        "negotiation",
-        "cow"
-      ]
+      "options": ["priesthood", "negotiation", "cow"]
     },
     "logic": {},
     "status": "active",
@@ -14310,11 +13438,7 @@
     },
     "config": {
       "placeholder": "Libero quo reprehenderit.",
-      "options": [
-        "digit",
-        "guard",
-        "season"
-      ]
+      "options": ["digit", "guard", "season"]
     },
     "logic": {},
     "status": "active",
@@ -14377,11 +13501,7 @@
     },
     "config": {
       "placeholder": "Delego ulterius vehemens.",
-      "options": [
-        "mobility",
-        "guacamole",
-        "cantaloupe"
-      ]
+      "options": ["mobility", "guacamole", "cantaloupe"]
     },
     "logic": {},
     "status": "active",
@@ -14397,11 +13517,7 @@
     },
     "config": {
       "placeholder": "Casus aperiam verbera.",
-      "options": [
-        "testimonial",
-        "innovation",
-        "SUV"
-      ]
+      "options": ["testimonial", "innovation", "SUV"]
     },
     "logic": {},
     "status": "active",
@@ -14466,11 +13582,7 @@
     },
     "config": {
       "placeholder": "Demo timidus culpa.",
-      "options": [
-        "typewriter",
-        "mixture",
-        "best-seller"
-      ]
+      "options": ["typewriter", "mixture", "best-seller"]
     },
     "logic": {},
     "status": "inactive",
@@ -14565,11 +13677,7 @@
     },
     "config": {
       "placeholder": "Certus uxor clementia.",
-      "options": [
-        "director",
-        "almighty",
-        "oil"
-      ]
+      "options": ["director", "almighty", "oil"]
     },
     "logic": {},
     "status": "active",
@@ -14585,11 +13693,7 @@
     },
     "config": {
       "placeholder": "Videlicet thesis ascit.",
-      "options": [
-        "moment",
-        "daddy",
-        "perp"
-      ]
+      "options": ["moment", "daddy", "perp"]
     },
     "logic": {},
     "status": "inactive",
@@ -14622,11 +13726,7 @@
     },
     "config": {
       "placeholder": "Aeger quam vorago.",
-      "options": [
-        "fedora",
-        "freckle",
-        "petticoat"
-      ]
+      "options": ["fedora", "freckle", "petticoat"]
     },
     "logic": {},
     "status": "active",
@@ -14657,11 +13757,7 @@
     },
     "config": {
       "placeholder": "Tondeo assentator textor.",
-      "options": [
-        "luck",
-        "cross-contamination",
-        "exploration"
-      ]
+      "options": ["luck", "cross-contamination", "exploration"]
     },
     "logic": {},
     "status": "inactive",
@@ -14726,11 +13822,7 @@
     },
     "config": {
       "placeholder": "Aeger pel arceo.",
-      "options": [
-        "digit",
-        "commercial",
-        "coliseum"
-      ]
+      "options": ["digit", "commercial", "coliseum"]
     },
     "logic": {},
     "status": "inactive",
@@ -14761,11 +13853,7 @@
     },
     "config": {
       "placeholder": "Sint angelus alius.",
-      "options": [
-        "mixture",
-        "sticker",
-        "marathon"
-      ]
+      "options": ["mixture", "sticker", "marathon"]
     },
     "logic": {},
     "status": "active",
@@ -14830,11 +13918,7 @@
     },
     "config": {
       "placeholder": "Conturbo statua thalassinus.",
-      "options": [
-        "spirit",
-        "kiss",
-        "stock"
-      ]
+      "options": ["spirit", "kiss", "stock"]
     },
     "logic": {},
     "status": "inactive",
@@ -14882,11 +13966,7 @@
     },
     "config": {
       "placeholder": "Turbo crur spectaculum.",
-      "options": [
-        "airbus",
-        "solvency",
-        "contractor"
-      ]
+      "options": ["airbus", "solvency", "contractor"]
     },
     "logic": {},
     "status": "inactive",
@@ -15026,11 +14106,7 @@
     },
     "config": {
       "placeholder": "Nostrum quia rerum.",
-      "options": [
-        "teriyaki",
-        "conservative",
-        "cope"
-      ]
+      "options": ["teriyaki", "conservative", "cope"]
     },
     "logic": {},
     "status": "active",
@@ -15046,11 +14122,7 @@
     },
     "config": {
       "placeholder": "Urbanus aequitas eveniet.",
-      "options": [
-        "earth",
-        "ceramic",
-        "tool"
-      ]
+      "options": ["earth", "ceramic", "tool"]
     },
     "logic": {},
     "status": "inactive",
@@ -15066,11 +14138,7 @@
     },
     "config": {
       "placeholder": "Altus somniculosus possimus.",
-      "options": [
-        "cutover",
-        "scaffold",
-        "license"
-      ]
+      "options": ["cutover", "scaffold", "license"]
     },
     "logic": {},
     "status": "inactive",
@@ -15133,11 +14201,7 @@
     },
     "config": {
       "placeholder": "Vulnero carmen brevis.",
-      "options": [
-        "resolve",
-        "tributary",
-        "hierarchy"
-      ]
+      "options": ["resolve", "tributary", "hierarchy"]
     },
     "logic": {},
     "status": "inactive",
@@ -15153,11 +14217,7 @@
     },
     "config": {
       "placeholder": "Cinis sint cenaculum.",
-      "options": [
-        "cope",
-        "courtroom",
-        "discourse"
-      ]
+      "options": ["cope", "courtroom", "discourse"]
     },
     "logic": {},
     "status": "inactive",
@@ -15188,11 +14248,7 @@
     },
     "config": {
       "placeholder": "Eum deripio cunabula.",
-      "options": [
-        "rationale",
-        "numeric",
-        "halt"
-      ]
+      "options": ["rationale", "numeric", "halt"]
     },
     "logic": {},
     "status": "active",
@@ -15240,11 +14296,7 @@
     },
     "config": {
       "placeholder": "Conspergo comptus voluntarius.",
-      "options": [
-        "secret",
-        "rule",
-        "fog"
-      ]
+      "options": ["secret", "rule", "fog"]
     },
     "logic": {},
     "status": "inactive",
@@ -15386,11 +14438,7 @@
     },
     "config": {
       "placeholder": "Brevis ceno aequus.",
-      "options": [
-        "request",
-        "strategy",
-        "story"
-      ]
+      "options": ["request", "strategy", "story"]
     },
     "logic": {},
     "status": "inactive",
@@ -15440,11 +14488,7 @@
     },
     "config": {
       "placeholder": "Amitto validus averto.",
-      "options": [
-        "soliloquy",
-        "straw",
-        "marksman"
-      ]
+      "options": ["soliloquy", "straw", "marksman"]
     },
     "logic": {},
     "status": "active",
@@ -15507,11 +14551,7 @@
     },
     "config": {
       "placeholder": "Adsum censura dolore.",
-      "options": [
-        "birdcage",
-        "sock",
-        "fencing"
-      ]
+      "options": ["birdcage", "sock", "fencing"]
     },
     "logic": {},
     "status": "inactive",
@@ -15638,11 +14678,7 @@
     },
     "config": {
       "placeholder": "Tutis ait capio.",
-      "options": [
-        "dead",
-        "guide",
-        "freezing"
-      ]
+      "options": ["dead", "guide", "freezing"]
     },
     "logic": {},
     "status": "active",
@@ -15752,11 +14788,7 @@
     },
     "config": {
       "placeholder": "Conturbo apto acquiro.",
-      "options": [
-        "swing",
-        "gazebo",
-        "marimba"
-      ]
+      "options": ["swing", "gazebo", "marimba"]
     },
     "logic": {},
     "status": "active",
@@ -15898,11 +14930,7 @@
     },
     "config": {
       "placeholder": "Speculum capio verumtamen.",
-      "options": [
-        "roundabout",
-        "produce",
-        "caption"
-      ]
+      "options": ["roundabout", "produce", "caption"]
     },
     "logic": {},
     "status": "inactive",
@@ -15918,11 +14946,7 @@
     },
     "config": {
       "placeholder": "Argumentum validus attollo.",
-      "options": [
-        "confusion",
-        "waterspout",
-        "role"
-      ]
+      "options": ["confusion", "waterspout", "role"]
     },
     "logic": {},
     "status": "active",
@@ -15938,11 +14962,7 @@
     },
     "config": {
       "placeholder": "Et cupiditate contra.",
-      "options": [
-        "bin",
-        "mozzarella",
-        "knight"
-      ]
+      "options": ["bin", "mozzarella", "knight"]
     },
     "logic": {},
     "status": "active",
@@ -15990,11 +15010,7 @@
     },
     "config": {
       "placeholder": "Dolor trado velociter.",
-      "options": [
-        "blowgun",
-        "embossing",
-        "casket"
-      ]
+      "options": ["blowgun", "embossing", "casket"]
     },
     "logic": {},
     "status": "inactive",
@@ -16010,11 +15026,7 @@
     },
     "config": {
       "placeholder": "Curiositas arceo quibusdam.",
-      "options": [
-        "manner",
-        "parade",
-        "heartbeat"
-      ]
+      "options": ["manner", "parade", "heartbeat"]
     },
     "logic": {},
     "status": "active",
@@ -16030,11 +15042,7 @@
     },
     "config": {
       "placeholder": "Alveus cultellus surgo.",
-      "options": [
-        "saw",
-        "boyfriend",
-        "stay"
-      ]
+      "options": ["saw", "boyfriend", "stay"]
     },
     "logic": {},
     "status": "inactive",
@@ -16084,11 +15092,7 @@
     },
     "config": {
       "placeholder": "Casso cur utilis.",
-      "options": [
-        "tentacle",
-        "conservation",
-        "marathon"
-      ]
+      "options": ["tentacle", "conservation", "marathon"]
     },
     "logic": {},
     "status": "active",
@@ -16245,11 +15249,7 @@
     },
     "config": {
       "placeholder": "Delicate arbor argumentum.",
-      "options": [
-        "disclosure",
-        "synergy",
-        "hawk"
-      ]
+      "options": ["disclosure", "synergy", "hawk"]
     },
     "logic": {},
     "status": "active",
@@ -16344,11 +15344,7 @@
     },
     "config": {
       "placeholder": "Possimus tondeo suppellex.",
-      "options": [
-        "finger",
-        "obedience",
-        "pecan"
-      ]
+      "options": ["finger", "obedience", "pecan"]
     },
     "logic": {},
     "status": "inactive",
@@ -16364,11 +15360,7 @@
     },
     "config": {
       "placeholder": "Tendo adulescens vicissitudo.",
-      "options": [
-        "tinderbox",
-        "testing",
-        "whack"
-      ]
+      "options": ["tinderbox", "testing", "whack"]
     },
     "logic": {},
     "status": "active",
@@ -16384,11 +15376,7 @@
     },
     "config": {
       "placeholder": "Aro a ut.",
-      "options": [
-        "amnesty",
-        "humor",
-        "reasoning"
-      ]
+      "options": ["amnesty", "humor", "reasoning"]
     },
     "logic": {},
     "status": "inactive",
@@ -16404,11 +15392,7 @@
     },
     "config": {
       "placeholder": "Animus abutor advoco.",
-      "options": [
-        "boyfriend",
-        "alert",
-        "parade"
-      ]
+      "options": ["boyfriend", "alert", "parade"]
     },
     "logic": {},
     "status": "active",
@@ -16424,11 +15408,7 @@
     },
     "config": {
       "placeholder": "Minima sumptus tricesimus.",
-      "options": [
-        "fisherman",
-        "lift",
-        "sticker"
-      ]
+      "options": ["fisherman", "lift", "sticker"]
     },
     "logic": {},
     "status": "inactive",
@@ -16444,11 +15424,7 @@
     },
     "config": {
       "placeholder": "Unde peccatus autus.",
-      "options": [
-        "peninsula",
-        "lift",
-        "advancement"
-      ]
+      "options": ["peninsula", "lift", "advancement"]
     },
     "logic": {},
     "status": "active",
@@ -16528,11 +15504,7 @@
     },
     "config": {
       "placeholder": "Tribuo tantum cum.",
-      "options": [
-        "exhaust",
-        "overheard",
-        "decryption"
-      ]
+      "options": ["exhaust", "overheard", "decryption"]
     },
     "logic": {},
     "status": "active",
@@ -16593,11 +15565,7 @@
     },
     "config": {
       "placeholder": "Tenus veniam auctor.",
-      "options": [
-        "fold",
-        "platter",
-        "monster"
-      ]
+      "options": ["fold", "platter", "monster"]
     },
     "logic": {},
     "status": "active",
@@ -16613,11 +15581,7 @@
     },
     "config": {
       "placeholder": "Adfectus urbanus adulescens.",
-      "options": [
-        "polarisation",
-        "legend",
-        "marketplace"
-      ]
+      "options": ["polarisation", "legend", "marketplace"]
     },
     "logic": {},
     "status": "inactive",
@@ -16633,11 +15597,7 @@
     },
     "config": {
       "placeholder": "Tibi creta abundans.",
-      "options": [
-        "widow",
-        "hello",
-        "tectonics"
-      ]
+      "options": ["widow", "hello", "tectonics"]
     },
     "logic": {},
     "status": "active",
@@ -16670,11 +15630,7 @@
     },
     "config": {
       "placeholder": "Doloremque terminatio tendo.",
-      "options": [
-        "bran",
-        "sauerkraut",
-        "pinstripe"
-      ]
+      "options": ["bran", "sauerkraut", "pinstripe"]
     },
     "logic": {},
     "status": "inactive",
@@ -16705,11 +15661,7 @@
     },
     "config": {
       "placeholder": "Vestrum aeneus blanditiis.",
-      "options": [
-        "mantua",
-        "overheard",
-        "scrap"
-      ]
+      "options": ["mantua", "overheard", "scrap"]
     },
     "logic": {},
     "status": "inactive",
@@ -16725,11 +15677,7 @@
     },
     "config": {
       "placeholder": "Thema claudeo audacia.",
-      "options": [
-        "coal",
-        "eternity",
-        "chasuble"
-      ]
+      "options": ["coal", "eternity", "chasuble"]
     },
     "logic": {},
     "status": "active",

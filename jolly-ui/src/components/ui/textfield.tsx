@@ -4,19 +4,19 @@ import {
   TextField as AriaTextField,
   composeRenderProps,
   Text,
-} from "react-aria-components"
+} from "react-aria-components";
 import type {
   InputProps as AriaInputProps,
   TextAreaProps as AriaTextAreaProps,
   TextFieldProps as AriaTextFieldProps,
   ValidationResult as AriaValidationResult,
-} from "react-aria-components"
+} from "react-aria-components";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-import { FieldError, Label } from "./field"
+import { FieldError, Label } from "./field";
 
-const TextField = AriaTextField
+const TextField = AriaTextField;
 
 const Input = ({ className, ...props }: AriaInputProps) => {
   return (
@@ -30,13 +30,13 @@ const Input = ({ className, ...props }: AriaInputProps) => {
           "data-[focused]:outline-none data-[focused]:ring-2 data-[focused]:ring-ring data-[focused]:ring-offset-2",
           /* Resets */
           "focus-visible:outline-none",
-          className
-        )
+          className,
+        ),
       )}
       {...props}
     />
-  )
-}
+  );
+};
 
 const TextArea = ({ className, ...props }: AriaTextAreaProps) => {
   return (
@@ -50,20 +50,20 @@ const TextArea = ({ className, ...props }: AriaTextAreaProps) => {
           "data-[disabled]:cursor-not-allowed data-[disabled]:opacity-50",
           /* Resets */
           "focus-visible:outline-none",
-          className
-        )
+          className,
+        ),
       )}
       {...props}
     />
-  )
-}
+  );
+};
 
 interface JollyTextFieldProps extends AriaTextFieldProps {
-  label?: string
-  description?: string
-  errorMessage?: string | ((validation: AriaValidationResult) => string)
-  textArea?: boolean
-  placeholder?: string
+  label?: string;
+  description?: string;
+  errorMessage?: string | ((validation: AriaValidationResult) => string);
+  textArea?: boolean;
+  placeholder?: string;
 }
 
 function JollyTextField({
@@ -78,16 +78,12 @@ function JollyTextField({
   return (
     <TextField
       className={composeRenderProps(className, (className) =>
-        cn("group flex flex-col gap-2", className)
+        cn("group flex flex-col gap-2", className),
       )}
       {...props}
     >
       <Label>{label}</Label>
-      {textArea ? (
-        <TextArea placeholder={placeholder} />
-      ) : (
-        <Input placeholder={placeholder} />
-      )}
+      {textArea ? <TextArea placeholder={placeholder} /> : <Input placeholder={placeholder} />}
       {description && (
         <Text className="text-sm text-muted-foreground" slot="description">
           {description}
@@ -95,8 +91,8 @@ function JollyTextField({
       )}
       <FieldError>{errorMessage}</FieldError>
     </TextField>
-  )
+  );
 }
 
-export { Input, TextField, JollyTextField, TextArea }
-export type { JollyTextFieldProps }
+export { Input, TextField, JollyTextField, TextArea };
+export type { JollyTextFieldProps };

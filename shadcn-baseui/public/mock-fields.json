@@ -11,11 +11,7 @@
     },
     "config": {
       "placeholder": "Defluo ducimus vallum volup speculum adopto nostrum.",
-      "options": [
-        "worst",
-        "frivolous",
-        "sparkling"
-      ]
+      "options": ["worst", "frivolous", "sparkling"]
     }
   },
   {
@@ -30,11 +26,7 @@
     },
     "config": {
       "placeholder": "Sint agnosco a tonsor hic blanditiis solutio utique cervus tondeo.",
-      "options": [
-        "boring",
-        "repentant",
-        "frozen"
-      ]
+      "options": ["boring", "repentant", "frozen"]
     }
   },
   {
@@ -49,11 +41,7 @@
     },
     "config": {
       "placeholder": "Deinde aveho totam.",
-      "options": [
-        "genuine",
-        "powerless",
-        "strict"
-      ]
+      "options": ["genuine", "powerless", "strict"]
     }
   },
   {
@@ -112,11 +100,7 @@
     },
     "config": {
       "placeholder": "Cometes decor adimpleo solvo angelus constans cicuta quae vulariter beatus.",
-      "options": [
-        "stingy",
-        "excited",
-        "wiggly"
-      ]
+      "options": ["stingy", "excited", "wiggly"]
     }
   },
   {
@@ -161,11 +145,7 @@
     },
     "config": {
       "placeholder": "Deprecator auxilium vomica debitis deprecator praesentium sublime excepturi adversus omnis.",
-      "options": [
-        "silent",
-        "crazy",
-        "glass"
-      ]
+      "options": ["silent", "crazy", "glass"]
     }
   },
   {
@@ -268,11 +248,7 @@
     },
     "config": {
       "placeholder": "Tempore quidem exercitationem abscido teres cometes vacuus.",
-      "options": [
-        "soggy",
-        "chubby",
-        "mindless"
-      ]
+      "options": ["soggy", "chubby", "mindless"]
     }
   },
   {
@@ -287,11 +263,7 @@
     },
     "config": {
       "placeholder": "Audentia arto sumptus baiulus cinis.",
-      "options": [
-        "tempting",
-        "striking",
-        "tired"
-      ]
+      "options": ["tempting", "striking", "tired"]
     }
   },
   {
@@ -320,11 +292,7 @@
     },
     "config": {
       "placeholder": "Ascisco capitulus abduco suppono trado adopto appello tristis celo.",
-      "options": [
-        "agitated",
-        "winged",
-        "deficient"
-      ]
+      "options": ["agitated", "winged", "deficient"]
     }
   },
   {
@@ -381,11 +349,7 @@
     },
     "config": {
       "placeholder": "Vulgaris caste sed absorbeo amo amet.",
-      "options": [
-        "messy",
-        "self-assured",
-        "palatable"
-      ]
+      "options": ["messy", "self-assured", "palatable"]
     }
   },
   {
@@ -536,11 +500,7 @@
     },
     "config": {
       "placeholder": "Natus ipsum alius dedecor minima pariatur trado alii.",
-      "options": [
-        "exalted",
-        "slow",
-        "prickly"
-      ]
+      "options": ["exalted", "slow", "prickly"]
     }
   },
   {
@@ -569,11 +529,7 @@
     },
     "config": {
       "placeholder": "Bos confugo decor compello.",
-      "options": [
-        "excited",
-        "fortunate",
-        "evil"
-      ]
+      "options": ["excited", "fortunate", "evil"]
     }
   },
   {
@@ -648,11 +604,7 @@
     },
     "config": {
       "placeholder": "Despecto vae deprimo.",
-      "options": [
-        "unkempt",
-        "excitable",
-        "chubby"
-      ]
+      "options": ["unkempt", "excitable", "chubby"]
     }
   },
   {
@@ -737,11 +689,7 @@
     },
     "config": {
       "placeholder": "Eum tantillus alo congregatio patior excepturi amiculum vorago allatus corporis.",
-      "options": [
-        "grubby",
-        "windy",
-        "selfish"
-      ]
+      "options": ["grubby", "windy", "selfish"]
     }
   },
   {
@@ -770,11 +718,7 @@
     },
     "config": {
       "placeholder": "Ultio volaticus cruentus tenus cervus amo.",
-      "options": [
-        "radiant",
-        "rich",
-        "tasty"
-      ]
+      "options": ["radiant", "rich", "tasty"]
     }
   },
   {
@@ -851,11 +795,7 @@
     },
     "config": {
       "placeholder": "Asperiores currus comparo vesica creator xiphias.",
-      "options": [
-        "pricey",
-        "sticky",
-        "insecure"
-      ]
+      "options": ["pricey", "sticky", "insecure"]
     }
   },
   {
@@ -900,11 +840,7 @@
     },
     "config": {
       "placeholder": "Deduco advoco cunae deinde itaque calcar coniecto.",
-      "options": [
-        "obvious",
-        "nifty",
-        "limping"
-      ]
+      "options": ["obvious", "nifty", "limping"]
     }
   },
   {
@@ -991,11 +927,7 @@
     },
     "config": {
       "placeholder": "Texo voluptatem thesaurus.",
-      "options": [
-        "cheap",
-        "polished",
-        "remarkable"
-      ]
+      "options": ["cheap", "polished", "remarkable"]
     }
   },
   {
@@ -1258,11 +1190,7 @@
     },
     "config": {
       "placeholder": "Catena clibanus subseco.",
-      "options": [
-        "rough",
-        "artistic",
-        "private"
-      ]
+      "options": ["rough", "artistic", "private"]
     }
   },
   {
@@ -1277,11 +1205,7 @@
     },
     "config": {
       "placeholder": "Vitium conduco quas.",
-      "options": [
-        "international",
-        "accurate",
-        "bleak"
-      ]
+      "options": ["international", "accurate", "bleak"]
     }
   },
   {
@@ -1504,11 +1428,7 @@
     },
     "config": {
       "placeholder": "Adversus decerno suffragium.",
-      "options": [
-        "spherical",
-        "amazing",
-        "crafty"
-      ]
+      "options": ["spherical", "amazing", "crafty"]
     }
   },
   {
@@ -1641,11 +1561,7 @@
     },
     "config": {
       "placeholder": "Adversus conturbo qui voro consectetur decor territo.",
-      "options": [
-        "sardonic",
-        "equatorial",
-        "darling"
-      ]
+      "options": ["sardonic", "equatorial", "darling"]
     }
   },
   {
@@ -1660,11 +1576,7 @@
     },
     "config": {
       "placeholder": "Vilitas admoveo vox cresco argentum.",
-      "options": [
-        "unsung",
-        "sinful",
-        "steep"
-      ]
+      "options": ["unsung", "sinful", "steep"]
     }
   },
   {
@@ -1917,11 +1829,7 @@
     },
     "config": {
       "placeholder": "Ascit curso suasoria appello caecus trepide defero.",
-      "options": [
-        "parallel",
-        "timely",
-        "querulous"
-      ]
+      "options": ["parallel", "timely", "querulous"]
     }
   },
   {
@@ -2110,11 +2018,7 @@
     },
     "config": {
       "placeholder": "Deleniti abbas amplus magnam aro clarus.",
-      "options": [
-        "ideal",
-        "serene",
-        "stunning"
-      ]
+      "options": ["ideal", "serene", "stunning"]
     }
   },
   {
@@ -2157,11 +2061,7 @@
     },
     "config": {
       "placeholder": "Compono amo deleo voluptatem ascisco.",
-      "options": [
-        "abandoned",
-        "definite",
-        "sour"
-      ]
+      "options": ["abandoned", "definite", "sour"]
     }
   },
   {
@@ -2190,11 +2090,7 @@
     },
     "config": {
       "placeholder": "Calamitas solvo capillus.",
-      "options": [
-        "major",
-        "courageous",
-        "better"
-      ]
+      "options": ["major", "courageous", "better"]
     }
   },
   {
@@ -2309,11 +2205,7 @@
     },
     "config": {
       "placeholder": "Apud sumo odit vestrum adficio cauda fugit xiphias truculenter.",
-      "options": [
-        "disloyal",
-        "worthwhile",
-        "surprised"
-      ]
+      "options": ["disloyal", "worthwhile", "surprised"]
     }
   },
   {
@@ -2414,11 +2306,7 @@
     },
     "config": {
       "placeholder": "Torrens atque sumptus.",
-      "options": [
-        "new",
-        "vibrant",
-        "colorful"
-      ]
+      "options": ["new", "vibrant", "colorful"]
     }
   },
   {
@@ -2447,11 +2335,7 @@
     },
     "config": {
       "placeholder": "Paens vapulus communis.",
-      "options": [
-        "bogus",
-        "flustered",
-        "weary"
-      ]
+      "options": ["bogus", "flustered", "weary"]
     }
   },
   {
@@ -2496,11 +2380,7 @@
     },
     "config": {
       "placeholder": "Patior urbs denego conscendo venustas depono vicinus utrimque voluptatum.",
-      "options": [
-        "nervous",
-        "insignificant",
-        "accurate"
-      ]
+      "options": ["nervous", "insignificant", "accurate"]
     }
   },
   {
@@ -2515,11 +2395,7 @@
     },
     "config": {
       "placeholder": "Bonus antiquus vorax comprehendo annus vulpes.",
-      "options": [
-        "tricky",
-        "some",
-        "raw"
-      ]
+      "options": ["tricky", "some", "raw"]
     }
   },
   {
@@ -2580,11 +2456,7 @@
     },
     "config": {
       "placeholder": "Desparatus crux conicio surculus.",
-      "options": [
-        "immense",
-        "milky",
-        "each"
-      ]
+      "options": ["immense", "milky", "each"]
     }
   },
   {
@@ -2629,11 +2501,7 @@
     },
     "config": {
       "placeholder": "Desidero maxime sursum denuo provident usus caveo absum trans.",
-      "options": [
-        "glum",
-        "that",
-        "general"
-      ]
+      "options": ["glum", "that", "general"]
     }
   },
   {
@@ -2756,11 +2624,7 @@
     },
     "config": {
       "placeholder": "Arcesso tersus atrocitas crastinus.",
-      "options": [
-        "thick",
-        "both",
-        "self-assured"
-      ]
+      "options": ["thick", "both", "self-assured"]
     }
   },
   {
@@ -2877,11 +2741,7 @@
     },
     "config": {
       "placeholder": "Creo solitudo addo non.",
-      "options": [
-        "beloved",
-        "negligible",
-        "enlightened"
-      ]
+      "options": ["beloved", "negligible", "enlightened"]
     }
   },
   {
@@ -2938,11 +2798,7 @@
     },
     "config": {
       "placeholder": "Aut patrocinor thesis vox beneficium cum pauper repellendus.",
-      "options": [
-        "unusual",
-        "honorable",
-        "deadly"
-      ]
+      "options": ["unusual", "honorable", "deadly"]
     }
   },
   {
@@ -3103,11 +2959,7 @@
     },
     "config": {
       "placeholder": "Volaticus curtus veniam cariosus thermae cena.",
-      "options": [
-        "black",
-        "kooky",
-        "metallic"
-      ]
+      "options": ["black", "kooky", "metallic"]
     }
   },
   {
@@ -3222,11 +3074,7 @@
     },
     "config": {
       "placeholder": "Aeger surculus civitas maxime deleniti cometes doloremque acsi.",
-      "options": [
-        "minor",
-        "lighthearted",
-        "pale"
-      ]
+      "options": ["minor", "lighthearted", "pale"]
     }
   },
   {
@@ -3283,11 +3131,7 @@
     },
     "config": {
       "placeholder": "Cultura clarus tamisium.",
-      "options": [
-        "short",
-        "haunting",
-        "moist"
-      ]
+      "options": ["short", "haunting", "moist"]
     }
   },
   {
@@ -3330,11 +3174,7 @@
     },
     "config": {
       "placeholder": "Desolo atrox necessitatibus laudantium vespillo cur tricesimus nulla accendo.",
-      "options": [
-        "pastel",
-        "appropriate",
-        "other"
-      ]
+      "options": ["pastel", "appropriate", "other"]
     }
   },
   {
@@ -3391,11 +3231,7 @@
     },
     "config": {
       "placeholder": "Inflammatio vestrum cohibeo tergo aegrus amet demo.",
-      "options": [
-        "urban",
-        "ultimate",
-        "acclaimed"
-      ]
+      "options": ["urban", "ultimate", "acclaimed"]
     }
   },
   {
@@ -3454,11 +3290,7 @@
     },
     "config": {
       "placeholder": "Vae solium sumo amo conitor.",
-      "options": [
-        "hard-to-find",
-        "likely",
-        "judicious"
-      ]
+      "options": ["hard-to-find", "likely", "judicious"]
     }
   },
   {
@@ -3487,11 +3319,7 @@
     },
     "config": {
       "placeholder": "Copiose denego contigo ab una theca animus velit.",
-      "options": [
-        "agile",
-        "potable",
-        "other"
-      ]
+      "options": ["agile", "potable", "other"]
     }
   },
   {
@@ -3656,11 +3484,7 @@
     },
     "config": {
       "placeholder": "Conservo terror terminatio vilitas.",
-      "options": [
-        "aching",
-        "rubbery",
-        "unfortunate"
-      ]
+      "options": ["aching", "rubbery", "unfortunate"]
     }
   },
   {
@@ -3719,11 +3543,7 @@
     },
     "config": {
       "placeholder": "Similique comminor debeo.",
-      "options": [
-        "enchanting",
-        "sophisticated",
-        "which"
-      ]
+      "options": ["enchanting", "sophisticated", "which"]
     }
   },
   {
@@ -3796,11 +3616,7 @@
     },
     "config": {
       "placeholder": "Astrum thermae aureus conturbo verto abscido utilis usitas.",
-      "options": [
-        "cavernous",
-        "prickly",
-        "mealy"
-      ]
+      "options": ["cavernous", "prickly", "mealy"]
     }
   },
   {
@@ -3857,11 +3673,7 @@
     },
     "config": {
       "placeholder": "Tutamen tubineus cometes curtus odit decerno supplanto temporibus.",
-      "options": [
-        "recent",
-        "aggravating",
-        "trusting"
-      ]
+      "options": ["recent", "aggravating", "trusting"]
     }
   },
   {
@@ -3876,11 +3688,7 @@
     },
     "config": {
       "placeholder": "Textus tabesco reiciendis demo veniam dolores caveo.",
-      "options": [
-        "outlandish",
-        "entire",
-        "perky"
-      ]
+      "options": ["outlandish", "entire", "perky"]
     }
   },
   {
@@ -3951,11 +3759,7 @@
     },
     "config": {
       "placeholder": "Animadverto terreo delibero basium considero bellicus adhaero defessus consectetur chirographum.",
-      "options": [
-        "shady",
-        "quarterly",
-        "important"
-      ]
+      "options": ["shady", "quarterly", "important"]
     }
   },
   {
@@ -4070,11 +3874,7 @@
     },
     "config": {
       "placeholder": "Tamdiu veniam apto tremo degero thorax triumphus ullam brevis.",
-      "options": [
-        "joyful",
-        "average",
-        "valuable"
-      ]
+      "options": ["joyful", "average", "valuable"]
     }
   },
   {
@@ -4131,11 +3931,7 @@
     },
     "config": {
       "placeholder": "Agnitio adinventitias aeternus viriliter.",
-      "options": [
-        "candid",
-        "slight",
-        "wicked"
-      ]
+      "options": ["candid", "slight", "wicked"]
     }
   },
   {
@@ -4150,11 +3946,7 @@
     },
     "config": {
       "placeholder": "Amplus agnitio quos vinco urbs sulum quaerat vox.",
-      "options": [
-        "afraid",
-        "thorough",
-        "insistent"
-      ]
+      "options": ["afraid", "thorough", "insistent"]
     }
   },
   {
@@ -4197,11 +3989,7 @@
     },
     "config": {
       "placeholder": "Accendo sopor templum ascisco velut tamisium videlicet caritas quod ullam.",
-      "options": [
-        "urban",
-        "plump",
-        "unimportant"
-      ]
+      "options": ["urban", "plump", "unimportant"]
     }
   },
   {
@@ -4320,11 +4108,7 @@
     },
     "config": {
       "placeholder": "Tergeo aureus deinde tum.",
-      "options": [
-        "valuable",
-        "experienced",
-        "celebrated"
-      ]
+      "options": ["valuable", "experienced", "celebrated"]
     }
   },
   {
@@ -4371,11 +4155,7 @@
     },
     "config": {
       "placeholder": "Cruentus cuppedia bestia terreo compono exercitationem.",
-      "options": [
-        "affectionate",
-        "spiteful",
-        "insistent"
-      ]
+      "options": ["affectionate", "spiteful", "insistent"]
     }
   },
   {
@@ -4450,11 +4230,7 @@
     },
     "config": {
       "placeholder": "Adhuc doloribus abutor claro compello.",
-      "options": [
-        "jubilant",
-        "sarcastic",
-        "sticky"
-      ]
+      "options": ["jubilant", "sarcastic", "sticky"]
     }
   },
   {
@@ -4483,11 +4259,7 @@
     },
     "config": {
       "placeholder": "Sopor voluptatum casus.",
-      "options": [
-        "orange",
-        "right",
-        "urban"
-      ]
+      "options": ["orange", "right", "urban"]
     }
   },
   {
@@ -4532,11 +4304,7 @@
     },
     "config": {
       "placeholder": "Adduco vulgo causa statua ducimus benevolentia distinctio tenax voro absorbeo.",
-      "options": [
-        "chubby",
-        "hopeful",
-        "supportive"
-      ]
+      "options": ["chubby", "hopeful", "supportive"]
     }
   },
   {
@@ -4597,11 +4365,7 @@
     },
     "config": {
       "placeholder": "Canonicus angulus stella adfero callide arguo confido tandem.",
-      "options": [
-        "failing",
-        "educated",
-        "limp"
-      ]
+      "options": ["failing", "educated", "limp"]
     }
   },
   {
@@ -4644,11 +4408,7 @@
     },
     "config": {
       "placeholder": "Curatio decumbo subnecto.",
-      "options": [
-        "cultivated",
-        "incomplete",
-        "outrageous"
-      ]
+      "options": ["cultivated", "incomplete", "outrageous"]
     }
   },
   {
@@ -4679,11 +4439,7 @@
     },
     "config": {
       "placeholder": "Ducimus arbor stillicidium desolo ventosus delinquo subnecto cauda.",
-      "options": [
-        "unaware",
-        "bouncy",
-        "french"
-      ]
+      "options": ["unaware", "bouncy", "french"]
     }
   },
   {
@@ -4698,11 +4454,7 @@
     },
     "config": {
       "placeholder": "Iure bibo victoria vitium crux versus amaritudo.",
-      "options": [
-        "noted",
-        "well-lit",
-        "great"
-      ]
+      "options": ["noted", "well-lit", "great"]
     }
   },
   {
@@ -4731,11 +4483,7 @@
     },
     "config": {
       "placeholder": "Delicate tertius considero veniam delinquo triumphus sopor beatae aequus.",
-      "options": [
-        "improbable",
-        "filthy",
-        "thorny"
-      ]
+      "options": ["improbable", "filthy", "thorny"]
     }
   },
   {
@@ -4750,11 +4498,7 @@
     },
     "config": {
       "placeholder": "Usque virtus ulterius deprimo desipio.",
-      "options": [
-        "golden",
-        "antique",
-        "each"
-      ]
+      "options": ["golden", "antique", "each"]
     }
   },
   {
@@ -4855,11 +4599,7 @@
     },
     "config": {
       "placeholder": "Amita cinis atqui tamdiu tempora cicuta alo.",
-      "options": [
-        "scientific",
-        "rotten",
-        "waterlogged"
-      ]
+      "options": ["scientific", "rotten", "waterlogged"]
     }
   },
   {
@@ -4874,11 +4614,7 @@
     },
     "config": {
       "placeholder": "Absque viridis adhaero sursum maxime tenus currus crebro ademptio.",
-      "options": [
-        "front",
-        "agitated",
-        "posh"
-      ]
+      "options": ["front", "agitated", "posh"]
     }
   },
   {
@@ -4977,11 +4713,7 @@
     },
     "config": {
       "placeholder": "Utrum tumultus victoria.",
-      "options": [
-        "stylish",
-        "whispered",
-        "puny"
-      ]
+      "options": ["stylish", "whispered", "puny"]
     }
   },
   {
@@ -5010,11 +4742,7 @@
     },
     "config": {
       "placeholder": "Vindico stella auxilium solum crepusculum pariatur.",
-      "options": [
-        "thorny",
-        "noxious",
-        "shady"
-      ]
+      "options": ["thorny", "noxious", "shady"]
     }
   },
   {
@@ -5029,11 +4757,7 @@
     },
     "config": {
       "placeholder": "Vestigium convoco patrocinor labore ullus.",
-      "options": [
-        "self-assured",
-        "messy",
-        "experienced"
-      ]
+      "options": ["self-assured", "messy", "experienced"]
     }
   },
   {
@@ -5062,11 +4786,7 @@
     },
     "config": {
       "placeholder": "Terra corona contego canto.",
-      "options": [
-        "complicated",
-        "trivial",
-        "thin"
-      ]
+      "options": ["complicated", "trivial", "thin"]
     }
   },
   {
@@ -5275,11 +4995,7 @@
     },
     "config": {
       "placeholder": "Corpus assentator thorax usitas terror.",
-      "options": [
-        "astonishing",
-        "scientific",
-        "tinted"
-      ]
+      "options": ["astonishing", "scientific", "tinted"]
     }
   },
   {
@@ -5322,11 +5038,7 @@
     },
     "config": {
       "placeholder": "Volo tonsor spoliatio animi autus approbo facilis animus ascisco.",
-      "options": [
-        "snappy",
-        "stark",
-        "flimsy"
-      ]
+      "options": ["snappy", "stark", "flimsy"]
     }
   },
   {
@@ -5399,11 +5111,7 @@
     },
     "config": {
       "placeholder": "Porro voco suppellex curia.",
-      "options": [
-        "utter",
-        "rotten",
-        "bad"
-      ]
+      "options": ["utter", "rotten", "bad"]
     }
   },
   {
@@ -5536,11 +5244,7 @@
     },
     "config": {
       "placeholder": "Repudiandae summisse arbor.",
-      "options": [
-        "mealy",
-        "smoggy",
-        "remarkable"
-      ]
+      "options": ["mealy", "smoggy", "remarkable"]
     }
   },
   {
@@ -5569,11 +5273,7 @@
     },
     "config": {
       "placeholder": "Vereor quas astrum temeritas arbor atque.",
-      "options": [
-        "murky",
-        "colossal",
-        "vivid"
-      ]
+      "options": ["murky", "colossal", "vivid"]
     }
   },
   {
@@ -5646,11 +5346,7 @@
     },
     "config": {
       "placeholder": "Corporis debilito temporibus exercitationem tui chirographum solus vinculum videlicet anser.",
-      "options": [
-        "red",
-        "hollow",
-        "quick"
-      ]
+      "options": ["red", "hollow", "quick"]
     }
   },
   {
@@ -5721,11 +5417,7 @@
     },
     "config": {
       "placeholder": "Blanditiis solus reprehenderit clibanus valetudo crapula sortitus.",
-      "options": [
-        "total",
-        "oddball",
-        "flowery"
-      ]
+      "options": ["total", "oddball", "flowery"]
     }
   },
   {
@@ -5786,11 +5478,7 @@
     },
     "config": {
       "placeholder": "Contabesco tres natus cohibeo texo advenio.",
-      "options": [
-        "black-and-white",
-        "mundane",
-        "juvenile"
-      ]
+      "options": ["black-and-white", "mundane", "juvenile"]
     }
   },
   {
@@ -5805,11 +5493,7 @@
     },
     "config": {
       "placeholder": "Demum tonsor tamdiu unde volutabrum damnatio demulceo aperiam.",
-      "options": [
-        "rapid",
-        "stark",
-        "uncomfortable"
-      ]
+      "options": ["rapid", "stark", "uncomfortable"]
     }
   },
   {
@@ -5854,11 +5538,7 @@
     },
     "config": {
       "placeholder": "Damnatio tersus conicio cura ustilo.",
-      "options": [
-        "ripe",
-        "courteous",
-        "dependent"
-      ]
+      "options": ["ripe", "courteous", "dependent"]
     }
   },
   {
@@ -5873,11 +5553,7 @@
     },
     "config": {
       "placeholder": "Tamdiu convoco perspiciatis delectatio aestivus amaritudo barba quia umbra.",
-      "options": [
-        "swift",
-        "scary",
-        "imaginary"
-      ]
+      "options": ["swift", "scary", "imaginary"]
     }
   },
   {
@@ -5920,11 +5596,7 @@
     },
     "config": {
       "placeholder": "Talio argentum curiositas.",
-      "options": [
-        "lovable",
-        "posh",
-        "criminal"
-      ]
+      "options": ["lovable", "posh", "criminal"]
     }
   },
   {
@@ -5999,11 +5671,7 @@
     },
     "config": {
       "placeholder": "Surgo defendo suffoco articulus uter amor condico fugit adinventitias tertius.",
-      "options": [
-        "long",
-        "outrageous",
-        "bossy"
-      ]
+      "options": ["long", "outrageous", "bossy"]
     }
   },
   {
@@ -6060,11 +5728,7 @@
     },
     "config": {
       "placeholder": "Eum adeo una sui cum temporibus cubitum vitae voluptatem volutabrum.",
-      "options": [
-        "alert",
-        "trusty",
-        "mild"
-      ]
+      "options": ["alert", "trusty", "mild"]
     }
   },
   {
@@ -6079,11 +5743,7 @@
     },
     "config": {
       "placeholder": "Delectatio tero causa tersus tersus degusto adaugeo reprehenderit celer adficio.",
-      "options": [
-        "slimy",
-        "regal",
-        "muffled"
-      ]
+      "options": ["slimy", "regal", "muffled"]
     }
   },
   {
@@ -6184,11 +5844,7 @@
     },
     "config": {
       "placeholder": "Aedificium chirographum deprecator totidem.",
-      "options": [
-        "shocked",
-        "definitive",
-        "weary"
-      ]
+      "options": ["shocked", "definitive", "weary"]
     }
   },
   {
@@ -6203,11 +5859,7 @@
     },
     "config": {
       "placeholder": "Civitas laudantium solio ocer.",
-      "options": [
-        "optimal",
-        "unknown",
-        "juvenile"
-      ]
+      "options": ["optimal", "unknown", "juvenile"]
     }
   },
   {
@@ -6482,11 +6134,7 @@
     },
     "config": {
       "placeholder": "Velum cetera aro ancilla degenero curtus tabula quisquam.",
-      "options": [
-        "acceptable",
-        "shocked",
-        "kooky"
-      ]
+      "options": ["acceptable", "shocked", "kooky"]
     }
   },
   {
@@ -6547,11 +6195,7 @@
     },
     "config": {
       "placeholder": "Numquam facilis excepturi animus.",
-      "options": [
-        "puny",
-        "perfumed",
-        "free"
-      ]
+      "options": ["puny", "perfumed", "free"]
     }
   },
   {
@@ -6786,11 +6430,7 @@
     },
     "config": {
       "placeholder": "Currus abbas derideo tyrannus solio maiores depereo.",
-      "options": [
-        "tinted",
-        "outstanding",
-        "mysterious"
-      ]
+      "options": ["tinted", "outstanding", "mysterious"]
     }
   },
   {
@@ -6835,11 +6475,7 @@
     },
     "config": {
       "placeholder": "Suppellex tactus auditor dolorum balbus xiphias pecco trans vilitas cur.",
-      "options": [
-        "flowery",
-        "heavy",
-        "cheerful"
-      ]
+      "options": ["flowery", "heavy", "cheerful"]
     }
   },
   {
@@ -6896,11 +6532,7 @@
     },
     "config": {
       "placeholder": "Valetudo ait xiphias.",
-      "options": [
-        "far-off",
-        "unkempt",
-        "warm"
-      ]
+      "options": ["far-off", "unkempt", "warm"]
     }
   },
   {
@@ -6931,11 +6563,7 @@
     },
     "config": {
       "placeholder": "Adhaero adicio tubineus tero theca.",
-      "options": [
-        "innocent",
-        "muffled",
-        "nice"
-      ]
+      "options": ["innocent", "muffled", "nice"]
     }
   },
   {
@@ -6950,11 +6578,7 @@
     },
     "config": {
       "placeholder": "Tersus eaque enim cibus ventito thermae viridis consequatur cedo cura.",
-      "options": [
-        "surprised",
-        "serpentine",
-        "somber"
-      ]
+      "options": ["surprised", "serpentine", "somber"]
     }
   },
   {
@@ -6969,11 +6593,7 @@
     },
     "config": {
       "placeholder": "Ascit pariatur delectatio terror studio tabula decretum ars caveo demergo.",
-      "options": [
-        "marvelous",
-        "nice",
-        "lost"
-      ]
+      "options": ["marvelous", "nice", "lost"]
     }
   },
   {
@@ -6988,11 +6608,7 @@
     },
     "config": {
       "placeholder": "Terebro pel stipes.",
-      "options": [
-        "apt",
-        "bare",
-        "staid"
-      ]
+      "options": ["apt", "bare", "staid"]
     }
   },
   {
@@ -7021,11 +6637,7 @@
     },
     "config": {
       "placeholder": "Viriliter supellex cauda capto dolor toties tergo crinis comitatus.",
-      "options": [
-        "excitable",
-        "primary",
-        "bouncy"
-      ]
+      "options": ["excitable", "primary", "bouncy"]
     }
   },
   {
@@ -7070,11 +6682,7 @@
     },
     "config": {
       "placeholder": "Patrocinor cur patior animus trucido.",
-      "options": [
-        "witty",
-        "fake",
-        "curly"
-      ]
+      "options": ["witty", "fake", "curly"]
     }
   },
   {
@@ -7089,11 +6697,7 @@
     },
     "config": {
       "placeholder": "Succedo illum aiunt tertius deleniti quibusdam mollitia.",
-      "options": [
-        "sentimental",
-        "animated",
-        "roasted"
-      ]
+      "options": ["sentimental", "animated", "roasted"]
     }
   },
   {
@@ -7138,11 +6742,7 @@
     },
     "config": {
       "placeholder": "Aro volutabrum angelus incidunt magni.",
-      "options": [
-        "taut",
-        "whole",
-        "finished"
-      ]
+      "options": ["taut", "whole", "finished"]
     }
   },
   {
@@ -7229,11 +6829,7 @@
     },
     "config": {
       "placeholder": "Casso volva id thalassinus spoliatio decet.",
-      "options": [
-        "reasonable",
-        "irresponsible",
-        "quixotic"
-      ]
+      "options": ["reasonable", "irresponsible", "quixotic"]
     }
   },
   {
@@ -7368,11 +6964,7 @@
     },
     "config": {
       "placeholder": "Debeo voco bardus creo velut catena deficio admoneo verecundia.",
-      "options": [
-        "zesty",
-        "lumpy",
-        "meaty"
-      ]
+      "options": ["zesty", "lumpy", "meaty"]
     }
   },
   {
@@ -7401,11 +6993,7 @@
     },
     "config": {
       "placeholder": "Allatus sulum aestivus.",
-      "options": [
-        "careless",
-        "utilized",
-        "defenseless"
-      ]
+      "options": ["careless", "utilized", "defenseless"]
     }
   },
   {
@@ -7420,11 +7008,7 @@
     },
     "config": {
       "placeholder": "Solio studio defendo ascisco eum animadverto artificiose.",
-      "options": [
-        "that",
-        "stable",
-        "sick"
-      ]
+      "options": ["that", "stable", "sick"]
     }
   },
   {
@@ -7455,11 +7039,7 @@
     },
     "config": {
       "placeholder": "Dignissimos toties terra solus attonbitus bibo.",
-      "options": [
-        "tricky",
-        "scared",
-        "sweet"
-      ]
+      "options": ["tricky", "scared", "sweet"]
     }
   },
   {
@@ -7574,11 +7154,7 @@
     },
     "config": {
       "placeholder": "Demoror aliquid cauda bardus agnitio crudelis vero umbra tactus exercitationem.",
-      "options": [
-        "foolish",
-        "dental",
-        "shameful"
-      ]
+      "options": ["foolish", "dental", "shameful"]
     }
   },
   {
@@ -7593,11 +7169,7 @@
     },
     "config": {
       "placeholder": "Molestiae iste conatus comitatus certe dapifer defetiscor pecto.",
-      "options": [
-        "precious",
-        "wrong",
-        "present"
-      ]
+      "options": ["precious", "wrong", "present"]
     }
   },
   {
@@ -7744,11 +7316,7 @@
     },
     "config": {
       "placeholder": "Conservo corrumpo depromo clementia balbus.",
-      "options": [
-        "mushy",
-        "insignificant",
-        "frequent"
-      ]
+      "options": ["mushy", "insignificant", "frequent"]
     }
   },
   {
@@ -7793,11 +7361,7 @@
     },
     "config": {
       "placeholder": "Conspergo curto comburo.",
-      "options": [
-        "kosher",
-        "portly",
-        "yellowish"
-      ]
+      "options": ["kosher", "portly", "yellowish"]
     }
   },
   {
@@ -7826,11 +7390,7 @@
     },
     "config": {
       "placeholder": "Vir contabesco tamen ullam curiositas carcer.",
-      "options": [
-        "ruddy",
-        "mammoth",
-        "cluttered"
-      ]
+      "options": ["ruddy", "mammoth", "cluttered"]
     }
   },
   {
@@ -7875,11 +7435,7 @@
     },
     "config": {
       "placeholder": "Circumvenio coepi adaugeo.",
-      "options": [
-        "mindless",
-        "indelible",
-        "subdued"
-      ]
+      "options": ["mindless", "indelible", "subdued"]
     }
   },
   {
@@ -8058,11 +7614,7 @@
     },
     "config": {
       "placeholder": "Dapifer delectus cinis defleo ultra verbera crastinus acidus socius atque.",
-      "options": [
-        "juvenile",
-        "fatal",
-        "informal"
-      ]
+      "options": ["juvenile", "fatal", "informal"]
     }
   },
   {
@@ -8077,11 +7629,7 @@
     },
     "config": {
       "placeholder": "Uterque depraedor desolo volaticus.",
-      "options": [
-        "nippy",
-        "altruistic",
-        "funny"
-      ]
+      "options": ["nippy", "altruistic", "funny"]
     }
   },
   {
@@ -8110,11 +7658,7 @@
     },
     "config": {
       "placeholder": "Derideo verecundia ager.",
-      "options": [
-        "junior",
-        "willing",
-        "clean"
-      ]
+      "options": ["junior", "willing", "clean"]
     }
   },
   {
@@ -8143,11 +7687,7 @@
     },
     "config": {
       "placeholder": "Cognatus optio virgo cuppedia abutor cura canonicus utrum minus corpus.",
-      "options": [
-        "feline",
-        "fuzzy",
-        "rough"
-      ]
+      "options": ["feline", "fuzzy", "rough"]
     }
   },
   {
@@ -8262,11 +7802,7 @@
     },
     "config": {
       "placeholder": "Commodi vulnero adstringo patria debeo.",
-      "options": [
-        "powerful",
-        "international",
-        "heartfelt"
-      ]
+      "options": ["powerful", "international", "heartfelt"]
     }
   },
   {
@@ -8313,11 +7849,7 @@
     },
     "config": {
       "placeholder": "Solium creber recusandae amita amplus congregatio.",
-      "options": [
-        "meager",
-        "uneven",
-        "advanced"
-      ]
+      "options": ["meager", "uneven", "advanced"]
     }
   },
   {
@@ -8346,11 +7878,7 @@
     },
     "config": {
       "placeholder": "Cotidie attonbitus textor vestrum astrum.",
-      "options": [
-        "strong",
-        "joyous",
-        "actual"
-      ]
+      "options": ["strong", "joyous", "actual"]
     }
   },
   {
@@ -8443,11 +7971,7 @@
     },
     "config": {
       "placeholder": "Subseco condico audio pecto.",
-      "options": [
-        "magnificent",
-        "pricey",
-        "charming"
-      ]
+      "options": ["magnificent", "pricey", "charming"]
     }
   },
   {
@@ -8508,11 +8032,7 @@
     },
     "config": {
       "placeholder": "Timor sunt admiratio agnitio porro sit varietas.",
-      "options": [
-        "coordinated",
-        "unrealistic",
-        "utter"
-      ]
+      "options": ["coordinated", "unrealistic", "utter"]
     }
   },
   {
@@ -8527,11 +8047,7 @@
     },
     "config": {
       "placeholder": "Correptius desino adficio.",
-      "options": [
-        "well-groomed",
-        "grubby",
-        "excited"
-      ]
+      "options": ["well-groomed", "grubby", "excited"]
     }
   },
   {
@@ -8546,11 +8062,7 @@
     },
     "config": {
       "placeholder": "Dignissimos abeo aperiam studio.",
-      "options": [
-        "superficial",
-        "unkempt",
-        "crafty"
-      ]
+      "options": ["superficial", "unkempt", "crafty"]
     }
   },
   {
@@ -8579,11 +8091,7 @@
     },
     "config": {
       "placeholder": "Quisquam pel aequitas aduro commodo.",
-      "options": [
-        "actual",
-        "shallow",
-        "pure"
-      ]
+      "options": ["actual", "shallow", "pure"]
     }
   },
   {
@@ -8642,11 +8150,7 @@
     },
     "config": {
       "placeholder": "Coma doloremque tamdiu vilicus nobis.",
-      "options": [
-        "mealy",
-        "rural",
-        "honorable"
-      ]
+      "options": ["mealy", "rural", "honorable"]
     }
   },
   {
@@ -8705,11 +8209,7 @@
     },
     "config": {
       "placeholder": "Bibo vindico textus tabgo nisi.",
-      "options": [
-        "helpful",
-        "curly",
-        "shameful"
-      ]
+      "options": ["helpful", "curly", "shameful"]
     }
   },
   {
@@ -8754,11 +8254,7 @@
     },
     "config": {
       "placeholder": "Aurum sunt voco terra perferendis claudeo terra angelus dolore.",
-      "options": [
-        "tense",
-        "first",
-        "blushing"
-      ]
+      "options": ["tense", "first", "blushing"]
     }
   },
   {
@@ -8875,11 +8371,7 @@
     },
     "config": {
       "placeholder": "Audax angelus adaugeo conculco.",
-      "options": [
-        "trusting",
-        "speedy",
-        "lonely"
-      ]
+      "options": ["trusting", "speedy", "lonely"]
     }
   },
   {
@@ -8994,11 +8486,7 @@
     },
     "config": {
       "placeholder": "Corpus tempora similique adversus aut chirographum.",
-      "options": [
-        "authorized",
-        "trustworthy",
-        "sentimental"
-      ]
+      "options": ["authorized", "trustworthy", "sentimental"]
     }
   },
   {
@@ -9045,11 +8533,7 @@
     },
     "config": {
       "placeholder": "Officiis arcus summopere canto labore allatus caecus adversus verbum.",
-      "options": [
-        "glum",
-        "spiteful",
-        "minor"
-      ]
+      "options": ["glum", "spiteful", "minor"]
     }
   },
   {
@@ -9064,11 +8548,7 @@
     },
     "config": {
       "placeholder": "Astrum thesis accendo decor abundans crastinus nulla adimpleo veritas mollitia.",
-      "options": [
-        "ecstatic",
-        "muted",
-        "flawed"
-      ]
+      "options": ["ecstatic", "muted", "flawed"]
     }
   },
   {
@@ -9099,11 +8579,7 @@
     },
     "config": {
       "placeholder": "Tricesimus laboriosam demitto animadverto a adficio.",
-      "options": [
-        "unusual",
-        "small",
-        "soulful"
-      ]
+      "options": ["unusual", "small", "soulful"]
     }
   },
   {
@@ -9132,11 +8608,7 @@
     },
     "config": {
       "placeholder": "Trans vestrum summisse.",
-      "options": [
-        "unique",
-        "physical",
-        "burdensome"
-      ]
+      "options": ["unique", "physical", "burdensome"]
     }
   },
   {
@@ -9151,11 +8623,7 @@
     },
     "config": {
       "placeholder": "Laborum cibo vulgus amplus aequitas autem inflammatio sequi calculus.",
-      "options": [
-        "gifted",
-        "slimy",
-        "judicious"
-      ]
+      "options": ["gifted", "slimy", "judicious"]
     }
   },
   {
@@ -9170,11 +8638,7 @@
     },
     "config": {
       "placeholder": "Talio deporto ocer angelus cursus unde delego astrum deserunt xiphias.",
-      "options": [
-        "which",
-        "caring",
-        "mammoth"
-      ]
+      "options": ["which", "caring", "mammoth"]
     }
   },
   {
@@ -9203,11 +8667,7 @@
     },
     "config": {
       "placeholder": "Tum delicate sol catena perferendis atqui aedificium cupiditas aegrus sopor.",
-      "options": [
-        "tall",
-        "our",
-        "fake"
-      ]
+      "options": ["tall", "our", "fake"]
     }
   },
   {
@@ -9282,11 +8742,7 @@
     },
     "config": {
       "placeholder": "Campana uxor suscipit.",
-      "options": [
-        "gruesome",
-        "neglected",
-        "unlined"
-      ]
+      "options": ["gruesome", "neglected", "unlined"]
     }
   },
   {
@@ -9377,11 +8833,7 @@
     },
     "config": {
       "placeholder": "Cruentus benevolentia adamo umerus.",
-      "options": [
-        "sociable",
-        "meager",
-        "shameless"
-      ]
+      "options": ["sociable", "meager", "shameless"]
     }
   },
   {
@@ -9426,11 +8878,7 @@
     },
     "config": {
       "placeholder": "Avaritia despecto somniculosus.",
-      "options": [
-        "shady",
-        "instructive",
-        "rural"
-      ]
+      "options": ["shady", "instructive", "rural"]
     }
   },
   {
@@ -9445,11 +8893,7 @@
     },
     "config": {
       "placeholder": "Angulus textus denego deprimo comprehendo.",
-      "options": [
-        "short",
-        "internal",
-        "sleepy"
-      ]
+      "options": ["short", "internal", "sleepy"]
     }
   },
   {
@@ -9478,11 +8922,7 @@
     },
     "config": {
       "placeholder": "Decipio calamitas aeternus impedit optio alias videlicet delectus deficio.",
-      "options": [
-        "long-term",
-        "pink",
-        "second"
-      ]
+      "options": ["long-term", "pink", "second"]
     }
   },
   {
@@ -9525,11 +8965,7 @@
     },
     "config": {
       "placeholder": "Ascit coadunatio dens reprehenderit calco cohibeo congregatio.",
-      "options": [
-        "recent",
-        "amazing",
-        "trim"
-      ]
+      "options": ["recent", "amazing", "trim"]
     }
   },
   {
@@ -9604,11 +9040,7 @@
     },
     "config": {
       "placeholder": "Abscido baiulus conculco stips civis.",
-      "options": [
-        "wonderful",
-        "vain",
-        "dependent"
-      ]
+      "options": ["wonderful", "vain", "dependent"]
     }
   },
   {
@@ -9637,11 +9069,7 @@
     },
     "config": {
       "placeholder": "Officiis voluptas aro conventus angulus tardus cupiditate artificiose.",
-      "options": [
-        "scornful",
-        "unhealthy",
-        "unrealistic"
-      ]
+      "options": ["scornful", "unhealthy", "unrealistic"]
     }
   },
   {
@@ -9656,11 +9084,7 @@
     },
     "config": {
       "placeholder": "Blanditiis thesis demulceo aliquid ut vado autem solum repellendus quia.",
-      "options": [
-        "salty",
-        "avaricious",
-        "excited"
-      ]
+      "options": ["salty", "avaricious", "excited"]
     }
   },
   {
@@ -9705,11 +9129,7 @@
     },
     "config": {
       "placeholder": "Aranea demum accendo inflammatio repellendus vitae ultra.",
-      "options": [
-        "grizzled",
-        "authorized",
-        "extra-large"
-      ]
+      "options": ["grizzled", "authorized", "extra-large"]
     }
   },
   {
@@ -9782,11 +9202,7 @@
     },
     "config": {
       "placeholder": "Trans astrum tergum sui.",
-      "options": [
-        "flowery",
-        "trivial",
-        "willing"
-      ]
+      "options": ["flowery", "trivial", "willing"]
     }
   },
   {
@@ -9845,11 +9261,7 @@
     },
     "config": {
       "placeholder": "Aperiam magni somniculosus claro audax bene adversus vitium.",
-      "options": [
-        "prestigious",
-        "hasty",
-        "bossy"
-      ]
+      "options": ["prestigious", "hasty", "bossy"]
     }
   },
   {
@@ -9966,11 +9378,7 @@
     },
     "config": {
       "placeholder": "Ipsum audio comprehendo.",
-      "options": [
-        "liquid",
-        "yellowish",
-        "great"
-      ]
+      "options": ["liquid", "yellowish", "great"]
     }
   },
   {
@@ -10077,11 +9485,7 @@
     },
     "config": {
       "placeholder": "Officiis spero anser vetus.",
-      "options": [
-        "meager",
-        "tempting",
-        "competent"
-      ]
+      "options": ["meager", "tempting", "competent"]
     }
   },
   {
@@ -10166,11 +9570,7 @@
     },
     "config": {
       "placeholder": "Absque tenus autem pel cotidie alius tego assentator cultellus.",
-      "options": [
-        "exalted",
-        "tinted",
-        "stunning"
-      ]
+      "options": ["exalted", "tinted", "stunning"]
     }
   },
   {
@@ -10215,11 +9615,7 @@
     },
     "config": {
       "placeholder": "Vesica tremo contigo tres tondeo velociter ait.",
-      "options": [
-        "oily",
-        "hollow",
-        "utter"
-      ]
+      "options": ["oily", "hollow", "utter"]
     }
   },
   {
@@ -10234,11 +9630,7 @@
     },
     "config": {
       "placeholder": "Cetera circumvenio depromo consuasor adstringo adsuesco.",
-      "options": [
-        "lean",
-        "definitive",
-        "showy"
-      ]
+      "options": ["lean", "definitive", "showy"]
     }
   },
   {
@@ -10355,11 +9747,7 @@
     },
     "config": {
       "placeholder": "Corona acies clementia comprehendo tumultus eius clam.",
-      "options": [
-        "immense",
-        "courteous",
-        "unsung"
-      ]
+      "options": ["immense", "courteous", "unsung"]
     }
   },
   {
@@ -10432,11 +9820,7 @@
     },
     "config": {
       "placeholder": "Blandior strenuus capillus taceo amiculum.",
-      "options": [
-        "frizzy",
-        "great",
-        "far"
-      ]
+      "options": ["frizzy", "great", "far"]
     }
   },
   {
@@ -10451,11 +9835,7 @@
     },
     "config": {
       "placeholder": "Nesciunt quisquam callide turba admoneo.",
-      "options": [
-        "fond",
-        "silent",
-        "great"
-      ]
+      "options": ["fond", "silent", "great"]
     }
   },
   {
@@ -10734,11 +10114,7 @@
     },
     "config": {
       "placeholder": "Cur iste celo.",
-      "options": [
-        "immaculate",
-        "bleak",
-        "advanced"
-      ]
+      "options": ["immaculate", "bleak", "advanced"]
     }
   },
   {
@@ -10769,11 +10145,7 @@
     },
     "config": {
       "placeholder": "Armarium ratione saepe autus arto conscendo.",
-      "options": [
-        "insistent",
-        "windy",
-        "rosy"
-      ]
+      "options": ["insistent", "windy", "rosy"]
     }
   },
   {
@@ -10802,11 +10174,7 @@
     },
     "config": {
       "placeholder": "Corona beneficium coniuratio defetiscor vomito.",
-      "options": [
-        "svelte",
-        "whispered",
-        "brilliant"
-      ]
+      "options": ["svelte", "whispered", "brilliant"]
     }
   },
   {
@@ -10913,11 +10281,7 @@
     },
     "config": {
       "placeholder": "Suadeo ventus alo.",
-      "options": [
-        "pure",
-        "anguished",
-        "puzzled"
-      ]
+      "options": ["pure", "anguished", "puzzled"]
     }
   },
   {
@@ -10962,11 +10326,7 @@
     },
     "config": {
       "placeholder": "Pecto occaecati paens aedificium aetas aro suus abstergo administratio.",
-      "options": [
-        "flawed",
-        "informal",
-        "insignificant"
-      ]
+      "options": ["flawed", "informal", "insignificant"]
     }
   },
   {
@@ -10995,11 +10355,7 @@
     },
     "config": {
       "placeholder": "Suscipit censura umquam suscipit.",
-      "options": [
-        "palatable",
-        "circular",
-        "grubby"
-      ]
+      "options": ["palatable", "circular", "grubby"]
     }
   },
   {
@@ -11130,11 +10486,7 @@
     },
     "config": {
       "placeholder": "Strues deduco alii corrupti sunt terminatio.",
-      "options": [
-        "swift",
-        "steep",
-        "grave"
-      ]
+      "options": ["swift", "steep", "grave"]
     }
   },
   {
@@ -11221,11 +10573,7 @@
     },
     "config": {
       "placeholder": "Virgo bene aeneus sed temeritas speciosus adipiscor crepusculum.",
-      "options": [
-        "precious",
-        "naughty",
-        "repentant"
-      ]
+      "options": ["precious", "naughty", "repentant"]
     }
   },
   {
@@ -11284,11 +10632,7 @@
     },
     "config": {
       "placeholder": "Venia demoror contabesco tamdiu iste celer terebro spiritus.",
-      "options": [
-        "imaginary",
-        "digital",
-        "astonishing"
-      ]
+      "options": ["imaginary", "digital", "astonishing"]
     }
   },
   {
@@ -11377,11 +10721,7 @@
     },
     "config": {
       "placeholder": "Amplitudo derelinquo corroboro tribuo vulgus dicta utrum defleo solio cernuus.",
-      "options": [
-        "puzzled",
-        "lone",
-        "obedient"
-      ]
+      "options": ["puzzled", "lone", "obedient"]
     }
   },
   {
@@ -11424,11 +10764,7 @@
     },
     "config": {
       "placeholder": "Utroque decipio utroque admiratio abbas volo suffoco.",
-      "options": [
-        "bleak",
-        "stunning",
-        "medium"
-      ]
+      "options": ["bleak", "stunning", "medium"]
     }
   },
   {
@@ -11443,11 +10779,7 @@
     },
     "config": {
       "placeholder": "Tracto voluptatum casso vester.",
-      "options": [
-        "yellow",
-        "frank",
-        "youthful"
-      ]
+      "options": ["yellow", "frank", "youthful"]
     }
   },
   {
@@ -11462,11 +10794,7 @@
     },
     "config": {
       "placeholder": "Acceptus beatus tyrannus amaritudo suffoco provident aeternus torqueo depopulo fuga.",
-      "options": [
-        "respectful",
-        "massive",
-        "dependent"
-      ]
+      "options": ["respectful", "massive", "dependent"]
     }
   },
   {
@@ -11481,11 +10809,7 @@
     },
     "config": {
       "placeholder": "Rem toties vulnus defessus.",
-      "options": [
-        "foolish",
-        "writhing",
-        "oily"
-      ]
+      "options": ["foolish", "writhing", "oily"]
     }
   },
   {
@@ -11516,11 +10840,7 @@
     },
     "config": {
       "placeholder": "Canis aequus suus torqueo confugo caelum absconditus ventosus.",
-      "options": [
-        "petty",
-        "decent",
-        "gummy"
-      ]
+      "options": ["petty", "decent", "gummy"]
     }
   },
   {
@@ -11651,11 +10971,7 @@
     },
     "config": {
       "placeholder": "Arcus cui universe vilicus decens tamdiu.",
-      "options": [
-        "annual",
-        "quixotic",
-        "narrow"
-      ]
+      "options": ["annual", "quixotic", "narrow"]
     }
   },
   {
@@ -11728,11 +11044,7 @@
     },
     "config": {
       "placeholder": "Cubitum ullus curia aro cilicium tero.",
-      "options": [
-        "aching",
-        "warlike",
-        "steep"
-      ]
+      "options": ["aching", "warlike", "steep"]
     }
   },
   {
@@ -11763,11 +11075,7 @@
     },
     "config": {
       "placeholder": "Cubitum canto defaeco cursus caute pecus.",
-      "options": [
-        "shady",
-        "lanky",
-        "unselfish"
-      ]
+      "options": ["shady", "lanky", "unselfish"]
     }
   },
   {
@@ -11782,11 +11090,7 @@
     },
     "config": {
       "placeholder": "Amaritudo temptatio vilicus certe.",
-      "options": [
-        "cute",
-        "frizzy",
-        "awful"
-      ]
+      "options": ["cute", "frizzy", "awful"]
     }
   },
   {
@@ -11801,11 +11105,7 @@
     },
     "config": {
       "placeholder": "Appello cubo vergo.",
-      "options": [
-        "torn",
-        "inconsequential",
-        "clueless"
-      ]
+      "options": ["torn", "inconsequential", "clueless"]
     }
   },
   {
@@ -11862,11 +11162,7 @@
     },
     "config": {
       "placeholder": "Vere quibusdam ater repellat et.",
-      "options": [
-        "practical",
-        "brisk",
-        "short-term"
-      ]
+      "options": ["practical", "brisk", "short-term"]
     }
   },
   {
@@ -11881,11 +11177,7 @@
     },
     "config": {
       "placeholder": "Totidem callide cumque audentia unde soleo turba.",
-      "options": [
-        "fussy",
-        "respectful",
-        "ironclad"
-      ]
+      "options": ["fussy", "respectful", "ironclad"]
     }
   },
   {
@@ -11900,11 +11192,7 @@
     },
     "config": {
       "placeholder": "Vere cornu nulla dignissimos triduana.",
-      "options": [
-        "bad",
-        "frightened",
-        "graceful"
-      ]
+      "options": ["bad", "frightened", "graceful"]
     }
   },
   {
@@ -11965,11 +11253,7 @@
     },
     "config": {
       "placeholder": "Ante aurum succedo aufero coma valetudo a cohors solvo reprehenderit.",
-      "options": [
-        "shady",
-        "alive",
-        "extroverted"
-      ]
+      "options": ["shady", "alive", "extroverted"]
     }
   },
   {
@@ -11984,11 +11268,7 @@
     },
     "config": {
       "placeholder": "Tamen vesica spectaculum assumenda decerno eos.",
-      "options": [
-        "unselfish",
-        "bustling",
-        "quarrelsome"
-      ]
+      "options": ["unselfish", "bustling", "quarrelsome"]
     }
   },
   {
@@ -12017,11 +11297,7 @@
     },
     "config": {
       "placeholder": "Exercitationem vacuus odit deputo consequatur angustus verbera antepono desipio.",
-      "options": [
-        "defensive",
-        "cheerful",
-        "gifted"
-      ]
+      "options": ["defensive", "cheerful", "gifted"]
     }
   },
   {
@@ -12124,11 +11400,7 @@
     },
     "config": {
       "placeholder": "Adflicto usus xiphias.",
-      "options": [
-        "mammoth",
-        "stingy",
-        "smart"
-      ]
+      "options": ["mammoth", "stingy", "smart"]
     }
   },
   {
@@ -12187,11 +11459,7 @@
     },
     "config": {
       "placeholder": "Cumque dicta clam verumtamen ultio.",
-      "options": [
-        "wobbly",
-        "definitive",
-        "nifty"
-      ]
+      "options": ["wobbly", "definitive", "nifty"]
     }
   },
   {
@@ -12264,11 +11532,7 @@
     },
     "config": {
       "placeholder": "Temporibus reprehenderit comitatus adipisci blanditiis suus decerno decor.",
-      "options": [
-        "red",
-        "fixed",
-        "snoopy"
-      ]
+      "options": ["red", "fixed", "snoopy"]
     }
   },
   {
@@ -12385,11 +11649,7 @@
     },
     "config": {
       "placeholder": "Defleo subnecto aliquid allatus corroboro canonicus pecco celebrer.",
-      "options": [
-        "artistic",
-        "silver",
-        "noteworthy"
-      ]
+      "options": ["artistic", "silver", "noteworthy"]
     }
   },
   {
@@ -12446,11 +11706,7 @@
     },
     "config": {
       "placeholder": "Terebro clibanus vaco vinculum tollo cruentus comprehendo temperantia utrimque.",
-      "options": [
-        "sarcastic",
-        "outgoing",
-        "impeccable"
-      ]
+      "options": ["sarcastic", "outgoing", "impeccable"]
     }
   },
   {
@@ -12525,11 +11781,7 @@
     },
     "config": {
       "placeholder": "Tergum celebrer carmen terga campana patruus ventosus coerceo.",
-      "options": [
-        "tragic",
-        "private",
-        "sparse"
-      ]
+      "options": ["tragic", "private", "sparse"]
     }
   },
   {
@@ -12606,11 +11858,7 @@
     },
     "config": {
       "placeholder": "Antea vesper dolorem admitto turpis validus chirographum voluntarius quos vesper.",
-      "options": [
-        "secret",
-        "ashamed",
-        "useless"
-      ]
+      "options": ["secret", "ashamed", "useless"]
     }
   },
   {
@@ -12639,11 +11887,7 @@
     },
     "config": {
       "placeholder": "Depromo utique centum vesica delectatio.",
-      "options": [
-        "jumbo",
-        "personal",
-        "handy"
-      ]
+      "options": ["jumbo", "personal", "handy"]
     }
   },
   {
@@ -12672,11 +11916,7 @@
     },
     "config": {
       "placeholder": "Adversus denique speciosus veniam subvenio circumvenio.",
-      "options": [
-        "flimsy",
-        "private",
-        "tedious"
-      ]
+      "options": ["flimsy", "private", "tedious"]
     }
   },
   {
@@ -12779,11 +12019,7 @@
     },
     "config": {
       "placeholder": "Tero theologus utor velut auctor apto tandem patior vomica tergeo.",
-      "options": [
-        "perky",
-        "extra-large",
-        "every"
-      ]
+      "options": ["perky", "extra-large", "every"]
     }
   },
   {
@@ -12798,11 +12034,7 @@
     },
     "config": {
       "placeholder": "Alii officia somnus alienus cuppedia pauper autem creta.",
-      "options": [
-        "entire",
-        "busy",
-        "grubby"
-      ]
+      "options": ["entire", "busy", "grubby"]
     }
   },
   {
@@ -12817,11 +12049,7 @@
     },
     "config": {
       "placeholder": "Voluptatibus curatio error subseco averto verbera cultura.",
-      "options": [
-        "noxious",
-        "humble",
-        "intent"
-      ]
+      "options": ["noxious", "humble", "intent"]
     }
   },
   {
@@ -12850,11 +12078,7 @@
     },
     "config": {
       "placeholder": "Decor ullam uberrime patior synagoga.",
-      "options": [
-        "delicious",
-        "cute",
-        "spherical"
-      ]
+      "options": ["delicious", "cute", "spherical"]
     }
   },
   {
@@ -12883,11 +12107,7 @@
     },
     "config": {
       "placeholder": "Acsi amo arma acidus thorax.",
-      "options": [
-        "shrill",
-        "hopeful",
-        "rigid"
-      ]
+      "options": ["shrill", "hopeful", "rigid"]
     }
   },
   {
@@ -12902,11 +12122,7 @@
     },
     "config": {
       "placeholder": "Usque atqui perspiciatis argumentum spargo nulla ager adsum deripio deporto.",
-      "options": [
-        "prime",
-        "male",
-        "bitter"
-      ]
+      "options": ["prime", "male", "bitter"]
     }
   },
   {
@@ -12979,11 +12195,7 @@
     },
     "config": {
       "placeholder": "Ipsam auditor una.",
-      "options": [
-        "elderly",
-        "fantastic",
-        "voluminous"
-      ]
+      "options": ["elderly", "fantastic", "voluminous"]
     }
   },
   {
@@ -13028,11 +12240,7 @@
     },
     "config": {
       "placeholder": "Uberrime vel aufero deleniti atqui ambulo colo.",
-      "options": [
-        "scary",
-        "flimsy",
-        "monthly"
-      ]
+      "options": ["scary", "flimsy", "monthly"]
     }
   },
   {
@@ -13047,11 +12255,7 @@
     },
     "config": {
       "placeholder": "Cicuta verus at sui cogito magnam accusantium perspiciatis consuasor.",
-      "options": [
-        "thrifty",
-        "joyous",
-        "fine"
-      ]
+      "options": ["thrifty", "joyous", "fine"]
     }
   },
   {
@@ -13080,11 +12284,7 @@
     },
     "config": {
       "placeholder": "Vindico ab taceo vitae templum succedo tum sum cena thorax.",
-      "options": [
-        "naughty",
-        "usable",
-        "stained"
-      ]
+      "options": ["naughty", "usable", "stained"]
     }
   },
   {
@@ -13217,11 +12417,7 @@
     },
     "config": {
       "placeholder": "Basium urbanus tracto carpo desidero.",
-      "options": [
-        "ultimate",
-        "right",
-        "foolish"
-      ]
+      "options": ["ultimate", "right", "foolish"]
     }
   },
   {
@@ -13250,11 +12446,7 @@
     },
     "config": {
       "placeholder": "Patior vir vigilo votum compello desipio vix.",
-      "options": [
-        "next",
-        "impossible",
-        "left"
-      ]
+      "options": ["next", "impossible", "left"]
     }
   },
   {
@@ -13355,11 +12547,7 @@
     },
     "config": {
       "placeholder": "Amiculum atrocitas arbor.",
-      "options": [
-        "joyous",
-        "blushing",
-        "perfumed"
-      ]
+      "options": ["joyous", "blushing", "perfumed"]
     }
   },
   {
@@ -13374,11 +12562,7 @@
     },
     "config": {
       "placeholder": "Id occaecati rem vox sub volva tabernus conventus similique.",
-      "options": [
-        "simple",
-        "regal",
-        "enchanted"
-      ]
+      "options": ["simple", "regal", "enchanted"]
     }
   },
   {
@@ -13393,11 +12577,7 @@
     },
     "config": {
       "placeholder": "Denego avarus tergeo culpa quae supplanto vado atavus.",
-      "options": [
-        "shy",
-        "interesting",
-        "aged"
-      ]
+      "options": ["shy", "interesting", "aged"]
     }
   },
   {
@@ -13426,11 +12606,7 @@
     },
     "config": {
       "placeholder": "Voluptatum confero venustas cognomen.",
-      "options": [
-        "worthless",
-        "long-term",
-        "dramatic"
-      ]
+      "options": ["worthless", "long-term", "dramatic"]
     }
   },
   {
@@ -13445,11 +12621,7 @@
     },
     "config": {
       "placeholder": "Copiose dolorum caelum commodo creptio clarus super verus bis facere.",
-      "options": [
-        "short",
-        "untrue",
-        "incomplete"
-      ]
+      "options": ["short", "untrue", "incomplete"]
     }
   },
   {
@@ -13464,11 +12636,7 @@
     },
     "config": {
       "placeholder": "Tenuis aptus carcer theca candidus.",
-      "options": [
-        "actual",
-        "medium",
-        "huge"
-      ]
+      "options": ["actual", "medium", "huge"]
     }
   },
   {
@@ -13511,11 +12679,7 @@
     },
     "config": {
       "placeholder": "Tersus crudelis auctor illo temptatio aiunt deduco cubicularis apparatus urbs.",
-      "options": [
-        "rubbery",
-        "hopeful",
-        "rapid"
-      ]
+      "options": ["rubbery", "hopeful", "rapid"]
     }
   },
   {
@@ -13604,11 +12768,7 @@
     },
     "config": {
       "placeholder": "Torrens dolor admoveo.",
-      "options": [
-        "indelible",
-        "honored",
-        "worse"
-      ]
+      "options": ["indelible", "honored", "worse"]
     }
   },
   {
@@ -13665,11 +12825,7 @@
     },
     "config": {
       "placeholder": "Varius spero conduco adsidue pecco corrupti.",
-      "options": [
-        "creative",
-        "shadowy",
-        "private"
-      ]
+      "options": ["creative", "shadowy", "private"]
     }
   },
   {
@@ -13714,11 +12870,7 @@
     },
     "config": {
       "placeholder": "Curriculum agnosco voluptas.",
-      "options": [
-        "fond",
-        "elegant",
-        "usable"
-      ]
+      "options": ["fond", "elegant", "usable"]
     }
   },
   {
@@ -13749,11 +12901,7 @@
     },
     "config": {
       "placeholder": "Cupio viduo accedo canto alienus suus.",
-      "options": [
-        "funny",
-        "severe",
-        "putrid"
-      ]
+      "options": ["funny", "severe", "putrid"]
     }
   },
   {
@@ -13782,11 +12930,7 @@
     },
     "config": {
       "placeholder": "Amiculum tamen tamquam cinis confero vehemens adicio.",
-      "options": [
-        "unused",
-        "early",
-        "left"
-      ]
+      "options": ["unused", "early", "left"]
     }
   },
   {
@@ -13991,11 +13135,7 @@
     },
     "config": {
       "placeholder": "Bestia crur doloribus.",
-      "options": [
-        "well-documented",
-        "smooth",
-        "adolescent"
-      ]
+      "options": ["well-documented", "smooth", "adolescent"]
     }
   },
   {
@@ -14040,11 +13180,7 @@
     },
     "config": {
       "placeholder": "Villa aequitas optio aurum maiores concedo itaque.",
-      "options": [
-        "firm",
-        "miserable",
-        "yearly"
-      ]
+      "options": ["firm", "miserable", "yearly"]
     }
   },
   {
@@ -14163,11 +13299,7 @@
     },
     "config": {
       "placeholder": "Cur explicabo cattus tantillus ars debilito tamen id.",
-      "options": [
-        "discrete",
-        "limp",
-        "old"
-      ]
+      "options": ["discrete", "limp", "old"]
     }
   },
   {
@@ -14196,11 +13328,7 @@
     },
     "config": {
       "placeholder": "Tergum cruciamentum comprehendo curatio tracto adhaero statim somniculosus cicuta administratio.",
-      "options": [
-        "shocked",
-        "frizzy",
-        "menacing"
-      ]
+      "options": ["shocked", "frizzy", "menacing"]
     }
   },
   {
@@ -14349,11 +13477,7 @@
     },
     "config": {
       "placeholder": "Incidunt ipsum venia ventus vociferor ara capitulus.",
-      "options": [
-        "far-flung",
-        "watery",
-        "measly"
-      ]
+      "options": ["far-flung", "watery", "measly"]
     }
   },
   {
@@ -14482,11 +13606,7 @@
     },
     "config": {
       "placeholder": "Enim aureus arbustum arma.",
-      "options": [
-        "splendid",
-        "oblong",
-        "cavernous"
-      ]
+      "options": ["splendid", "oblong", "cavernous"]
     }
   },
   {
@@ -14661,11 +13781,7 @@
     },
     "config": {
       "placeholder": "Adduco quae comparo autem recusandae omnis acsi dapifer victoria.",
-      "options": [
-        "wiggly",
-        "monthly",
-        "runny"
-      ]
+      "options": ["wiggly", "monthly", "runny"]
     }
   },
   {
@@ -14724,11 +13840,7 @@
     },
     "config": {
       "placeholder": "Animi officia undique sono adhuc pauci toties calcar.",
-      "options": [
-        "super",
-        "striking",
-        "distinct"
-      ]
+      "options": ["super", "striking", "distinct"]
     }
   },
   {
@@ -14875,11 +13987,7 @@
     },
     "config": {
       "placeholder": "Vir spectaculum stillicidium antea taceo umerus subvenio tamquam paens.",
-      "options": [
-        "white",
-        "imaginative",
-        "reasonable"
-      ]
+      "options": ["white", "imaginative", "reasonable"]
     }
   },
   {
@@ -14908,11 +14016,7 @@
     },
     "config": {
       "placeholder": "Cinis vulnus cervus arceo damno astrum aro consectetur deludo nisi.",
-      "options": [
-        "judicious",
-        "dearest",
-        "meager"
-      ]
+      "options": ["judicious", "dearest", "meager"]
     }
   },
   {
@@ -14943,11 +14047,7 @@
     },
     "config": {
       "placeholder": "Apud valeo conforto ter uterque.",
-      "options": [
-        "smart",
-        "shoddy",
-        "spotless"
-      ]
+      "options": ["smart", "shoddy", "spotless"]
     }
   },
   {
@@ -14976,11 +14076,7 @@
     },
     "config": {
       "placeholder": "Cohors valeo consequuntur.",
-      "options": [
-        "free",
-        "spirited",
-        "powerless"
-      ]
+      "options": ["free", "spirited", "powerless"]
     }
   },
   {
@@ -15009,11 +14105,7 @@
     },
     "config": {
       "placeholder": "Speculum curatio adamo utor.",
-      "options": [
-        "whirlwind",
-        "stale",
-        "those"
-      ]
+      "options": ["whirlwind", "stale", "those"]
     }
   },
   {
@@ -15044,11 +14136,7 @@
     },
     "config": {
       "placeholder": "Degenero cohaero stella patrocinor.",
-      "options": [
-        "delectable",
-        "superficial",
-        "powerless"
-      ]
+      "options": ["delectable", "superficial", "powerless"]
     }
   },
   {
@@ -15211,11 +14299,7 @@
     },
     "config": {
       "placeholder": "Ciminatio consequatur assentator.",
-      "options": [
-        "late",
-        "round",
-        "medium"
-      ]
+      "options": ["late", "round", "medium"]
     }
   },
   {
@@ -15258,11 +14342,7 @@
     },
     "config": {
       "placeholder": "Porro dolor modi dolore error somniculosus.",
-      "options": [
-        "darling",
-        "sour",
-        "watery"
-      ]
+      "options": ["darling", "sour", "watery"]
     }
   },
   {
@@ -15277,11 +14357,7 @@
     },
     "config": {
       "placeholder": "Despecto collum taedium cerno certe eligendi vitiosus complectus audacia.",
-      "options": [
-        "altruistic",
-        "smart",
-        "gullible"
-      ]
+      "options": ["altruistic", "smart", "gullible"]
     }
   },
   {
@@ -15296,11 +14372,7 @@
     },
     "config": {
       "placeholder": "A amplitudo condico assentator.",
-      "options": [
-        "slimy",
-        "breakable",
-        "inconsequential"
-      ]
+      "options": ["slimy", "breakable", "inconsequential"]
     }
   },
   {
@@ -15373,11 +14445,7 @@
     },
     "config": {
       "placeholder": "Substantia demulceo repudiandae.",
-      "options": [
-        "honored",
-        "babyish",
-        "posh"
-      ]
+      "options": ["honored", "babyish", "posh"]
     }
   },
   {
@@ -15468,11 +14536,7 @@
     },
     "config": {
       "placeholder": "Conforto provident cruciamentum accusamus comis.",
-      "options": [
-        "humiliating",
-        "surprised",
-        "exalted"
-      ]
+      "options": ["humiliating", "surprised", "exalted"]
     }
   },
   {
@@ -15515,11 +14579,7 @@
     },
     "config": {
       "placeholder": "Vindico vomito constans decumbo summopere tamisium amiculum coerceo sto contra.",
-      "options": [
-        "rosy",
-        "sophisticated",
-        "knotty"
-      ]
+      "options": ["rosy", "sophisticated", "knotty"]
     }
   },
   {
@@ -15578,11 +14638,7 @@
     },
     "config": {
       "placeholder": "Administratio peior blanditiis stella vomica delego solitudo ambitus cribro.",
-      "options": [
-        "realistic",
-        "bright",
-        "skeletal"
-      ]
+      "options": ["realistic", "bright", "skeletal"]
     }
   },
   {
@@ -15641,11 +14697,7 @@
     },
     "config": {
       "placeholder": "Video suspendo doloremque spero spoliatio cetera valens vis uter.",
-      "options": [
-        "portly",
-        "back",
-        "forceful"
-      ]
+      "options": ["portly", "back", "forceful"]
     }
   },
   {
@@ -15676,11 +14728,7 @@
     },
     "config": {
       "placeholder": "Architecto varius deficio arguo perferendis accusamus accusamus accusantium aut delicate.",
-      "options": [
-        "ironclad",
-        "wry",
-        "superior"
-      ]
+      "options": ["ironclad", "wry", "superior"]
     }
   }
 ]

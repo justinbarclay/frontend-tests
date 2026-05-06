@@ -1,22 +1,18 @@
-import type { SeparatorProps as AriaSeparatorProps } from "react-aria-components"
-import { Separator as AriaSeparator } from "react-aria-components"
+import type { SeparatorProps as AriaSeparatorProps } from "react-aria-components";
+import { Separator as AriaSeparator } from "react-aria-components";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-const Separator = ({
-  className,
-  orientation = "horizontal",
-  ...props
-}: AriaSeparatorProps) => (
+const Separator = ({ className, orientation = "horizontal", ...props }: AriaSeparatorProps) => (
   <AriaSeparator
     orientation={orientation}
     className={cn(
       "shrink-0 bg-border",
       orientation === "horizontal" ? "h-px w-full" : "h-full w-px",
-      className
+      className,
     )}
     {...props}
   />
-)
+);
 
-export { Separator }
+export { Separator };

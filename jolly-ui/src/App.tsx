@@ -7,14 +7,14 @@ import { FieldLedger } from "./views/FieldLedger";
 
 function App() {
   const { isAuthenticated, logout } = useAuthStore();
-  
+
   const renderView = () => {
     if (!isAuthenticated) {
       return <Login />;
     }
 
     // Switch statement for routing as requested
-    const view = "ledger"; 
+    const view = "ledger";
     switch (view) {
       case "ledger":
         return <FieldLedger />;
@@ -26,9 +26,7 @@ function App() {
   return (
     <ThemeProvider defaultTheme="dark" storageKey="schema-architect-theme">
       <ToastProvider>
-        <AdminLayout onLogout={isAuthenticated ? logout : undefined}>
-          {renderView()}
-        </AdminLayout>
+        <AdminLayout onLogout={isAuthenticated ? logout : undefined}>{renderView()}</AdminLayout>
       </ToastProvider>
     </ThemeProvider>
   );

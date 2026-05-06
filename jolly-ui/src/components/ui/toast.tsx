@@ -36,8 +36,8 @@ export function ToastProvider({ children }: { children: React.ReactNode }) {
               t.type === "success"
                 ? "bg-emerald-500 text-white"
                 : t.type === "error"
-                ? "bg-destructive text-destructive-foreground"
-                : "bg-background text-foreground"
+                  ? "bg-destructive text-destructive-foreground"
+                  : "bg-background text-foreground"
             }`}
           >
             <span className="text-sm font-medium">{t.message}</span>

@@ -1,7 +1,14 @@
 import { useFieldStore } from "@/store/useFieldStore";
 import { Button } from "@/components/ui/button";
 import { Trash2, ShieldOff, X } from "lucide-react";
-import { DialogTrigger, DialogContent, DialogHeader, DialogTitle, DialogFooter, DialogDescription } from "@/components/ui/dialog";
+import {
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogFooter,
+  DialogDescription,
+} from "@/components/ui/dialog";
 
 export function BulkActionBar() {
   const { selectedIds, clearSelection, deleteSelected, deactivateSelected } = useFieldStore();
@@ -44,19 +51,22 @@ export function BulkActionBar() {
                 <DialogHeader>
                   <DialogTitle>Are you absolutely sure?</DialogTitle>
                   <DialogDescription>
-                    This action cannot be undone. This will permanently delete {count} selected field{count > 1 ? 's' : ''}.
+                    This action cannot be undone. This will permanently delete {count} selected
+                    field{count > 1 ? "s" : ""}.
                   </DialogDescription>
                 </DialogHeader>
                 <DialogFooter>
-                  <Button variant="outline" onPress={close}>Cancel</Button>
-                  <Button 
-                    variant="destructive" 
+                  <Button variant="outline" onPress={close}>
+                    Cancel
+                  </Button>
+                  <Button
+                    variant="destructive"
                     onPress={() => {
                       deleteSelected();
                       close();
                     }}
                   >
-                    Delete {count} Field{count > 1 ? 's' : ''}
+                    Delete {count} Field{count > 1 ? "s" : ""}
                   </Button>
                 </DialogFooter>
               </>

@@ -1,4 +1,4 @@
-import { ArrowUpDown } from "lucide-react"
+import { ArrowUpDown } from "lucide-react";
 import {
   Cell as AriaCell,
   Column as AriaColumn,
@@ -10,7 +10,7 @@ import {
   ColumnResizer,
   composeRenderProps,
   Group,
-} from "react-aria-components"
+} from "react-aria-components";
 import type {
   ColumnProps as AriaColumnProps,
   CellProps,
@@ -18,38 +18,33 @@ import type {
   TableBodyProps,
   TableHeaderProps,
   TableProps,
-} from "react-aria-components"
+} from "react-aria-components";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
-const ResizableTableContainer = AriaResizableTableContainer
+const ResizableTableContainer = AriaResizableTableContainer;
 
 const Table = ({ className, ...props }: TableProps) => (
   <AriaTable
     className={composeRenderProps(className, (className) =>
       cn(
         "w-full caption-bottom text-sm -outline-offset-2 data-[focus-visible]:outline-ring",
-        className
-      )
+        className,
+      ),
     )}
     {...props}
   />
-)
+);
 
-const TableHeader = <T extends object>({
-  className,
-  ...props
-}: TableHeaderProps<T>) => (
+const TableHeader = <T extends object>({ className, ...props }: TableHeaderProps<T>) => (
   <AriaTableHeader
-    className={composeRenderProps(className, (className) =>
-      cn("[&_tr]:border-b", className)
-    )}
+    className={composeRenderProps(className, (className) => cn("[&_tr]:border-b", className))}
     {...props}
   />
-)
+);
 
 export interface ColumnProps extends AriaColumnProps {
-  isResizable?: boolean
+  isResizable?: boolean;
 }
 
 const Column = ({ className, children, ...props }: ColumnProps) => (
@@ -57,8 +52,8 @@ const Column = ({ className, children, ...props }: ColumnProps) => (
     className={composeRenderProps(className, (className) =>
       cn(
         "h-12 text-left align-middle font-medium text-muted-foreground -outline-offset-2 data-[focus-visible]:outline-ring",
-        className
-      )
+        className,
+      ),
     )}
     {...props}
   >
@@ -69,9 +64,8 @@ const Column = ({ className, children, ...props }: ColumnProps) => (
           tabIndex={-1}
           className={cn(
             "flex h-10 flex-1 items-center gap-1 overflow-hidden rounded-md px-4",
-            allowsSorting &&
-              "p-2 data-[hovered]:bg-accent data-[hovered]:text-accent-foreground",
-            "focus-visible:outline-none  data-[focus-visible]:-outline-offset-2 data-[focus-visible]:outline-ring [&:has([slot=selection])]:pr-0"
+            allowsSorting && "p-2 data-[hovered]:bg-accent data-[hovered]:text-accent-foreground",
+            "focus-visible:outline-none  data-[focus-visible]:-outline-offset-2 data-[focus-visible]:outline-ring [&:has([slot=selection])]:pr-0",
           )}
         >
           <span className="truncate">{children}</span>
@@ -83,53 +77,42 @@ const Column = ({ className, children, ...props }: ColumnProps) => (
       </div>
     ))}
   </AriaColumn>
-)
+);
 
-const TableBody = <T extends object>({
-  className,
-  ...props
-}: TableBodyProps<T>) => (
+const TableBody = <T extends object>({ className, ...props }: TableBodyProps<T>) => (
   <AriaTableBody
     className={composeRenderProps(className, (className) =>
       cn(
         "-outline-offset-2 data-[empty]:h-24 data-[empty]:text-center data-[focus-visible]:outline-ring [&_tr:last-child]:border-0",
-        className
-      )
+        className,
+      ),
     )}
     {...props}
   />
-)
+);
 
 const Row = <T extends object>({ className, ...props }: RowProps<T>) => (
   <AriaRow
     className={composeRenderProps(className, (className) =>
       cn(
         "border-b -outline-offset-2 transition-colors data-[hovered]:bg-muted/50 data-[selected]:bg-muted data-[focus-visible]:outline-ring",
-        className
-      )
+        className,
+      ),
     )}
     {...props}
   />
-)
+);
 
 const Cell = ({ className, ...props }: CellProps) => (
   <AriaCell
     className={composeRenderProps(className, (className) =>
       cn(
         "p-4 align-middle -outline-offset-2 data-[focus-visible]:outline-ring [&:has([role=checkbox])]:pr-0",
-        className
-      )
+        className,
+      ),
     )}
     {...props}
   />
-)
+);
 
-export {
-  Table,
-  TableHeader,
-  Column,
-  TableBody,
-  Row,
-  Cell,
-  ResizableTableContainer,
-}
+export { Table, TableHeader, Column, TableBody, Row, Cell, ResizableTableContainer };

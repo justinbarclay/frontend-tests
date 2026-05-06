@@ -2,7 +2,7 @@ import type { FieldType } from "../types/schema";
 import { useBuilderStore } from "../store/useBuilderStore";
 import { useState } from "react";
 import { JollyTextField } from "./ui/textfield";
-import { JollySelect, SelectItem,  } from "./ui/select";
+import { JollySelect, SelectItem } from "./ui/select";
 import { JollyNumberField } from "./ui/numberfield";
 import { PlusIcon } from "lucide-react";
 import { Button } from "./ui/button";
@@ -76,12 +76,10 @@ const SelectConfigurator = () => {
             const newOptions = [...(field.config.options || [])];
             newOptions[index] = value;
             updateConfig("options", newOptions);
-          }
-          }
+          }}
         />
-      ))
-      }
-      {/* New Option Input with button*/ }
+      ))}
+      {/* New Option Input with button*/}
       <div className="col-span-2 flex items-end gap-2 mt-2">
         <JollyTextField
           className="flex-1"
@@ -98,8 +96,7 @@ const SelectConfigurator = () => {
             const newOptions = [...(field.config.options || []), newValue];
             updateConfig("options", newOptions);
             setValue("");
-          }
-          }
+          }}
         >
           <PlusIcon className="size-4" />
         </Button>
@@ -148,9 +145,7 @@ const ConfigurationForm = () => {
           placeholder="Placeholder"
           key="placeholder"
           value={field.config.placeholder}
-          onChange={(value) =>
-            updateRoot("config", { ...field.config, placeholder: value })
-          }
+          onChange={(value) => updateRoot("config", { ...field.config, placeholder: value })}
         />
         <JollySelect
           className="col-span-4"

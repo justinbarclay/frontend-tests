@@ -1,10 +1,7 @@
-import {
-  Switch as AriaSwitch,
-  composeRenderProps,
-} from "react-aria-components"
-import type { SwitchProps as AriaSwitchProps } from "react-aria-components"
+import { Switch as AriaSwitch, composeRenderProps } from "react-aria-components";
+import type { SwitchProps as AriaSwitchProps } from "react-aria-components";
 
-import { cn } from "@/lib/utils"
+import { cn } from "@/lib/utils";
 
 const Switch = ({ className, children, ...props }: AriaSwitchProps) => (
   <AriaSwitch
@@ -13,8 +10,8 @@ const Switch = ({ className, children, ...props }: AriaSwitchProps) => (
         "group inline-flex items-center gap-2 text-sm font-medium leading-none transition-colors",
         /* Disabled */
         "data-[disabled]:cursor-not-allowed data-[disabled]:opacity-70",
-        className
-      )
+        className,
+      ),
     )}
     {...props}
   >
@@ -27,6 +24,6 @@ const Switch = ({ className, children, ...props }: AriaSwitchProps) => (
       </>
     ))}
   </AriaSwitch>
-)
+);
 
-export { Switch }
+export { Switch };

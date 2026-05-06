@@ -30,14 +30,9 @@ import { CSS } from "@dnd-kit/utilities";
 
 // Custom sortable row that correctly forwards refs for both Virtuoso and dnd-kit
 const SortableVirtuosoRow = ({ item, ...props }: any) => {
-  const {
-    attributes,
-    listeners,
-    setNodeRef,
-    transform,
-    transition,
-    isDragging,
-  } = useSortable({ id: item.id });
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
+    id: item.id,
+  });
 
   const style = {
     transform: CSS.Transform.toString(transform),
@@ -63,7 +58,7 @@ const SortableVirtuosoRow = ({ item, ...props }: any) => {
       className={cn(
         "border-b transition-colors hover:bg-muted/50",
         isDragging && "bg-muted shadow-sm",
-        props.className
+        props.className,
       )}
     >
       <td className="w-10 p-4 align-middle">
@@ -98,7 +93,7 @@ export function FieldLedger() {
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-    })
+    }),
   );
 
   useEffect(() => {
@@ -136,9 +131,7 @@ export function FieldLedger() {
           className="max-w-md flex-1"
         />
         <DialogTrigger>
-          <Button 
-            className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-          >
+          <Button className="inline-flex items-center gap-2 rounded-md bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow transition-colors hover:bg-primary/90 focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2">
             <Plus className="size-4" />
             New Field
           </Button>
@@ -147,13 +140,9 @@ export function FieldLedger() {
       </div>
 
       <div className="rounded-md border bg-card">
-        <DndContext
-          sensors={sensors}
-          collisionDetection={closestCenter}
-          onDragEnd={handleDragEnd}
-        >
+        <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
           <SortableContext
-            items={filteredFields.map(f => f.id)}
+            items={filteredFields.map((f) => f.id)}
             strategy={verticalListSortingStrategy}
           >
             <TableVirtuoso
@@ -161,8 +150,16 @@ export function FieldLedger() {
               data={filteredFields}
               components={{
                 Table: (props) => <table {...props} className="w-full caption-bottom text-sm" />,
-                TableHead: React.forwardRef((props, ref) => <thead {...props} ref={ref} className="[&_tr]:border-b bg-background sticky top-0 z-20 shadow-sm" />),
-                TableBody: React.forwardRef((props, ref) => <tbody {...props} ref={ref} className="[&_tr:last-child]:border-0" />),
+                TableHead: React.forwardRef((props, ref) => (
+                  <thead
+                    {...props}
+                    ref={ref}
+                    className="[&_tr]:border-b bg-background sticky top-0 z-20 shadow-sm"
+                  />
+                )),
+                TableBody: React.forwardRef((props, ref) => (
+                  <tbody {...props} ref={ref} className="[&_tr:last-child]:border-0" />
+                )),
                 TableRow: SortableVirtuosoRow,
               }}
               fixedHeaderContent={() => (
@@ -180,18 +177,30 @@ export function FieldLedger() {
                     />
                   </th>
                   <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground">
-                    <button onClick={() => setSort("label")} className="flex items-center gap-1 hover:text-foreground">
-                      Label <ArrowUpDown className="size-3"/>
+                    <button
+                      onClick={() => setSort("label")}
+                      className="flex items-center gap-1 hover:text-foreground"
+                    >
+                      Label <ArrowUpDown className="size-3" />
                     </button>
                   </th>
                   <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground">
-                    <button onClick={() => setSort("name")} className="flex items-center gap-1 hover:text-foreground">
-                      Name <ArrowUpDown className="size-3"/>
+                    <button
+                      onClick={() => setSort("name")}
+                      className="flex items-center gap-1 hover:text-foreground"
+                    >
+                      Name <ArrowUpDown className="size-3" />
                     </button>
                   </th>
-                  <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground">Type</th>
-                  <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground">Status</th>
-                  <th className="h-12 px-4 text-right align-middle font-medium text-muted-foreground">Usage</th>
+                  <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground">
+                    Type
+                  </th>
+                  <th className="h-12 px-4 text-left align-middle font-medium text-muted-foreground">
+                    Status
+                  </th>
+                  <th className="h-12 px-4 text-right align-middle font-medium text-muted-foreground">
+                    Usage
+                  </th>
                 </tr>
               )}
               itemContent={(_index, field) => (
@@ -204,12 +213,18 @@ export function FieldLedger() {
                     />
                   </td>
                   <td className="p-4 align-middle font-medium">{field.label}</td>
-                  <td className="p-4 align-middle font-mono text-xs text-muted-foreground">{field.name}</td>
-                  <td className="p-4 align-middle">
-                    <Badge variant="secondary" className="capitalize">{field.type}</Badge>
+                  <td className="p-4 align-middle font-mono text-xs text-muted-foreground">
+                    {field.name}
                   </td>
                   <td className="p-4 align-middle">
-                    <Badge variant={field.status === "active" ? "success" : "secondary"}>{field.status}</Badge>
+                    <Badge variant="secondary" className="capitalize">
+                      {field.type}
+                    </Badge>
+                  </td>
+                  <td className="p-4 align-middle">
+                    <Badge variant={field.status === "active" ? "success" : "secondary"}>
+                      {field.status}
+                    </Badge>
                   </td>
                   <td className="p-4 align-middle text-right tabular-nums">{field.usageCount}</td>
                 </>

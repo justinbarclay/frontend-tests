@@ -7,11 +7,11 @@ import { parseArgs } from "util";
 const { values } = parseArgs({
   args: process.argv.slice(2),
   options: {
-    build:   { type: "boolean", short: "b", default: false },
+    build: { type: "boolean", short: "b", default: false },
     analyze: { type: "boolean", short: "a", default: false },
-    top:     { type: "boolean", short: "t", default: false },
-    json:    { type: "boolean", short: "j", default: false },
-    help:    { type: "boolean", short: "h", default: false },
+    top: { type: "boolean", short: "t", default: false },
+    json: { type: "boolean", short: "j", default: false },
+    help: { type: "boolean", short: "h", default: false },
   },
 });
 
@@ -42,19 +42,21 @@ const repos = ["mantine-v8", "jolly-ui", "shadcn-baseui"];
 async function buildAll() {
   console.log("🔨 Building all repos in parallel...\n");
 
-  const builds = repos.map((name) => new Promise((resolveP) => {
-    const cwd = resolve(root, "..", name);
-    const proc = spawn("npm", ["run", "build"], { cwd, shell: true });
+  const builds = repos.map(
+    (name) =>
+      new Promise((resolveP) => {
+        const cwd = resolve(root, "..", name);
+        const proc = spawn("npm", ["run", "build"], { cwd, shell: true });
 
-    const lines = [];
-    const capture = (data) => {
-      for (const line of data.toString().split("\n"))
-        if (line.trim()) lines.push(line);
-    };
-    proc.stdout.on("data", capture);
-    proc.stderr.on("data", capture);
-    proc.on("close", (code) => resolveP({ name, code, lines }));
-  }));
+        const lines = [];
+        const capture = (data) => {
+          for (const line of data.toString().split("\n")) if (line.trim()) lines.push(line);
+        };
+        proc.stdout.on("data", capture);
+        proc.stderr.on("data", capture);
+        proc.on("close", (code) => resolveP({ name, code, lines }));
+      }),
+  );
 
   const results = await Promise.all(builds);
   let anyFailed = false;
@@ -85,17 +87,29 @@ function analyzeAll() {
   for (const name of repos) {
     const path = resolve(root, "..", name, "dist", "stats.json");
     const chunks = JSON.parse(readFileSync(path, "utf8"));
-    let totalParsed = 0, totalGzip = 0, totalBrotli = 0;
-    let jsParsed = 0, jsGzip = 0, cssParsed = 0, cssGzip = 0;
-    let nmSize = 0, appSize = 0;
+    let totalParsed = 0,
+      totalGzip = 0,
+      totalBrotli = 0;
+    let jsParsed = 0,
+      jsGzip = 0,
+      cssParsed = 0,
+      cssGzip = 0;
+    let nmSize = 0,
+      appSize = 0;
     const pkgSizes = {};
 
     for (const c of chunks) {
       totalParsed += c.parsedSize || 0;
-      totalGzip   += c.gzipSize   || 0;
+      totalGzip += c.gzipSize || 0;
       totalBrotli += c.brotliSize || 0;
-      if (c.filename.endsWith(".js"))  { jsParsed += c.parsedSize || 0; jsGzip += c.gzipSize || 0; }
-      if (c.filename.endsWith(".css")) { cssParsed += c.parsedSize || 0; cssGzip += c.gzipSize || 0; }
+      if (c.filename.endsWith(".js")) {
+        jsParsed += c.parsedSize || 0;
+        jsGzip += c.gzipSize || 0;
+      }
+      if (c.filename.endsWith(".css")) {
+        cssParsed += c.parsedSize || 0;
+        cssGzip += c.gzipSize || 0;
+      }
       for (const top of c.source || []) {
         if (top.label === "node_modules") {
           nmSize += top.parsedSize || 0;
@@ -108,44 +122,59 @@ function analyzeAll() {
     }
 
     results.push({
-      name, totalParsed, totalGzip, totalBrotli,
-      jsParsed, jsGzip, cssParsed, cssGzip,
-      nmSize, appSize,
-      top5: Object.entries(pkgSizes).sort((a, b) => b[1] - a[1]).slice(0, 5),
+      name,
+      totalParsed,
+      totalGzip,
+      totalBrotli,
+      jsParsed,
+      jsGzip,
+      cssParsed,
+      cssGzip,
+      nmSize,
+      appSize,
+      top5: Object.entries(pkgSizes)
+        .sort((a, b) => b[1] - a[1])
+        .slice(0, 5),
     });
   }
 
   if (values.json) {
     const toEntry = (key) => Object.fromEntries(results.map((r) => [r.name, r[key]]));
-    console.log(JSON.stringify({
-      repos: results.map((r) => r.name),
-      summary: [
-        { metric: "Total (parsed)", ...toEntry("totalParsed") },
-        { metric: "Total (gzip)",   ...toEntry("totalGzip") },
-        { metric: "Total (brotli)", ...toEntry("totalBrotli") },
-        { metric: "JS (parsed)",    ...toEntry("jsParsed") },
-        { metric: "JS (gzip)",      ...toEntry("jsGzip") },
-        { metric: "CSS (parsed)",   ...toEntry("cssParsed") },
-        { metric: "CSS (gzip)",     ...toEntry("cssGzip") },
-        { metric: "node_modules",   ...toEntry("nmSize") },
-        { metric: "App code",       ...toEntry("appSize") },
-      ],
-      top5: Object.fromEntries(results.map((r) => [r.name, r.top5])),
-    }, null, 2));
+    console.log(
+      JSON.stringify(
+        {
+          repos: results.map((r) => r.name),
+          summary: [
+            { metric: "Total (parsed)", ...toEntry("totalParsed") },
+            { metric: "Total (gzip)", ...toEntry("totalGzip") },
+            { metric: "Total (brotli)", ...toEntry("totalBrotli") },
+            { metric: "JS (parsed)", ...toEntry("jsParsed") },
+            { metric: "JS (gzip)", ...toEntry("jsGzip") },
+            { metric: "CSS (parsed)", ...toEntry("cssParsed") },
+            { metric: "CSS (gzip)", ...toEntry("cssGzip") },
+            { metric: "node_modules", ...toEntry("nmSize") },
+            { metric: "App code", ...toEntry("appSize") },
+          ],
+          top5: Object.fromEntries(results.map((r) => [r.name, r.top5])),
+        },
+        null,
+        2,
+      ),
+    );
     return;
   }
 
   const cols = ["Metric", ...results.map((r) => r.name)];
   const rows = [
     ["Total (parsed)", ...results.map((r) => `${toKB(r.totalParsed)} KB`)],
-    ["Total (gzip)",   ...results.map((r) => `${toKB(r.totalGzip)} KB`)],
+    ["Total (gzip)", ...results.map((r) => `${toKB(r.totalGzip)} KB`)],
     ["Total (brotli)", ...results.map((r) => `${toKB(r.totalBrotli)} KB`)],
-    ["JS (parsed)",    ...results.map((r) => `${toKB(r.jsParsed)} KB`)],
-    ["JS (gzip)",      ...results.map((r) => `${toKB(r.jsGzip)} KB`)],
-    ["CSS (parsed)",   ...results.map((r) => `${toKB(r.cssParsed)} KB`)],
-    ["CSS (gzip)",     ...results.map((r) => `${toKB(r.cssGzip)} KB`)],
-    ["node_modules",   ...results.map((r) => `${toKB(r.nmSize)} KB`)],
-    ["App code",       ...results.map((r) => `${toKB(r.appSize)} KB`)],
+    ["JS (parsed)", ...results.map((r) => `${toKB(r.jsParsed)} KB`)],
+    ["JS (gzip)", ...results.map((r) => `${toKB(r.jsGzip)} KB`)],
+    ["CSS (parsed)", ...results.map((r) => `${toKB(r.cssParsed)} KB`)],
+    ["CSS (gzip)", ...results.map((r) => `${toKB(r.cssGzip)} KB`)],
+    ["node_modules", ...results.map((r) => `${toKB(r.nmSize)} KB`)],
+    ["App code", ...results.map((r) => `${toKB(r.appSize)} KB`)],
   ];
 
   const widths = cols.map((c, i) => Math.max(c.length, ...rows.map((r) => r[i].length)) + 2);
@@ -154,15 +183,13 @@ function analyzeAll() {
   console.log("\n📦 Bundle Size Comparison\n");
   console.log(cols.map((c, i) => pad(c, widths[i])).join("|"));
   console.log(hr);
-  for (const row of rows)
-    console.log(row.map((c, i) => pad(c, widths[i])).join("|"));
+  for (const row of rows) console.log(row.map((c, i) => pad(c, widths[i])).join("|"));
 
   if (values.top) {
     console.log("\n📦 Top 5 Dependencies (parsed KB)\n");
     for (const r of results) {
       console.log(`  ${r.name}`);
-      for (const [pkg, size] of r.top5)
-        console.log(`    ${pad(toKB(size) + " KB", 10)} ${pkg}`);
+      for (const [pkg, size] of r.top5) console.log(`    ${pad(toKB(size) + " KB", 10)} ${pkg}`);
     }
   }
 }
