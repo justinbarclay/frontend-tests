@@ -1,0 +1,624 @@
+#+TITLE: ConfigurationForm vs PreviewField — Component Comparison
+#+DATE: 2026-05-06
+#+AUTHOR: Copilot
+#+OPTIONS: num:nil toc:t
+#+LATEX_CLASS: article
+#+LATEX_CLASS_OPTIONS: [11pt,a4paper]
+#+LATEX_HEADER: \PassOptionsToPackage{table,dvipsnames}{xcolor}
+#+LATEX_HEADER: \usepackage[margin=2.2cm,top=2.8cm,bottom=2.8cm]{geometry}
+#+LATEX_HEADER: \usepackage{xcolor}
+#+LATEX_HEADER: \usepackage{lmodern}
+#+LATEX_HEADER: \usepackage[scaled=0.85]{helvet}
+#+LATEX_HEADER: \usepackage[scaled=0.9]{inconsolata}
+#+LATEX_HEADER: \usepackage{titlesec}
+#+LATEX_HEADER: \usepackage{fancyhdr}
+#+LATEX_HEADER: \usepackage{listings}
+#+LATEX_HEADER: \usepackage{booktabs}
+#+LATEX_HEADER: \usepackage{tabularx}
+#+LATEX_HEADER: \definecolor{PrimaryDark}{HTML}{1B2A4A}
+#+LATEX_HEADER: \definecolor{AccentCyan}{HTML}{00B4D8}
+#+LATEX_HEADER: \definecolor{AccentOrange}{HTML}{F77F00}
+#+LATEX_HEADER: \definecolor{AccentPurple}{HTML}{7209B7}
+#+LATEX_HEADER: \definecolor{EmeraldGreen}{HTML}{2D9E6B}
+#+LATEX_HEADER: \definecolor{TableOdd}{HTML}{D6EFFF}
+#+LATEX_HEADER: \definecolor{CodeBg}{HTML}{1E1E2E}
+#+LATEX_HEADER: \definecolor{CodeKeyword}{HTML}{CBA6F7}
+#+LATEX_HEADER: \definecolor{CodeString}{HTML}{A6E3A1}
+#+LATEX_HEADER: \definecolor{CodeComment}{HTML}{6C7086}
+#+LATEX_HEADER: \definecolor{CodeFg}{HTML}{CDD6F4}
+#+LATEX_HEADER: \newcommand{\SectionRule}{\color{AccentCyan}\titlerule[2pt]}
+#+LATEX_HEADER: \titleformat{\section}{\normalfont\Large\bfseries\sffamily\color{PrimaryDark}}{}{0pt}{}[\SectionRule]
+#+LATEX_HEADER: \titleformat{\subsection}{\normalfont\large\bfseries\sffamily\color{AccentPurple}}{}{0pt}{}
+#+LATEX_HEADER: \titleformat{\subsubsection}{\normalfont\normalsize\bfseries\sffamily\color{AccentOrange}}{}{0pt}{}
+#+LATEX_HEADER: \titlespacing*{\section}{0pt}{2ex plus 0.5ex}{1ex}
+#+LATEX_HEADER: \setlength{\parskip}{0.4em}
+#+LATEX_HEADER: \setlength{\parindent}{0pt}
+#+LATEX_HEADER: \AtBeginDocument{\rowcolors{2}{TableOdd}{white}}
+#+LATEX_HEADER: \lstset{backgroundcolor=\color{CodeBg},basicstyle=\small\ttfamily\color{CodeFg},breaklines=true,frame=single,rulecolor=\color{AccentCyan!40},framesep=5pt,xleftmargin=5pt,xrightmargin=5pt,keywordstyle=\color{CodeKeyword}\bfseries,stringstyle=\color{CodeString},commentstyle=\color{CodeComment}\itshape,aboveskip=0.8em,belowskip=0.8em}
+#+LATEX_HEADER: \pagestyle{fancy}
+#+LATEX_HEADER: \fancyhf{}
+#+LATEX_HEADER: \fancyhead[L]{\small\sffamily\color{PrimaryDark}Component Comparison Report}
+#+LATEX_HEADER: \fancyhead[R]{\small\sffamily\color{AccentCyan}\thepage}
+#+LATEX_HEADER: \renewcommand{\headrulewidth}{2pt}
+#+LATEX_HEADER: \renewcommand{\headrule}{\hbox to\headwidth{\color{AccentCyan}\leaders\hrule height\headrulewidth\hfill}}
+#+LATEX_HEADER: \makeatletter
+#+LATEX_HEADER: \renewcommand{\maketitle}{\begin{center}{\color{AccentCyan}\rule{\linewidth}{4pt}}\vspace{0.6em}\par{\Huge\bfseries\sffamily\color{PrimaryDark}\@title\par}\vspace{0.4em}{\color{AccentCyan}\rule{\linewidth}{4pt}}\vspace{0.4em}\par{\large\sffamily\color{AccentPurple}\@author\enspace{\color{PrimaryDark}\textbullet}\enspace\color{AccentOrange}\@date\par}\vspace{0.8em}{\color{PrimaryDark!20}\rule{\linewidth}{1pt}}\vspace{1.5em}\par\end{center}\thispagestyle{fancy}}
+#+LATEX_HEADER: \makeatother
+
+* Overview
+
+All three repos implement the same two conceptual components against an identical store
+interface (=useBuilderStore=) and =FieldSchema= type:
+
+- =ConfigurationForm= — a form for editing a field's schema (label, name, placeholder, type,
+  and type-specific validation/config).
+- =PreviewField= — a live read-only simulation of what the configured field would look like to
+  an end user.
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
+| Repo           | UI library                         | Lines: ConfigurationForm | Lines: PreviewField |
+|----------------+------------------------------------+--------------------------+---------------------|
+| jolly-ui       | React Aria / Jolly UI              |                      173 |                  91 |
+| shadcn-baseui  | shadcn-ui primitives + BaseUI      |                      188 |                 113 |
+| mantine-v8     | Mantine v8                         |                      173 |                  72 |
+
+Mantine achieves the most with the fewest lines in =PreviewField= (72) because its component
+API accepts all behaviour through props rather than composing primitives manually.
+
+* ConfigurationForm
+
+** Shared structure
+
+All three follow the same pattern:
+
+1. Render shared fields: =label=, =name=, =placeholder=, field =type= selector.
+2. Dispatch to a type-specific sub-configurator (=TextConfigurator=, =NumberConfigurator=,
+   =SelectConfigurator=, or an empty =<div>= for boolean).
+3. Write back to the store via =updateRoot=, =updateValidation=, and =updateConfig=.
+
+** Layout
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
+| Aspect             | jolly-ui                          | shadcn-baseui                    | mantine-v8                       |
+|--------------------+-----------------------------------+----------------------------------+----------------------------------|
+| Grid               | 2-column, fields use col-span-2/4 | 12-column, fields use col-span-6 | 12-column, fields use span={6}   |
+| Grouping primitive | Plain =<div>=                     | =<FieldGroup>= wrapper component | =<Grid>= / =<Grid.Col>=          |
+| Label/Name row     | Stacked (each col-span-2)         | Side-by-side (col-span-6 each)   | Side-by-side (span={6} each)     |
+
+** UI library components
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
+| Field          | jolly-ui              | shadcn-baseui                       | mantine-v8                            |
+|----------------+-----------------------+-------------------------------------+---------------------------------------|
+| Text input     | =JollyTextField=      | =<Field>= + =<Input>=               | =<TextInput>=                         |
+| Number input   | =JollyNumberField=    | =<Field>= + =<Input type="number">= | =<NumberInput>=                       |
+| Select         | =JollySelect=         | Shadcn =<Select>= + Trigger/Content | =<Select>=                            |
+| Add-option btn | =<Button onPress>=    | =<InputGroupButton onClick>=        | =rightSection={<Button>}= on TextInput |
+
+** SelectItem identity
+
+- =jolly-ui= passes =id= to =<SelectItem id="number">= (React Aria convention).
+- =shadcn-baseui= passes =value= to =<SelectItem value="text">= (Radix/shadcn convention).
+- =mantine-v8= passes a plain =data={["number", "select", "text", "boolean"]}= string array
+  directly to =<Select>=; no child item components are needed.
+
+** SelectConfigurator — option list rendering
+
+- =jolly-ui= renders each existing option with its own numbered label (/"Option 1"/, /"Option 2"/ …).
+- =shadcn-baseui= groups all existing options under a single /"Options"/ =FieldLabel=, then renders
+  bare =<Input>= elements beneath it.
+- =mantine-v8= mirrors =jolly-ui=: each option gets its own =<TextInput label="Option N">= and adds
+  a new-option field with the =+= button embedded in the input's =rightSection=.
+
+** Select — current value display
+
+- =jolly-ui= and =mantine-v8= are both uncontrolled: neither passes =value= to the field-type
+  =<Select>=, so the selector shows the placeholder and does not reflect live store state.
+- =shadcn-baseui= passes =value={field.type}= and renders it via =<SelectValue>=, so the selector
+  always reflects the live state.
+
+* PreviewField
+
+** Shared structure
+
+All three export a default =Preview= component that reads =state.field= from the store, looks up
+the appropriate sub-renderer in a dispatch map, and renders it. The empty/unsupported-type
+fallback messages are identical across all three.
+
+** NumberPreview
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
+| Behaviour              | jolly-ui                                              | shadcn-baseui                                                             | mantine-v8                                              |
+|------------------------+-------------------------------------------------------+---------------------------------------------------------------------------+---------------------------------------------------------|
+| Component              | =JollyNumberField= (all-in-one)                       | =<Field>= + =<Input type="number">=                                       | =<NumberInput>=                                         |
+| Decimal formatting     | Declarative via =formatOptions= prop                  | Manual =toFixed=, shows a /"Formatted: …"/ hint line                      | Manual =toFixed= piped into controlled =value= prop; no hint |
+| Alphabetic key guard   | Handled internally                                    | Explicit regex guard: =/[a-zA-Z]/.test(val)= prevents =setValue=          | Handled internally                                      |
+| Required error trigger | Fires on empty value                                  | Same; hint also gated on =value !== "" && !isNaN(...)=                    | Not implemented (no error state displayed)              |
+
+** TextPreview
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
+| Behaviour          | jolly-ui                                                               | shadcn-baseui                               | mantine-v8                                            |
+|--------------------+------------------------------------------------------------------------+---------------------------------------------+-------------------------------------------------------|
+| Pattern evaluation | Only when non-empty (short-circuit =value &&= …)                       | Always; empty string passes most patterns   | Always; empty string passes most patterns             |
+| Error display      | Text message: /"Invalid format"/                                       | Text message: /"Field does not match regex pattern"/ | Boolean =error= prop — red highlight, no message |
+
+** SelectPreview
+
+- =jolly-ui= uses =JollySelect= with =<SelectItem id={option}>= children.
+- =shadcn-baseui= uses the full Radix Select stack (=Trigger= / =Content= / =Item=) with
+  =defaultValue= set to the placeholder and =<SelectItem value={option}>=.
+- =mantine-v8= uses a single =<Select label={field.label} data={field.config.options}>=;
+  no child components are needed.
+
+** BooleanPreview
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
+| Aspect          | jolly-ui                                       | shadcn-baseui                                                         | mantine-v8                                              |
+|-----------------+------------------------------------------------+-----------------------------------------------------------------------+---------------------------------------------------------|
+| Wrapper         | Plain =<div className="flex items-center …">= | =<Field className="max-w-md">=                                        | None — =<Switch>= is self-contained                     |
+| Label position  | Sibling =<span>= rendered before the switch   | =<FieldLabel>= above the switch (standard field layout)               | Inline via =label= prop                                 |
+| Default state   | No default; =onChange={() => {}}= no-op        | =defaultChecked= wired to =field.config.defaultValue= (boolean cast) | =defaultChecked= wired to =field.config.defaultValue=  |
+| On/Off labels   | None                                           | None                                                                  | =onLabel="True"= / =offLabel="False"=                   |
+
+* Summary of key differences
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
+| Dimension                | jolly-ui                           | shadcn-baseui                                      | mantine-v8                              |
+|--------------------------+------------------------------------+----------------------------------------------------+-----------------------------------------|
+| UI library               | React Aria / Jolly UI              | shadcn-ui primitives + BaseUI                      | Mantine v8                              |
+| Layout granularity       | 2-col grid                         | 12-col grid                                        | 12-col grid                             |
+| Controlled selects       | Uncontrolled                       | Fully controlled (value reflects store state)      | Uncontrolled                            |
+| Select items             | Child components with =id=         | Child components with =value=                      | Plain string array via =data== prop     |
+| Number formatting        | Declarative via component props    | Manual =toFixed= + display hint                    | Manual =toFixed=, no hint               |
+| Number error state       | Shown on empty                     | Shown on empty                                     | Not displayed                           |
+| Pattern error on empty   | Suppressed                         | Evaluated (empty passes most patterns)             | Evaluated (empty passes most patterns)  |
+| Text error display       | Message string                     | Message string                                     | Red highlight only (no message)         |
+| Boolean default value    | Ignored                            | Read from =field.config.defaultValue=              | Read from =field.config.defaultValue=   |
+| Boolean on/off labels    | None                               | None                                               | ="True"= / ="False"=                    |
+| Add-option UX            | Separate =<Button>=                | =<InputGroupButton>=                               | Button embedded in input =rightSection= |
+
+* Bundle Size Analysis
+
+Evaluate =bundle-data= with =C-c C-c= to refresh from the latest build, then
+re-evaluate =bundle-overall= and =bundle-top5= to regenerate the tables.
+
+#+NAME: bundle-data
+#+begin_src sh :results output :exports none :cache yes
+./scripts/stats.js --analyze --json 2>/dev/null
+#+end_src
+
+#+RESULTS[5a4e5a38fc5a8bb6d98c0d4c408c6a5932b25dcb]: bundle-data
+#+begin_example
+{
+  "repos": [
+    "mantine-v8",
+    "jolly-ui",
+    "shadcn-baseui"
+  ],
+  "summary": [
+    {
+      "metric": "Total (parsed)",
+      "mantine-v8": 714927,
+      "jolly-ui": 608813,
+      "shadcn-baseui": 621005
+    },
+    {
+      "metric": "Total (gzip)",
+      "mantine-v8": 247178,
+      "jolly-ui": 238352,
+      "shadcn-baseui": 222603
+    },
+    {
+      "metric": "Total (brotli)",
+      "mantine-v8": 212257,
+      "jolly-ui": 209005,
+      "shadcn-baseui": 194885
+    },
+    {
+      "metric": "JS (parsed)",
+      "mantine-v8": 513745,
+      "jolly-ui": 566321,
+      "shadcn-baseui": 545535
+    },
+    {
+      "metric": "JS (gzip)",
+      "mantine-v8": 217093,
+      "jolly-ui": 230702,
+      "shadcn-baseui": 210259
+    },
+    {
+      "metric": "CSS (parsed)",
+      "mantine-v8": 200625,
+      "jolly-ui": 42025,
+      "shadcn-baseui": 75015
+    },
+    {
+      "metric": "CSS (gzip)",
+      "mantine-v8": 29737,
+      "jolly-ui": 7350,
+      "shadcn-baseui": 12051
+    },
+    {
+      "metric": "node_modules",
+      "mantine-v8": 498042,
+      "jolly-ui": 533618,
+      "shadcn-baseui": 496865
+    },
+    {
+      "metric": "App code",
+      "mantine-v8": 15703,
+      "jolly-ui": 32703,
+      "shadcn-baseui": 48670
+    }
+  ],
+  "top5": {
+    "mantine-v8": [
+      [
+        "@mantine",
+        200735
+      ],
+      [
+        "react-dom",
+        178512
+      ],
+      [
+        "@dnd-kit",
+        44194
+      ],
+      [
+        "@floating-ui",
+        26413
+      ],
+      [
+        "react-number-format/dist/react-number-format.es.js",
+        15003
+      ]
+    ],
+    "jolly-ui": [
+      [
+        "react-dom",
+        180333
+      ],
+      [
+        "react-aria/dist/private",
+        144603
+      ],
+      [
+        "react-virtuoso/dist/index.mjs",
+        54277
+      ],
+      [
+        "@dnd-kit",
+        46537
+      ],
+      [
+        "react-aria-components/dist/private",
+        35475
+      ]
+    ],
+    "shadcn-baseui": [
+      [
+        "react-dom",
+        178660
+      ],
+      [
+        "@base-ui",
+        139162
+      ],
+      [
+        "react-virtuoso/dist/index.mjs",
+        59321
+      ],
+      [
+        "@dnd-kit",
+        48307
+      ],
+      [
+        "tailwind-merge/dist/bundle-mjs.mjs",
+        26229
+      ]
+    ]
+  }
+}
+#+end_example
+
+** Overall bundle sizes
+
+#+NAME: bundle-overall
+#+begin_src emacs-lisp :var json=bundle-data :results value table :exports results
+(require 'json)
+(let* ((json-object-type 'alist)
+       (json-array-type  'list)
+       (json-key-type    'string)
+       (data    (json-read-from-string json))
+       (repos   (cdr (assoc "repos" data)))
+       (summary (cdr (assoc "summary" data)))
+       (to-kb   (lambda (b) (format "%.1f KB" (/ (float b) 1024.0))))
+       (headers (cons "Metric" repos))
+       (rows    (mapcar (lambda (row)
+                          (cons (cdr (assoc "metric" row))
+                                (mapcar (lambda (r)
+                                          (funcall to-kb (cdr (assoc r row))))
+                                        repos)))
+                        summary)))
+  (append (list headers 'hline) rows))
+#+end_src
+
+#+RESULTS: bundle-overall
+| Metric         | mantine-v8 | jolly-ui | shadcn-baseui |
+|----------------+------------+----------+---------------|
+| Total (parsed) | 698.2 KB   | 594.5 KB | 606.5 KB      |
+| Total (gzip)   | 241.4 KB   | 232.8 KB | 217.4 KB      |
+| Total (brotli) | 207.3 KB   | 204.1 KB | 190.3 KB      |
+| JS (parsed)    | 501.7 KB   | 553.0 KB | 532.7 KB      |
+| JS (gzip)      | 212.0 KB   | 225.3 KB | 205.3 KB      |
+| CSS (parsed)   | 195.9 KB   | 41.0 KB  | 73.3 KB       |
+| CSS (gzip)     | 29.0 KB    | 7.2 KB   | 11.8 KB       |
+| node_modules   | 486.4 KB   | 521.1 KB | 485.2 KB      |
+| App code       | 15.3 KB    | 31.9 KB  | 47.5 KB       |
+
+** Top 5 dependencies by parsed size
+
+*** mantine-v8
+
+#+NAME: bundle-top5-mantine
+#+begin_src emacs-lisp :var json=bundle-data :var repo="mantine-v8" :results value table :exports results
+(require 'json)
+(let* ((json-object-type 'alist)
+       (json-array-type  'list)
+       (json-key-type    'string)
+       (data  (json-read-from-string json))
+       (pkgs  (cdr (assoc repo (cdr (assoc "top5" data)))))
+       (to-kb (lambda (b) (format "%.1f KB" (/ (float b) 1024.0)))))
+  (append (list '("Package" "Parsed size") 'hline)
+          (mapcar (lambda (e) (list (car e) (funcall to-kb (cadr e)))) pkgs)))
+#+end_src
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align Xr
+#+RESULTS: bundle-top5-mantine
+| Package                                              | Parsed size |
+|------------------------------------------------------+-------------|
+| @mantine                                             | 196.0 KB    |
+| react-dom                                            | 174.3 KB    |
+| @dnd-kit                                             | 43.2 KB     |
+| @floating-ui                                         | 25.8 KB     |
+| react-number-format/dist/react-number-format.es.js   | 14.7 KB     |
+
+*** jolly-ui
+
+#+NAME: bundle-top5-jolly
+#+begin_src emacs-lisp :var json=bundle-data :var repo="jolly-ui" :results value table :exports results
+(require 'json)
+(let* ((json-object-type 'alist)
+       (json-array-type  'list)
+       (json-key-type    'string)
+       (data  (json-read-from-string json))
+       (pkgs  (cdr (assoc repo (cdr (assoc "top5" data)))))
+       (to-kb (lambda (b) (format "%.1f KB" (/ (float b) 1024.0)))))
+  (append (list '("Package" "Parsed size") 'hline)
+          (mapcar (lambda (e) (list (car e) (funcall to-kb (cadr e)))) pkgs)))
+#+end_src
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align Xr
+#+RESULTS: bundle-top5-jolly
+| Package                                    | Parsed size |
+|--------------------------------------------+-------------|
+| react-dom                                  | 176.1 KB    |
+| react-aria/dist/private                    | 141.2 KB    |
+| react-virtuoso/dist/index.mjs              | 53.0 KB     |
+| @dnd-kit                                   | 45.5 KB     |
+| react-aria-components/dist/private         | 34.6 KB     |
+
+*** shadcn-baseui
+
+#+NAME: bundle-top5-shadcn
+#+begin_src emacs-lisp :var json=bundle-data :var repo="shadcn-baseui" :results value table :exports results
+(require 'json)
+(let* ((json-object-type 'alist)
+       (json-array-type  'list)
+       (json-key-type    'string)
+       (data  (json-read-from-string json))
+       (pkgs  (cdr (assoc repo (cdr (assoc "top5" data)))))
+       (to-kb (lambda (b) (format "%.1f KB" (/ (float b) 1024.0)))))
+  (append (list '("Package" "Parsed size") 'hline)
+          (mapcar (lambda (e) (list (car e) (funcall to-kb (cadr e)))) pkgs)))
+#+end_src
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align Xr
+#+RESULTS: bundle-top5-shadcn
+| Package                                    | Parsed size |
+|--------------------------------------------+-------------|
+| react-dom                                  | 174.5 KB    |
+| @base-ui                                   | 135.9 KB    |
+| react-virtuoso/dist/index.mjs              | 57.9 KB     |
+| @dnd-kit                                   | 47.2 KB     |
+| tailwind-merge/dist/bundle-mjs.mjs         | 25.6 KB     |
+
+** Key observations
+
+- =shadcn-baseui= is the smallest on the wire (190.3 KB brotli) despite a mid-range parsed size,
+  suggesting its JS tree-shakes and compresses well.
+- =mantine-v8= has the largest CSS by a significant margin (195.9 KB parsed / 29 KB gzip) because
+  Mantine ships pre-built CSS Modules rather than utility classes generated at build time.
+- =mantine-v8= has the smallest JS footprint (501.7 KB parsed) and the smallest app-code
+  footprint (15.3 KB) — Mantine's rich component API means less hand-written glue code.
+- =jolly-ui= has the largest app code (31.9 KB) relative to its UI library, reflecting the more
+  verbose composition pattern of React Aria primitives.
+
+** Dependency analysis
+
+- =react-dom= (~174–176 KB) is the largest single dependency in all three repos and a constant
+  cost — it cannot be eliminated.
+- =react-aria= (141 KB private + 34.6 KB components = ~176 KB) is comparable in size to
+  =@base-ui= (135.9 KB) as the primary UI primitive layer.
+- =@mantine= (196 KB) is the heaviest UI library bundle, but it also replaces the most
+  hand-written code (see app code: 15.3 KB vs 31.9–47.5 KB).
+- =react-virtuoso= appears in both =jolly-ui= and =shadcn-baseui= (~53–58 KB) but not in
+  =mantine-v8=, which uses Mantine's own virtualisation.
+- =@dnd-kit= (~43–47 KB) is present in all three repos as it is shared infrastructure for the
+  drag-and-drop field reordering.
+- =tailwind-merge= (25.6 KB) is unique to =shadcn-baseui= — the cost of dynamic class merging
+  required by the shadcn component pattern.
+
+** Reproducibility
+
+To regenerate these numbers after a fresh build:
+
+#+begin_src sh
+# Build all repos then emit JSON
+./scripts/stats.js --build && ./scripts/stats.js --json
+
+# Analyse existing stats files without rebuilding
+./scripts/stats.js --analyze --json
+#+end_src
+
+* Accessibility Audit Methodology
+
+** Tools
+
+| Tool                        | Version  | Role                                               |
+|-----------------------------+----------+----------------------------------------------------|
+| =vitest=                    | 4.1.5    | Test runner                                        |
+| =@testing-library/react=    | latest   | React render + DOM queries under jsdom             |
+| =jsdom=                     | latest   | Headless DOM environment                           |
+| =axe-core=                  | latest   | WCAG / ARIA rule engine                            |
+
+** Test scope
+
+Each repo has 8 tests in =src/components/__tests__/a11y.test.tsx=:
+
+- =ConfigurationForm= rendered with =text=, =number=, =select=, and =boolean= field types
+- =PreviewField= rendered with =text=, =number=, =select=, and =boolean= field types
+
+Each test:
+1. Seeds the Zustand store with a representative =FieldSchema= via =useBuilderStore.setState=.
+2. Renders the component into jsdom.
+3. Runs =axe.run(container, options)= and fails with a structured message if any violations
+   are found.
+
+The following page-level axe rules are disabled — they do not apply to component-level tests:
+=html-has-lang=, =landmark-one-main=, =page-has-heading-one=, =region=, =document-title=.
+
+** Running the tests manually
+
+#+begin_src sh
+# From the monorepo root — run all three repos
+cd jolly-ui      && npm test && cd ..
+cd shadcn-baseui && npm test && cd ..
+cd mantine-v8    && npm test && cd ..
+#+end_src
+
+Or from within any repo:
+#+begin_src sh
+npm test
+#+end_src
+
+A passing test means no axe violations were found for that component/type combination.
+A failing test prints the violation rule ID, impact level, and the offending HTML snippet,
+for example:
+
+#+begin_example
+AssertionError: Accessibility violations:
+
+[critical] button-name: Ensure buttons have discernible text
+  <button type="button" role="combobox" aria-expanded="false" …>
+#+end_example
+
+** Interpreting impact levels
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lX
+| Level      | Meaning                                                            |
+|------------+--------------------------------------------------------------------|
+| =critical= | Blocks access entirely for affected users; fix immediately         |
+| =serious=  | Major barrier; fix before release                                  |
+| =moderate= | Causes significant difficulty; fix in next sprint                  |
+| =minor=    | Low impact; address when convenient                                |
+
+* Accessibility Audit
+
+Tests run with =axe-core= via =vitest= + =@testing-library/react= under jsdom.
+Page-level rules (=html-has-lang=, =landmark-one-main=, =page-has-heading-one=, =region=,
+=document-title=) are disabled as they are irrelevant at component scope.
+
+** Results summary
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXr
+| Repo           | ConfigurationForm       | PreviewField            | Total failures |
+|----------------+-------------------------+-------------------------+----------------|
+| jolly-ui       | 1 failure (select type) | 1 failure (boolean)     | 2 / 8          |
+| shadcn-baseui  | 4 failures (all types)  | 2 failures (select, boolean) | 6 / 8     |
+| mantine-v8     | ✓ all pass              | ✓ all pass              | 0 / 8          |
+
+** jolly-ui violations
+
+*** ConfigurationForm — select type
+- *Rule*: =button-name= (critical)
+- *Description*: Ensure buttons have discernible text.
+- *Element*: The =JollySelect= trigger button rendered by React Aria inside =SelectConfigurator=
+  (the select used to add options) renders with no visible label text in jsdom — the button is
+  present but its accessible name is empty.
+- *Root cause*: React Aria's =<Select>= wraps the trigger in a =<button>= whose text content comes
+  from the selected item label; with no item selected and no explicit =aria-label=, the button is
+  nameless.
+
+*** PreviewField — boolean field
+- *Rule*: =label= (critical)
+- *Description*: Ensure every form element has a label.
+- *Element*: =<input data-react-aria-pressable="true" role="switch" type="checkbox">=
+- *Root cause*: =jolly-ui='s =BooleanPreview= renders the label text in a sibling =<span>= before
+  the switch but does not associate it via =htmlFor= / =aria-labelledby=. React Aria's =<Switch>=
+  requires the label to be passed as a child or via its =<Label>= sub-component to wire the
+  association automatically.
+
+** shadcn-baseui violations
+
+*** ConfigurationForm — all four types (text, number, select, boolean)
+- *Rule*: =button-name= (critical)
+- *Description*: Ensure buttons have discernible text.
+- *Element*:
+  #+begin_src html
+  <button type="button" role="combobox" aria-expanded="false" aria-haspopup="listbox"
+          data-slot="select-trigger" …>
+  #+end_src
+- *Root cause*: The field =type= selector at the top of =ConfigurationForm= is a BaseUI/shadcn
+  =<Select>= whose =<SelectTrigger>= is a bare =<button>=. The sibling =<FieldLabel>= that visually
+  labels it is not programmatically associated with the trigger (BaseUI's lower-level =SelectTrigger=
+  does not inherit from the surrounding =<Field>= context the way Mantine or React Aria do). This
+  affects every ConfigurationForm variant because the type selector is always rendered.
+
+*** PreviewField — select field
+- *Rule*: =button-name= (critical)
+- *Description*: Same root cause as above; the =<SelectTrigger>= in =SelectPreview= also has no
+  accessible name.
+
+*** PreviewField — boolean field
+- *Rule*: =aria-toggle-field-name= (serious)
+- *Description*: Ensure every ARIA toggle field has an accessible name.
+- *Element*: =<span role="switch" aria-checked="false" data-slot="switch" …>=
+- *Root cause*: BaseUI's =<Switch>= renders as a =<span role="switch">= without wiring to its
+  sibling =<FieldLabel>=. An explicit =aria-label= or =aria-labelledby= on the switch element is
+  required.
+
+** mantine-v8 — no violations
+
+All 8 tests pass. Mantine's component API wires accessibility automatically:
+
+- =<Select label="…">= passes the label string through to the underlying combobox trigger via
+  =aria-label= / =aria-labelledby=, so =button-name= is never violated.
+- =<Switch label="…">= associates the label with the toggle via its internal =<label>= element,
+  satisfying both =label= and =aria-toggle-field-name=.
+
+** Cross-repo comparison
+
+#+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
+| Violation          | jolly-ui   | shadcn-baseui                          | mantine-v8 |
+|--------------------+------------+----------------------------------------+------------|
+| =button-name=      | Select in SelectConfigurator | Field-type selector + SelectPreview trigger | None |
+| =label=            | Switch in BooleanPreview | —                                    | None       |
+| =aria-toggle-field-name= | —    | Switch in BooleanPreview               | None       |
+
+The pattern is consistent: libraries that expose a single =label= prop on the component
+(Mantine, React Aria) wire accessibility automatically. Libraries that separate the label element
+from the control element as sibling primitives (BaseUI/shadcn) require the developer to manually
+associate them.
