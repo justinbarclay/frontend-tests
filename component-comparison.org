@@ -1,6 +1,6 @@
-#+TITLE: ConfigurationForm vs PreviewField — Component Comparison
+#+TITLE: Comparison of React UI libraries
 #+DATE: 2026-05-06
-#+AUTHOR: Copilot
+#+AUTHOR: Justin Barclay and Gemini
 #+OPTIONS: num:nil toc:t
 #+LATEX_CLASS: article
 #+LATEX_CLASS_OPTIONS: [11pt,a4paper]
@@ -79,21 +79,28 @@ All three follow the same pattern:
 ** Layout
 
 #+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
-| Aspect             | jolly-ui                          | shadcn-baseui                    | mantine-v8                       |
-|--------------------+-----------------------------------+----------------------------------+----------------------------------|
-| Grid               | 2-column, fields use col-span-2/4 | 12-column, fields use col-span-6 | 12-column, fields use span={6}   |
-| Grouping primitive | Plain =<div>=                     | =<FieldGroup>= wrapper component | =<Grid>= / =<Grid.Col>=          |
-| Label/Name row     | Stacked (each col-span-2)         | Side-by-side (col-span-6 each)   | Side-by-side (span={6} each)     |
+| Aspect             | jolly-ui                          | shadcn-baseui                    | mantine-v8                     |
+|--------------------+-----------------------------------+----------------------------------+--------------------------------|
+| Grid               | 2-column, fields use col-span-2/4 | 12-column, fields use col-span-6 | 12-column, fields use span={6} |
+| Grouping primitive | Plain =<div>=                     | =<FieldGroup>= wrapper component | =<Grid>= / =<Grid.Col>=        |
+| Label/Name row     | Stacked (each col-span-2)         | Side-by-side (col-span-6 each)   | Side-by-side (span={6} each)   |
 
 ** UI library components
 
 #+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXX
-| Field          | jolly-ui              | shadcn-baseui                       | mantine-v8                            |
-|----------------+-----------------------+-------------------------------------+---------------------------------------|
-| Text input     | =JollyTextField=      | =<Field>= + =<Input>=               | =<TextInput>=                         |
-| Number input   | =JollyNumberField=    | =<Field>= + =<Input type="number">= | =<NumberInput>=                       |
-| Select         | =JollySelect=         | Shadcn =<Select>= + Trigger/Content | =<Select>=                            |
-| Add-option btn | =<Button onPress>=    | =<InputGroupButton onClick>=        | =rightSection={<Button>}= on TextInput |
+| Field          | jolly-ui           | shadcn-baseui                       | mantine-v8                             |
+|----------------+--------------------+-------------------------------------+----------------------------------------|
+| Text input     | =JollyTextField=   | =<Field>= + =<Input>=               | =<TextInput>=                          |
+| Number input   | =JollyNumberField= | =<Field>= + =<Input type="number">= | =<NumberInput>=                        |
+| Select         | =JollySelect=      | Shadcn =<Select>= + Trigger/Content | =<Select>=                             |
+| Add-option btn | =<div>= flex wrapper + =<Button onPress>= | =<Field>= → =<InputGroup>= → =<InputGroupAddon>= → =<InputGroupButton>= | =rightSection={<Button>}= on TextInput |
+
+Both =jolly-ui= and =shadcn-baseui= required compositional setup before reaching the button itself.
+=jolly-ui= wraps =JollyTextField= and =<Button>= in a plain =<div className="flex items-end gap-2">=
+— no library primitive involved. =shadcn-baseui= requires a four-level component stack: =<Field>=
+provides label/error context; =<InputGroup>= establishes the combined input frame; =<InputGroupAddon>=
+positions the trailing slot; and finally =<InputGroupButton>= renders the clickable control. Mantine
+sidesteps this entirely by accepting a =rightSection= prop directly on =<TextInput>=.
 
 ** SelectItem identity
 
@@ -109,13 +116,6 @@ All three follow the same pattern:
   bare =<Input>= elements beneath it.
 - =mantine-v8= mirrors =jolly-ui=: each option gets its own =<TextInput label="Option N">= and adds
   a new-option field with the =+= button embedded in the input's =rightSection=.
-
-** Select — current value display
-
-- =jolly-ui= and =mantine-v8= are both uncontrolled: neither passes =value= to the field-type
-  =<Select>=, so the selector shows the placeholder and does not reflect live store state.
-- =shadcn-baseui= passes =value={field.type}= and renders it via =<SelectValue>=, so the selector
-  always reflects the live state.
 
 * PreviewField
 
@@ -168,7 +168,6 @@ fallback messages are identical across all three.
 |--------------------------+------------------------------------+----------------------------------------------------+-----------------------------------------|
 | UI library               | React Aria / Jolly UI              | shadcn-ui primitives + BaseUI                      | Mantine v8                              |
 | Layout granularity       | 2-col grid                         | 12-col grid                                        | 12-col grid                             |
-| Controlled selects       | Uncontrolled                       | Fully controlled (value reflects store state)      | Uncontrolled                            |
 | Select items             | Child components with =id=         | Child components with =value=                      | Plain string array via =data== prop     |
 | Number formatting        | Declarative via component props    | Manual =toFixed= + display hint                    | Manual =toFixed=, no hint               |
 | Number error state       | Shown on empty                     | Shown on empty                                     | Not displayed                           |
@@ -177,6 +176,328 @@ fallback messages are identical across all three.
 | Boolean default value    | Ignored                            | Read from =field.config.defaultValue=              | Read from =field.config.defaultValue=   |
 | Boolean on/off labels    | None                               | None                                               | ="True"= / ="False"=                    |
 | Add-option UX            | Separate =<Button>=                | =<InputGroupButton>=                               | Button embedded in input =rightSection= |
+** Select Examples
+I think looking at the Select Examples side-by-side is the most illustrative of the differences in approach between the three libraries, so here are the relevant snippets from each repo's =ConfigurationForm=.
+*** shadcn
+shadcn's Select element is the most primitive because the library provides no higher-level abstractions for form fields — you compose the full trigger/content/item stack yourself and wire it up to the store manually. This gives you maximum control but also means more boilerplate and manual wiring. Which means that this is something we'll have to explicitly write within out component/design system.
+[[https://github.com/justinbarclay/frontend-tests/blob/main/shadcn-baseui/src/components/ConfigurationForm.tsx#L158][Source: ConfigurationForm.tsx]]
+#+begin_src tsx
+  <Field className="col-span-12">
+    <FieldLabel>Field Type</FieldLabel>
+    <Select<FieldType>
+      value={field.type}
+      onValueChange={(value) => {
+          setType(value);
+      }}
+    >
+      <SelectTrigger>
+        <SelectValue>{field.type}</SelectValue>
+      </SelectTrigger>
+      <SelectContent>
+        <SelectItem value="text">text</SelectItem>
+        <SelectItem value="number">number</SelectItem>
+        <SelectItem value="boolean">boolean</SelectItem>
+        <SelectItem value="select">select</SelectItem>
+      </SelectContent>
+    </Select>
+  </Field>
+#+end_src
+*** jollyui
+jolly-ui provides a slight higher-level =JollySelect= component that abstracts away the trigger/content/item structure and internal wiring, so you can just pass =onChange= and it gives you back the selected value. However, it still requires you to render =SelectItem= children and pass the item ID.
+[[https://github.com/justinbarclay/frontend-tests/blob/main/jolly-ui/src/components/ConfigurationForm.tsx#L147][Source: ConfigurationForm.tsx]]
+#+begin_src tsx
+  <JollySelect
+    className="col-span-4"
+    label="Field Type"
+    placeholder="Pick a value"
+    value={field.type}
+    onChange={(key) => setType((key as FieldType) || "text")}
+  >
+    <SelectItem id="number">number</SelectItem>
+    <SelectItem id="select">select</SelectItem>
+    <SelectItem id="text">text</SelectItem>
+    <SelectItem id="boolean">boolean</SelectItem>
+  </JollySelect>
+#+end_src
+*** mantine
+Finally, Mantine's =<Select>= is the most high-level: it abstracts away the trigger/content/item structure like jolly-ui, but it also eliminates the need for child item components entirely by accepting a plain array of strings via the =data= prop. This is the most concise and straightforward approach, but it also means you have less control over the rendering of individual items (e.g. you can't easily add icons or custom layouts to the options without switching to a more manual approach).
+[[https://github.com/justinbarclay/frontend-tests/blob/main/mantine-v8/src/components/ConfigurationForm.tsx#L160][Source: ConfigurationForm.tsx]]
+#+begin_src tsx
+  <Grid.Col span={12}>
+    <Select
+      label="Field Type"
+      placeholder="Pick a value"
+      data={["number", "select", "text", "boolean"]}
+      onChange={(value: FieldType) => setType(value || "text")}
+    />
+  </Grid.Col>
+#+end_src
+** Number Input Example
+Here, the differences are less pronounced because all three libraries provide a number input component that handles the core functionality. However, shadcn's approach still requires more manual wiring and boilerplate: you have to render a =<Field>= wrapper, an =<Input type="number">=, and then manually implement the decimal formatting and error hint logic. In contrast, jolly-ui's =JollyNumberField= provides declarative formatting via props and built-in error handling, while Mantine's =<NumberInput>= also handles formatting internally (though it doesn't display an error state for empty values). So while the core input functionality is similar across all three, shadcn's approach is more low-level and requires more manual work to achieve the same features.
+
+*** shadcn
+[[https://github.com/justinbarclay/frontend-tests/blob/main/shadcn-baseui/src/components/ConfigurationForm.tsx#L35][Source: ConfigurationForm.tsx]]
+#+begin_src tsx
+  <Field className="col-span-6">
+    <FieldLabel>Min</FieldLabel>
+    <Input
+      placeholder="Set min"
+      key="min"
+      value={field.validation.min}
+      onChange={(event) => updateValidation("min", event.currentTarget.value)}
+    />
+  </Field>
+#+end_src
+*** jolly-ui
+[[https://github.com/justinbarclay/frontend-tests/blob/main/jolly-ui/src/components/ConfigurationForm.tsx#L35][Source: ConfigurationForm.tsx]]
+#+begin_src tsx
+  <JollyNumberField
+    className="col-span-2"
+    label="Min"
+    description="Set min"
+    value={field.validation.min ?? NaN}
+    onChange={(value) => updateValidation("min", isNaN(value) ? undefined : value)}
+  />
+#+end_src
+*** mantine
+[[https://github.com/justinbarclay/frontend-tests/blob/main/mantine-v8/src/components/ConfigurationForm.tsx#L32][Source: ConfigurationForm.tsx]]
+#+begin_src tsx
+  <Grid.Col span={6}>
+    <NumberInput
+      label="Min"
+      placeholder="Set min"
+      key="min"
+      value={field.validation.min}
+      onChange={(event) => updateValidation("min", event.valueOf())}
+    />
+  </Grid.Col>
+#+end_src
+** Error handling Example
+Finally, I am not going to beat a dead horse anymore, but you can see the clear pattern in the 3 systems. Jolly UI provides the most built-in error handling and declarative validation options, shadcn provides the most manual control but requires you to implement all error handling and validation logic yourself, and Mantine falls somewhere in between with some built-in validation but less explicit error state display (no error messages, just red highlights). So again, shadcn gives you maximum flexibility at the cost of more boilerplate and manual work, while jolly-ui and Mantine provide more out-of-the-box functionality with less control over the details.
+*** shadcn
+[[https://github.com/justinbarclay/frontend-tests/blob/main/shadcn-baseui/src/components/PreviewField.tsx#L20][Source: PreviewField.tsx]]
+#+begin_src tsx
+  <Field className="max-w-md" data-invalid={!!error}>
+    <FieldLabel>{field.label}</FieldLabel>
+    <Input
+      placeholder={field.config.placeholder || "Enter a number"}
+      type="number"
+      max={field.validation.max}
+      min={field.validation.min}
+      onChange={(event) => {
+        const val = event.currentTarget.value;
+        // Prevent update if alphabetical characters are present
+        if (!/[a-zA-Z]/.test(val)) {
+          setValue(val);
+        }
+      }}
+      value={value} // Use raw value for input to allow typing decimals freely
+      aria-invalid={!!error}
+    />
+    {field.config.decimalPlaces !== undefined && value !== "" && !isNaN(Number(value)) && (
+      <p className="text-xs text-muted-foreground mt-1">Formatted: {renderValue}</p>
+    )}
+    {error && <FieldError>{error}</FieldError>}
+  </Field>
+#+end_src
+*** jolly-ui
+[[https://github.com/justinbarclay/frontend-tests/blob/main/jolly-ui/src/components/PreviewField.tsx#L45][Source: PreviewField.tsx]]
+#+begin_src tsx
+  <div className="flex flex-col gap-1">
+    <JollyTextField
+      label={field.label}
+      placeholder={field.config.placeholder || "Enter text"}
+      onChange={(val) => setValue(val)}
+      value={value}
+      isRequired={field.validation.required}
+      isDisabled={field.status === "inactive"}
+      isInvalid={error}
+      errorMessage={"Invalid format"}
+    />
+  </div>
+#+end_src
+*** mantine
+[[https://github.com/justinbarclay/frontend-tests/blob/main/mantine-v8/src/components/PreviewField.tsx#L27][Source: PreviewField.tsx]]
+#+begin_src tsx
+  <TextInput
+    label={field.label}
+    placeholder={field.config.placeholder || "Enter text"}
+    onChange={(event) => setValue(event.currentTarget.value)}
+    value={value}
+    error={
+      field.validation.pattern && !new RegExp(field.validation.pattern).test(value)
+        ? "Invalid format"
+        : null}
+  />
+#+end_src
+
+** Custom Components and Styling
+When it comes to creating custom components and styling Jolly UI and shadcn become a lot more closely aligned. Both libraries require you to compose lower-level primitives together to achieve custom layouts and styles, which gives you a lot of flexibility but also means more boilerplate, more verbosity, and manual work. Mantine, on the other hand, provides more high-level components with built-in styling and layout options, which can make it faster to build common UI patterns. But then when you need to implement CSS modules.
+
+I am sure that this section of the demo is not _entirely_ representative of what it would look like in production because we would have made wrapper components to handle some of the generic styling and layout concerns, but I think it still serves to illustrate the general differences in approach between the three libraries when it comes to building custom components and applying styles.
+
+*** shadcn
+[[https://github.com/justinbarclay/frontend-tests/blob/main/shadcn-baseui/src/components/summary-bar.tsx#L6][Source: summary-bar.tsx]]
+#+begin_src tsx
+export function SummaryBar() {
+  const fields = useFieldStore((state) => state.fields);
+
+  const totalFields = fields.length;
+  const activeFields = fields.filter((f) => f.status === "active").length;
+
+  return (
+    <div className="relative overflow-hidden rounded-xl border bg-gradient-to-r from-primary/10 via-background to-primary/5 p-6 shadow-md border-primary/20">
+      {/* Decorative background element */}
+      <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/5 blur-3xl" />
+      <div className="absolute -left-8 -bottom-8 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
+
+      <div className="relative flex flex-wrap items-center gap-8 md:gap-16">
+        <div className="flex items-center gap-4">
+          <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary shadow-sm ring-1 ring-primary/20">
+            <DatabaseIcon className="h-6 w-6" />
+          </div>
+          <div>
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+              Total Fields
+            </p>
+            <p className="text-3xl font-bold tracking-tight">{totalFields.toLocaleString()}</p>
+          </div>
+        </div>
+
+        <div className="hidden h-12 w-px bg-border md:block" />
+
+        <div className="flex items-center gap-4">
+          <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-green-500/10 text-green-600 shadow-sm ring-1 ring-green-500/20 dark:text-green-500">
+            <CheckCircle2Icon className="h-6 w-6" />
+          </div>
+          <div>
+            <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+              Active Fields
+            </p>
+            <p className="text-3xl font-bold tracking-tight">{activeFields.toLocaleString()}</p>
+          </div>
+        </div>
+
+        <div className="ml-auto hidden items-center gap-2 text-xs font-medium text-muted-foreground md:flex">
+          <span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse" />
+          System Live
+        </div>
+      </div>
+    </div>
+  );
+}
+#+end_src
+
+*** jolly-ui
+[[https://github.com/justinbarclay/frontend-tests/blob/main/jolly-ui/src/components/SummaryBar.tsx#L3][Source: SummaryBar.tsx]]
+#+begin_src tsx
+export function SummaryBar() {
+  const fields = useFieldStore((state) => state.fields);
+  const totalFields = fields.length;
+  const activeFields = fields.filter((f) => f.status === "active").length;
+
+  return (
+    <div className="mb-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div className="relative overflow-hidden rounded-xl border bg-white p-6 shadow-sm transition-all hover:shadow-md dark:bg-zinc-900">
+        <div className="absolute -right-4 -top-4 size-24 rounded-full bg-indigo-500/10 blur-2xl" />
+        <div className="relative z-10 flex flex-col gap-1">
+          <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+            Total Fields
+          </span>
+          <div className="flex items-baseline gap-2">
+            <span className="text-4xl font-black tracking-tighter text-zinc-900 dark:text-zinc-100">
+              {totalFields.toLocaleString()}
+            </span>
+            <span className="text-xs font-bold text-indigo-500 dark:text-indigo-400">Total</span>
+          </div>
+        </div>
+        <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500" />
+      </div>
+
+      <div className="relative overflow-hidden rounded-xl border bg-white p-6 shadow-sm transition-all hover:shadow-md dark:bg-zinc-900">
+        <div className="absolute -right-4 -top-4 size-24 rounded-full bg-emerald-500/10 blur-2xl" />
+        <div className="relative z-10 flex flex-col gap-1">
+          <span className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
+            Active Fields
+          </span>
+          <div className="flex items-baseline gap-2">
+            <span className="text-4xl font-black tracking-tighter text-zinc-900 dark:text-zinc-100">
+              {activeFields.toLocaleString()}
+            </span>
+            <span className="text-xs font-bold text-emerald-500 dark:text-emerald-400">Active</span>
+          </div>
+        </div>
+        <div className="absolute inset-x-0 bottom-0 h-1 bg-gradient-to-r from-emerald-500 via-teal-500 to-cyan-500" />
+      </div>
+    </div>
+  );
+}
+#+end_src
+*** mantine
+[[https://github.com/justinbarclay/frontend-tests/blob/main/mantine-v8/src/components/SummaryBar.tsx#L5][Source: SummaryBar.tsx]]
+#+NAME: SummaryBar.tsx
+#+begin_src tsx
+export const SummaryBar = () => {
+  const fields = useFieldStore((state) => state.fields);
+  const activeFieldsCount = fields.filter((f) => f.status === "active").length;
+
+  return (
+    <Box className={classes.root}>
+      <Group gap="xl">
+        <Stack gap={4}>
+          <Text className={classes.statLabel}>Total Fields</Text>
+          <Text className={classes.statValue}>{fields.length}</Text>
+        </Stack>
+
+        <Box className={classes.divider} />
+
+        <Stack gap={4}>
+          <Text className={classes.statLabel}>Active Fields</Text>
+          <Text className={classes.statValue}>{activeFieldsCount}</Text>
+        </Stack>
+      </Group>
+    </Box>
+  );
+}
+#+end_src
+
+[[https://github.com/justinbarclay/frontend-tests/blob/main/mantine-v8/src/components/SummaryBar.module.css#L1][Source: SummaryBar.module.css]]
+#+NAME: SummaryBar.module.css
+#+begin_src css
+.root {
+  padding: var(--mantine-spacing-xl);
+  border-radius: var(--mantine-radius-md);
+  background: linear-gradient(
+    135deg,
+    var(--mantine-color-blue-filled) 0%,
+    var(--mantine-color-cyan-filled) 100%
+  );
+  color: var(--mantine-color-white);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  margin-bottom: var(--mantine-spacing-md);
+}
+
+.statLabel {
+  font-size: var(--mantine-font-size-xs);
+  text-transform: uppercase;
+  font-weight: 700;
+  opacity: 0.8;
+  letter-spacing: 0.5px;
+}
+
+.statValue {
+  font-size: rem(32px);
+  font-weight: 900;
+  line-height: 1;
+}
+
+.divider {
+  width: 1px;
+  background-color: rgba(255, 255, 255, 0.2);
+  height: rem(40px);
+}
+#+end_src
 
 * Bundle Size Analysis
 
@@ -541,8 +862,11 @@ Tests run with =axe-core= via =vitest= + =@testing-library/react= under jsdom.
 Page-level rules (=html-has-lang=, =landmark-one-main=, =page-has-heading-one=, =region=,
 =document-title=) are disabled as they are irrelevant at component scope.
 
-** Results summary
+#+begin_quote
+Editors note: This accessibility audit is not meant to be an exhaustive evaluation of the accessibility of these libraries or even of these specific components. It is meant to be a snapshot of the traps or pitfalls that a developer might encounter when using these libraries to build out the specific components in this demo, and how those issues might manifest in automated testing. The test coverage is intentionally narrow to keep the scope manageable and focused on the most common form controls and patterns used in the demo, but it is not comprehensive of all possible accessibility issues or edge cases in these libraries.
+#+end_quote
 
+** Results summary
 #+ATTR_LATEX: :environment tabularx :width \linewidth :align lXXr
 | Repo           | ConfigurationForm       | PreviewField            | Total failures |
 |----------------+-------------------------+-------------------------+----------------|
@@ -622,3 +946,6 @@ The pattern is consistent: libraries that expose a single =label= prop on the co
 (Mantine, React Aria) wire accessibility automatically. Libraries that separate the label element
 from the control element as sibling primitives (BaseUI/shadcn) require the developer to manually
 associate them.
+* Notes
+** Mind–body dualism: Boilerplate and Granularity
+The distinction between "Boilerplate" and "Component Granularity" is often a matter of architectural lens rather than technical difference. When a library requires a multi-level compositional stack to render a standard form field—as seen in the primitive-first approach of *Shadcn* or the headless orchestration required by *Jolly UI (React Aria)* —it is correctly identified as *Boilerplate* in the context of Enterprise or SaaS applications where speed of delivery and system-wide consistency are the primary value drivers. In these environments, every line of "glue code" represents a maintenance tax that adds no unique business value. However, that same verbosity is viewed as **Granularity** when a product’s core differentiator relies on high-precision interaction design—such as surgical re-render optimizations or non-standard brand aesthetics—that a "black box" monolithic component like **Mantine** would otherwise obstruct. Ultimately, the choice is a decision on where to place the "Extensibility Insurance": most applications are better served by the guardrails of a high-level API, while only a small subset of "hero features" truly justify the overhead of managing the low-level primitives and state-wiring inherent in Shadcn and Jolly UI.
