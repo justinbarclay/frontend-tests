@@ -179,7 +179,7 @@ fallback messages are identical across all three.
 ** Select Examples
 I think looking at the Select Examples side-by-side is the most illustrative of the differences in approach between the three libraries, so here are the relevant snippets from each repo's =ConfigurationForm=.
 *** shadcn
-shadcn's Select element is the most primitive because the library provides no higher-level abstractions for form fields — you compose the full trigger/content/item stack yourself and wire it up to the store manually. This gives you maximum control but also means more boilerplate and manual wiring. Which means that this is something we'll have to explicitly write within out component/design system.
+shadcn's Select element is the most primitive because the library provides no higher-level abstractions for form fields — you compose the full trigger/content/item stack yourself and wire it up to the store manually. This gives you maximum control but also means more [[id:4c832f7a-cf68-4e37-a81d-b6bd299fee9c][boilerplate]] and manual wiring. Which means that this is something we'll have to explicitly write within out component/design system.
 [[https://github.com/justinbarclay/frontend-tests/blob/main/shadcn-baseui/src/components/ConfigurationForm.tsx#L158][Source: ConfigurationForm.tsx]]
 #+begin_src tsx
   <Field className="col-span-12">
@@ -946,6 +946,11 @@ The pattern is consistent: libraries that expose a single =label= prop on the co
 (Mantine, React Aria) wire accessibility automatically. Libraries that separate the label element
 from the control element as sibling primitives (BaseUI/shadcn) require the developer to manually
 associate them.
-* Notes
+* Footnotes
+
 ** Mind–body dualism: Boilerplate and Granularity
+:PROPERTIES:
+:ID:       4c832f7a-cf68-4e37-a81d-b6bd299fee9c
+:END:
+
 The distinction between "Boilerplate" and "Component Granularity" is often a matter of architectural lens rather than technical difference. When a library requires a multi-level compositional stack to render a standard form field—as seen in the primitive-first approach of *Shadcn* or the headless orchestration required by *Jolly UI (React Aria)* —it is correctly identified as *Boilerplate* in the context of Enterprise or SaaS applications where speed of delivery and system-wide consistency are the primary value drivers. In these environments, every line of "glue code" represents a maintenance tax that adds no unique business value. However, that same verbosity is viewed as **Granularity** when a product’s core differentiator relies on high-precision interaction design—such as surgical re-render optimizations or non-standard brand aesthetics—that a "black box" monolithic component like **Mantine** would otherwise obstruct. Ultimately, the choice is a decision on where to place the "Extensibility Insurance": most applications are better served by the guardrails of a high-level API, while only a small subset of "hero features" truly justify the overhead of managing the low-level primitives and state-wiring inherent in Shadcn and Jolly UI.
