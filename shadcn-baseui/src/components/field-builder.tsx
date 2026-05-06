@@ -10,6 +10,7 @@ import {
 } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
 import ConfigurationForm from "./ConfigurationForm"
+import Preview from "./PreviewField"
 
 export function FieldBuilder() {
   const { isBuilderOpen, setIsBuilderOpen } = useFieldStore()
@@ -45,14 +46,7 @@ export function FieldBuilder() {
               Preview
             </h3>
             <div className="space-y-6">
-               <div className="rounded-lg border-2 border-dashed p-12 text-center bg-background">
-                <p className="text-muted-foreground italic">
-                  TODO: Developer Implementation [manual]
-                </p>
-                <p className="text-xs text-muted-foreground mt-2">
-                  Implement real-time component preview.
-                </p>
-              </div>
+              <Preview />
             </div>
           </div>
         </div>
