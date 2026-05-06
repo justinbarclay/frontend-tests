@@ -1,0 +1,14 @@
+{
+  "plugins": ["react", "unicorn", "typescript"],
+  "categories": {
+    "correctness": "deny",
+    "suspicious": "off",
+    "pedantic": "off",
+    "perf": "off",
+    "style": "off"
+  },
+  "rules": {
+    "func-style": ["deny", "expression"],
+    "arrow-body-style": ["deny", "as-needed"]
+  }
+}
