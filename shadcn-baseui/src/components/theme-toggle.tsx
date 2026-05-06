@@ -1,16 +1,15 @@
-"use client"
+"use client";
 
-import { useTheme } from "@/components/theme-provider"
-import { Switch } from "@/components/ui/switch"
-import { MoonIcon, SunIcon } from "lucide-react"
+import { useTheme } from "@/components/theme-provider";
+import { Switch } from "@/components/ui/switch";
+import { MoonIcon, SunIcon } from "lucide-react";
 
 export function ThemeToggle() {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   const isDark =
     theme === "dark" ||
-    (theme === "system" &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches)
+    (theme === "system" && window.matchMedia("(prefers-color-scheme: dark)").matches);
 
   return (
     <div className="flex items-center gap-2">
@@ -22,5 +21,5 @@ export function ThemeToggle() {
       />
       <MoonIcon className="size-4 text-muted-foreground" />
     </div>
-  )
+  );
 }

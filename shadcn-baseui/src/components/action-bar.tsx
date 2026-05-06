@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { useFieldStore } from "@/store/useFieldStore"
-import { Button } from "@/components/ui/button"
+import { useFieldStore } from "@/store/useFieldStore";
+import { Button } from "@/components/ui/button";
 import {
   AlertDialog,
   AlertDialogAction,
@@ -12,33 +12,32 @@ import {
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
-} from "@/components/ui/alert-dialog"
-import { Trash2Icon, BanIcon, XIcon } from "lucide-react"
-import { toast } from "@/lib/toast"
+} from "@/components/ui/alert-dialog";
+import { Trash2Icon, BanIcon, XIcon } from "lucide-react";
+import { toast } from "@/lib/toast";
 
 export function ActionBar() {
-  const { selectedIds, toggleSelectAll, deleteFields, deactivateFields } =
-    useFieldStore()
+  const { selectedIds, toggleSelectAll, deleteFields, deactivateFields } = useFieldStore();
 
-  const selectedCount = selectedIds.size
+  const selectedCount = selectedIds.size;
 
-  if (selectedCount === 0) return null
+  if (selectedCount === 0) return null;
 
   const handleDeactivate = () => {
-    deactivateFields(Array.from(selectedIds))
+    deactivateFields(Array.from(selectedIds));
     toast({
       title: "Fields deactivated",
       description: `${selectedCount} fields have been set to inactive.`,
-    })
-  }
+    });
+  };
 
   const handleDelete = () => {
-    deleteFields(Array.from(selectedIds))
+    deleteFields(Array.from(selectedIds));
     toast({
       title: "Fields deleted",
       description: `${selectedCount} fields have been permanently removed.`,
-    })
-  }
+    });
+  };
 
   return (
     <div className="fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center gap-4 rounded-full border bg-background px-6 py-3 shadow-2xl animate-in fade-in slide-in-from-bottom-8 duration-300">
@@ -72,11 +71,7 @@ export function ActionBar() {
         <AlertDialog>
           <AlertDialogTrigger
             render={
-              <Button
-                variant="destructive"
-                size="sm"
-                className="h-9 gap-2 rounded-full"
-              >
+              <Button variant="destructive" size="sm" className="h-9 gap-2 rounded-full">
                 <Trash2Icon className="h-4 w-4" />
                 Delete
               </Button>
@@ -86,9 +81,8 @@ export function ActionBar() {
             <AlertDialogHeader>
               <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>
               <AlertDialogDescription>
-                This action cannot be undone. This will permanently delete the{" "}
-                {selectedCount} selected fields and remove their data from our
-                servers.
+                This action cannot be undone. This will permanently delete the {selectedCount}{" "}
+                selected fields and remove their data from our servers.
               </AlertDialogDescription>
             </AlertDialogHeader>
             <AlertDialogFooter>
@@ -104,5 +98,5 @@ export function ActionBar() {
         </AlertDialog>
       </div>
     </div>
-  )
+  );
 }

@@ -39,10 +39,8 @@ const NumberPreview = ({ field }: { field: FieldSchema }) => {
         value={value} // Use raw value for input to allow typing decimals freely
         aria-invalid={!!error}
       />
-       {field.config.decimalPlaces !== undefined && value !== "" && !isNaN(Number(value)) && (
-        <p className="text-xs text-muted-foreground mt-1">
-          Formatted: {renderValue}
-        </p>
+      {field.config.decimalPlaces !== undefined && value !== "" && !isNaN(Number(value)) && (
+        <p className="text-xs text-muted-foreground mt-1">Formatted: {renderValue}</p>
       )}
       {error && <FieldError>{error}</FieldError>}
     </Field>
@@ -51,7 +49,9 @@ const NumberPreview = ({ field }: { field: FieldSchema }) => {
 
 const TextPreview = ({ field }: { field: FieldSchema }) => {
   const [value, setValue] = useState<string>("");
-  const error= field.validation.pattern ? !new RegExp(field.validation.pattern).test(value) : false;
+  const error = field.validation.pattern
+    ? !new RegExp(field.validation.pattern).test(value)
+    : false;
   return (
     <Field className="max-w-md" data-invalid={error}>
       <FieldLabel>{field.label}</FieldLabel>
@@ -63,15 +63,13 @@ const TextPreview = ({ field }: { field: FieldSchema }) => {
       />
       {error && <FieldError>Field does not match regex pattern</FieldError>}
     </Field>
-
   );
 };
 
 const SelectPreview = ({ field }: { field: FieldSchema }) => (
   <Field className="max-w-md">
     <FieldLabel>{field.label}</FieldLabel>
-    <Select
-      defaultValue={field.config.placeholder as string}>
+    <Select defaultValue={field.config.placeholder as string}>
       <SelectTrigger>
         <SelectValue>{field.config.placeholder}</SelectValue>
       </SelectTrigger>
@@ -89,9 +87,7 @@ const SelectPreview = ({ field }: { field: FieldSchema }) => (
 const BooleanPreview = ({ field }: { field: FieldSchema }) => (
   <Field className="max-w-md">
     <FieldLabel>{field.label}</FieldLabel>
-  <Switch
-    defaultChecked={(field.config.defaultValue as boolean) || false}
-  />
+    <Switch defaultChecked={(field.config.defaultValue as boolean) || false} />
   </Field>
 );
 const preview = {

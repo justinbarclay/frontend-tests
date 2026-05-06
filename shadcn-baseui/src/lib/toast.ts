@@ -1,10 +1,10 @@
-import { toastManager } from "@/lib/toast-manager"
+import { toastManager } from "@/lib/toast-manager";
 
 interface ToastOptions {
-  title?: string
-  description?: string
-  timeout?: number
-  type?: string
+  title?: string;
+  description?: string;
+  timeout?: number;
+  type?: string;
 }
 
 export function toast({ title, description, timeout = 5000, type }: ToastOptions) {
@@ -13,5 +13,5 @@ export function toast({ title, description, timeout = 5000, type }: ToastOptions
     description,
     timeout,
     type,
-  })
+  });
 }

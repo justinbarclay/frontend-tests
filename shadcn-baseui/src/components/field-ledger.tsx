@@ -1,27 +1,16 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { useFieldStore, type Field } from "@/store/useFieldStore"
-import { TableVirtuoso } from "react-virtuoso"
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableRow,
-} from "@/components/ui/table"
-import { Badge } from "@/components/ui/badge"
-import { Input } from "@/components/ui/input"
-import { Checkbox } from "@/components/ui/checkbox"
-import {
-  ArrowUpDownIcon,
-  SearchIcon,
-  PlusIcon,
-  GripVerticalIcon,
-} from "lucide-react"
-import { Button } from "@/components/ui/button"
-import { cn } from "@/lib/utils"
-import { SummaryBar } from "@/components/summary-bar"
+import * as React from "react";
+import { useFieldStore, type Field } from "@/store/useFieldStore";
+import { TableVirtuoso } from "react-virtuoso";
+import { Table, TableBody, TableCell, TableHead, TableRow } from "@/components/ui/table";
+import { Badge } from "@/components/ui/badge";
+import { Input } from "@/components/ui/input";
+import { Checkbox } from "@/components/ui/checkbox";
+import { ArrowUpDownIcon, SearchIcon, PlusIcon, GripVerticalIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { SummaryBar } from "@/components/summary-bar";
 
 import {
   DndContext,
@@ -33,57 +22,52 @@ import {
   DragOverlay,
   type DragEndEvent,
   type DragStartEvent,
-} from "@dnd-kit/core"
+} from "@dnd-kit/core";
 import {
   SortableContext,
   sortableKeyboardCoordinates,
   verticalListSortingStrategy,
   useSortable,
-} from "@dnd-kit/sortable"
-import { CSS } from "@dnd-kit/utilities"
+} from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 
 // Context to pass DND attributes from row to drag handle
 const SortableRowContext = React.createContext<{
-  attributes: any
-  listeners: any
-  setNodeRef: (node: HTMLElement | null) => void
-} | null>(null)
+  attributes: any;
+  listeners: any;
+  setNodeRef: (node: HTMLElement | null) => void;
+} | null>(null);
 
 const useSortableRow = () => {
-  const context = React.useContext(SortableRowContext)
+  const context = React.useContext(SortableRowContext);
   if (!context) {
-    throw new Error("useSortableRow must be used within a SortableRowProvider")
+    throw new Error("useSortableRow must be used within a SortableRowProvider");
   }
-  return context
-}
+  return context;
+};
 
 const DataTableRow = ({
   item,
   selectedIds,
   ...props
 }: {
-  item: Field
-  selectedIds: Set<string>
-  [key: string]: any
+  item: Field;
+  selectedIds: Set<string>;
+  [key: string]: any;
 }) => {
-  const {
-    attributes,
-    listeners,
-    setNodeRef,
-    transform,
-    transition,
-    isDragging,
-  } = useSortable({ id: item.id })
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
+    id: item.id,
+  });
 
   const style = {
     transform: CSS.Translate.toString(transform),
     transition,
-  }
+  };
 
   const contextValue = React.useMemo(
     () => ({ attributes, listeners, setNodeRef }),
-    [attributes, listeners, setNodeRef]
-  )
+    [attributes, listeners, setNodeRef],
+  );
 
   return (
     <SortableRowContext.Provider value={contextValue}>
@@ -97,11 +81,11 @@ const DataTableRow = ({
         {props.children}
       </TableRow>
     </SortableRowContext.Provider>
-  )
-}
+  );
+};
 
 const DragHandle = () => {
-  const { attributes, listeners } = useSortableRow()
+  const { attributes, listeners } = useSortableRow();
   return (
     <div
       {...attributes}
@@ -110,8 +94,8 @@ const DragHandle = () => {
     >
       <GripVerticalIcon className="h-4 w-4 text-muted-foreground" />
     </div>
-  )
-}
+  );
+};
 
 export function FieldLedger() {
   const {
@@ -125,65 +109,65 @@ export function FieldLedger() {
     toggleSelectAll,
     setIsBuilderOpen,
     reorderFields,
-  } = useFieldStore()
+  } = useFieldStore();
 
-  const [activeId, setActiveId] = React.useState<string | null>(null)
+  const [activeId, setActiveId] = React.useState<string | null>(null);
 
   const sensors = useSensors(
     useSensor(PointerSensor),
     useSensor(KeyboardSensor, {
       coordinateGetter: sortableKeyboardCoordinates,
-    })
-  )
+    }),
+  );
 
   const filteredAndSortedFields = React.useMemo(() => {
     let result = [...fields].filter(
       (f) =>
         f.label.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        f.name.toLowerCase().includes(searchQuery.toLowerCase())
-    )
+        f.name.toLowerCase().includes(searchQuery.toLowerCase()),
+    );
 
     if (sortConfig.key) {
-      const { key, direction } = sortConfig
+      const { key, direction } = sortConfig;
       result.sort((a, b) => {
-        const aValue = a[key]
-        const bValue = b[key]
+        const aValue = a[key];
+        const bValue = b[key];
 
-        if (aValue < bValue) return direction === "asc" ? -1 : 1
-        if (aValue > bValue) return direction === "asc" ? 1 : -1
-        return 0
-      })
+        if (aValue < bValue) return direction === "asc" ? -1 : 1;
+        if (aValue > bValue) return direction === "asc" ? 1 : -1;
+        return 0;
+      });
     }
 
-    return result
-  }, [fields, searchQuery, sortConfig])
+    return result;
+  }, [fields, searchQuery, sortConfig]);
 
   const handleDragStart = (event: DragStartEvent) => {
-    setActiveId(event.active.id.toString())
-  }
+    setActiveId(event.active.id.toString());
+  };
 
   const handleDragEnd = (event: DragEndEvent) => {
-    const { active, over } = event
+    const { active, over } = event;
 
     if (over && active.id !== over.id) {
-      const oldIndex = fields.findIndex((f) => f.id === active.id)
-      const newIndex = fields.findIndex((f) => f.id === over.id)
+      const oldIndex = fields.findIndex((f) => f.id === active.id);
+      const newIndex = fields.findIndex((f) => f.id === over.id);
       if (oldIndex !== -1 && newIndex !== -1) {
-        reorderFields(oldIndex, newIndex)
+        reorderFields(oldIndex, newIndex);
       }
     }
 
-    setActiveId(null)
-  }
+    setActiveId(null);
+  };
 
   const allSelected =
     filteredAndSortedFields.length > 0 &&
-    filteredAndSortedFields.every((f) => selectedIds.has(f.id))
+    filteredAndSortedFields.every((f) => selectedIds.has(f.id));
 
   const activeField = React.useMemo(
     () => fields.find((f) => f.id === activeId),
-    [fields, activeId]
-  )
+    [fields, activeId],
+  );
 
   return (
     <div className="flex flex-col gap-6">
@@ -227,16 +211,10 @@ export function FieldLedger() {
                   <TableBody {...props} ref={ref} />
                 )),
                 TableRow: (props) => {
-                  const index = props["data-index"]
-                  const field = filteredAndSortedFields[index]
-                  if (!field) return <TableRow {...props} />
-                  return (
-                    <DataTableRow
-                      {...props}
-                      item={field}
-                      selectedIds={selectedIds}
-                    />
-                  )
+                  const index = props["data-index"];
+                  const field = filteredAndSortedFields[index];
+                  if (!field) return <TableRow {...props} />;
+                  return <DataTableRow {...props} item={field} selectedIds={selectedIds} />;
                 },
               }}
               fixedHeaderContent={() => (
@@ -322,9 +300,7 @@ export function FieldLedger() {
                   </TableCell>
                   <TableCell className="font-medium">{field.label}</TableCell>
                   <TableCell>
-                    <code className="rounded bg-muted px-1 py-0.5 text-xs">
-                      {field.name}
-                    </code>
+                    <code className="rounded bg-muted px-1 py-0.5 text-xs">{field.name}</code>
                   </TableCell>
                   <TableCell>
                     <span className="capitalize">{field.type}</span>
@@ -335,15 +311,13 @@ export function FieldLedger() {
                       className={cn(
                         field.status === "active"
                           ? "bg-green-500/10 text-green-500 hover:bg-green-500/20 dark:bg-green-500/20"
-                          : "bg-muted text-muted-foreground"
+                          : "bg-muted text-muted-foreground",
                       )}
                     >
                       {field.status}
                     </Badge>
                   </TableCell>
-                  <TableCell className="text-right">
-                    {field.usageCount.toLocaleString()}
-                  </TableCell>
+                  <TableCell className="text-right">{field.usageCount.toLocaleString()}</TableCell>
                 </>
               )}
             />
@@ -361,25 +335,15 @@ export function FieldLedger() {
                   <TableCell className="w-[40px]">
                     <Checkbox checked={selectedIds.has(activeField.id)} />
                   </TableCell>
-                  <TableCell className="font-medium">
-                    {activeField.label}
-                  </TableCell>
+                  <TableCell className="font-medium">{activeField.label}</TableCell>
                   <TableCell>
-                    <code className="rounded bg-muted px-1 py-0.5 text-xs">
-                      {activeField.name}
-                    </code>
+                    <code className="rounded bg-muted px-1 py-0.5 text-xs">{activeField.name}</code>
                   </TableCell>
                   <TableCell>
                     <span className="capitalize">{activeField.type}</span>
                   </TableCell>
                   <TableCell>
-                    <Badge
-                      variant={
-                        activeField.status === "active"
-                          ? "default"
-                          : "secondary"
-                      }
-                    >
+                    <Badge variant={activeField.status === "active" ? "default" : "secondary"}>
                       {activeField.status}
                     </Badge>
                   </TableCell>
@@ -393,5 +357,5 @@ export function FieldLedger() {
         </DragOverlay>
       </DndContext>
     </div>
-  )
+  );
 }

@@ -1,20 +1,20 @@
-"use client"
+"use client";
 
-import { useFieldStore } from "@/store/useFieldStore"
-import { DatabaseIcon, CheckCircle2Icon } from "lucide-react"
+import { useFieldStore } from "@/store/useFieldStore";
+import { DatabaseIcon, CheckCircle2Icon } from "lucide-react";
 
 export function SummaryBar() {
-  const fields = useFieldStore((state) => state.fields)
-  
-  const totalFields = fields.length
-  const activeFields = fields.filter((f) => f.status === "active").length
+  const fields = useFieldStore((state) => state.fields);
+
+  const totalFields = fields.length;
+  const activeFields = fields.filter((f) => f.status === "active").length;
 
   return (
     <div className="relative overflow-hidden rounded-xl border bg-gradient-to-r from-primary/10 via-background to-primary/5 p-6 shadow-md border-primary/20">
       {/* Decorative background element */}
       <div className="absolute -right-8 -top-8 h-32 w-32 rounded-full bg-primary/5 blur-3xl" />
       <div className="absolute -left-8 -bottom-8 h-32 w-32 rounded-full bg-primary/10 blur-3xl" />
-      
+
       <div className="relative flex flex-wrap items-center gap-8 md:gap-16">
         <div className="flex items-center gap-4">
           <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 text-primary shadow-sm ring-1 ring-primary/20">
@@ -24,9 +24,7 @@ export function SummaryBar() {
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
               Total Fields
             </p>
-            <p className="text-3xl font-bold tracking-tight">
-              {totalFields.toLocaleString()}
-            </p>
+            <p className="text-3xl font-bold tracking-tight">{totalFields.toLocaleString()}</p>
           </div>
         </div>
 
@@ -40,9 +38,7 @@ export function SummaryBar() {
             <p className="text-sm font-medium text-muted-foreground uppercase tracking-wider">
               Active Fields
             </p>
-            <p className="text-3xl font-bold tracking-tight">
-              {activeFields.toLocaleString()}
-            </p>
+            <p className="text-3xl font-bold tracking-tight">{activeFields.toLocaleString()}</p>
           </div>
         </div>
 
@@ -52,5 +48,5 @@ export function SummaryBar() {
         </div>
       </div>
     </div>
-  )
+  );
 }

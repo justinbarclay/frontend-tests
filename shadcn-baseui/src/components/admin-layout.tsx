@@ -1,16 +1,16 @@
-"use client"
+"use client";
 
-import { useAuthStore } from "@/store/useAuthStore"
-import { ThemeToggle } from "@/components/theme-toggle"
-import { Button } from "@/components/ui/button"
-import { LogOutIcon } from "lucide-react"
+import { useAuthStore } from "@/store/useAuthStore";
+import { ThemeToggle } from "@/components/theme-toggle";
+import { Button } from "@/components/ui/button";
+import { LogOutIcon } from "lucide-react";
 
 interface AdminLayoutProps {
-  children: React.ReactNode
+  children: React.ReactNode;
 }
 
 export function AdminLayout({ children }: AdminLayoutProps) {
-  const { user, logout } = useAuthStore()
+  const { user, logout } = useAuthStore();
 
   return (
     <div className="flex min-h-screen flex-col bg-background">
@@ -24,12 +24,7 @@ export function AdminLayout({ children }: AdminLayoutProps) {
               {user?.email}
             </span>
             <ThemeToggle />
-            <Button
-              variant="ghost"
-              size="icon-sm"
-              onClick={logout}
-              aria-label="Log out"
-            >
+            <Button variant="ghost" size="icon-sm" onClick={logout} aria-label="Log out">
               <LogOutIcon className="size-4" />
             </Button>
           </div>
@@ -37,5 +32,5 @@ export function AdminLayout({ children }: AdminLayoutProps) {
       </header>
       <main className="flex-1 overflow-auto">{children}</main>
     </div>
-  )
+  );
 }

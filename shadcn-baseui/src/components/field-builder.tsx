@@ -1,19 +1,19 @@
-"use client"
+"use client";
 
-import { useFieldStore } from "@/store/useFieldStore"
+import { useFieldStore } from "@/store/useFieldStore";
 import {
   Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
   SheetDescription,
-} from "@/components/ui/sheet"
-import { Separator } from "@/components/ui/separator"
-import ConfigurationForm from "./ConfigurationForm"
-import Preview from "./PreviewField"
+} from "@/components/ui/sheet";
+import { Separator } from "@/components/ui/separator";
+import ConfigurationForm from "./ConfigurationForm";
+import Preview from "./PreviewField";
 
 export function FieldBuilder() {
-  const { isBuilderOpen, setIsBuilderOpen } = useFieldStore()
+  const { isBuilderOpen, setIsBuilderOpen } = useFieldStore();
 
   return (
     <Sheet open={isBuilderOpen} onOpenChange={setIsBuilderOpen}>
@@ -35,7 +35,7 @@ export function FieldBuilder() {
             </h3>
             <div className="space-y-6">
               <div className="rounded-lg border-2 border-dashed p-12 text-center">
-                <ConfigurationForm/>
+                <ConfigurationForm />
               </div>
             </div>
           </div>
@@ -52,5 +52,5 @@ export function FieldBuilder() {
         </div>
       </SheetContent>
     </Sheet>
-  )
+  );
 }

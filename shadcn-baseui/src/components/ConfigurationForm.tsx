@@ -13,7 +13,12 @@ const TextConfigurator = () => {
     <FieldGroup className="grid grid-cols-12">
       <Field className="col-span-12">
         <FieldLabel>Pattern</FieldLabel>
-        <Input placeholder="Regex pattern" key="pattern" value={field.validation.pattern} onChange={(event) => updateValidation("pattern", event.currentTarget.value)} />
+        <Input
+          placeholder="Regex pattern"
+          key="pattern"
+          value={field.validation.pattern}
+          onChange={(event) => updateValidation("pattern", event.currentTarget.value)}
+        />
       </Field>
     </FieldGroup>
   );
@@ -27,11 +32,21 @@ const NumberConfigurator = () => {
     <FieldGroup className="grid grid-cols-12">
       <Field className="col-span-6">
         <FieldLabel>Min</FieldLabel>
-        <Input placeholder="Set min" key="min" value={field.validation.min} onChange={(event) => updateValidation("min", event.currentTarget.value)} />
+        <Input
+          placeholder="Set min"
+          key="min"
+          value={field.validation.min}
+          onChange={(event) => updateValidation("min", event.currentTarget.value)}
+        />
       </Field>
       <Field className="col-span-6">
         <FieldLabel>Max</FieldLabel>
-        <Input placeholder="Set max" key="max" value={field.validation.max} onChange={(event) => updateValidation("max", event.currentTarget.value)} />
+        <Input
+          placeholder="Set max"
+          key="max"
+          value={field.validation.max}
+          onChange={(event) => updateValidation("max", event.currentTarget.value)}
+        />
       </Field>
       <Field className="col-span-12">
         <FieldLabel>Decimal Places</FieldLabel>
@@ -42,7 +57,7 @@ const NumberConfigurator = () => {
           value={field.config.decimalPlaces || 2}
           onChange={(event) => updateConfig("decimalPlaces", event.currentTarget.value)}
         />
-        </Field>
+      </Field>
     </FieldGroup>
   );
 };
@@ -79,12 +94,14 @@ const SelectConfigurator = () => {
             onChange={(event) => setValue(event.currentTarget.value)}
           />
           <InputGroupAddon align="inline-end">
-            <InputGroupButton aria-label="Add option" onClick={() => {
-              const newOptions = [...(field.config.options || []), newValue];
-              updateConfig("options", newOptions);
-              setValue("");
-            }
-            }>
+            <InputGroupButton
+              aria-label="Add option"
+              onClick={() => {
+                const newOptions = [...(field.config.options || []), newValue];
+                updateConfig("options", newOptions);
+                setValue("");
+              }}
+            >
               +
             </InputGroupButton>
           </InputGroupAddon>
@@ -116,11 +133,21 @@ const ConfigurationForm = () => {
       <FieldGroup className="grid grid-cols-12">
         <Field className="col-span-6">
           <FieldLabel>Label</FieldLabel>
-          <Input placeholder="Label" key="label" value={field.label} onChange={(event) => updateRoot("label", event.currentTarget.value)} />
+          <Input
+            placeholder="Label"
+            key="label"
+            value={field.label}
+            onChange={(event) => updateRoot("label", event.currentTarget.value)}
+          />
         </Field>
         <Field className="col-span-6">
           <FieldLabel>Name</FieldLabel>
-          <Input placeholder="Name" key="name" value={field.name} onChange={(event) => updateRoot("name", event.currentTarget.value)} />
+          <Input
+            placeholder="Name"
+            key="name"
+            value={field.name}
+            onChange={(event) => updateRoot("name", event.currentTarget.value)}
+          />
         </Field>
         <Field className="col-span-12">
           <FieldLabel>Placeholder</FieldLabel>
@@ -128,14 +155,18 @@ const ConfigurationForm = () => {
             placeholder="Placeholder"
             key="placeholder"
             value={field.config.placeholder}
-            onChange={(event) => updateRoot("config", { ...field.config, placeholder: event.currentTarget.value })}
+            onChange={(event) =>
+              updateRoot("config", { ...field.config, placeholder: event.currentTarget.value })
+            }
           />
         </Field>
         <Field className="col-span-12">
           <FieldLabel>Field Type</FieldLabel>
           <Select<FieldType>
             value={field.type}
-            onValueChange={ (value) => setType(value) }
+            onValueChange={(value) => {
+              if (value) setType(value);
+            }}
           >
             <SelectTrigger>
               <SelectValue>{field.type}</SelectValue>
@@ -149,9 +180,7 @@ const ConfigurationForm = () => {
           </Select>
         </Field>
       </FieldGroup>
-        {
-          validation
-        }
+      {validation}
     </>
   );
 };
