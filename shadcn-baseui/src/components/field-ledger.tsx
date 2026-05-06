@@ -109,7 +109,14 @@ export function FieldLedger() {
     toggleSelectAll,
     setIsBuilderOpen,
     reorderFields,
+    setFields,
   } = useFieldStore();
+
+  React.useEffect(() => {
+    fetch("/mock-fields.json")
+      .then((res) => res.json())
+      .then((data) => setFields(data));
+  }, [setFields]);
 
   const [activeId, setActiveId] = React.useState<string | null>(null);
 

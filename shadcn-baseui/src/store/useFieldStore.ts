@@ -1,6 +1,4 @@
 import { create } from "zustand";
-import { faker } from "@faker-js/faker";
-import { slugify } from "@/lib/utils";
 
 export type FieldType = "text" | "number" | "boolean" | "select";
 export type FieldStatus = "active" | "inactive";
@@ -34,6 +32,7 @@ interface FieldState {
   };
   selectedIds: Set<string>;
   isBuilderOpen: boolean;
+  setFields: (fields: Field[]) => void;
   setSearchQuery: (query: string) => void;
   setSort: (key: keyof Field) => void;
   setIsBuilderOpen: (open: boolean) => void;
@@ -45,26 +44,8 @@ interface FieldState {
   addField: (field: Omit<Field, "id" | "usageCount">) => void;
 }
 
-const generateMockFields = (count: number): Field[] => {
-  return Array.from({ length: count }, () => {
-    const label = faker.commerce.productName();
-    return {
-      id: faker.string.uuid(),
-      label,
-      name: slugify(label),
-      type: faker.helpers.arrayElement(["text", "number", "boolean", "select"]),
-      status: faker.helpers.arrayElement(["active", "inactive"]),
-      usageCount: faker.number.int({ min: 0, max: 500 }),
-      validation: {
-        required: faker.datatype.boolean(),
-      },
-      config: {},
-    };
-  });
-};
-
 export const useFieldStore = create<FieldState>((set) => ({
-  fields: generateMockFields(1000),
+  fields: [],
   searchQuery: "",
   sortConfig: {
     key: null,
@@ -72,6 +53,8 @@ export const useFieldStore = create<FieldState>((set) => ({
   },
   selectedIds: new Set(),
   isBuilderOpen: false,
+
+  setFields: (fields) => set({ fields }),
 
   setSearchQuery: (query) => set({ searchQuery: query }),
 
@@ -139,7 +122,7 @@ export const useFieldStore = create<FieldState>((set) => ({
       fields: [
         {
           ...fieldData,
-          id: faker.string.uuid(),
+          id: crypto.randomUUID(),
           usageCount: 0,
         },
         ...state.fields,

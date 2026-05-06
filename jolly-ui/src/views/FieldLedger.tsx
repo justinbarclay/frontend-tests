@@ -3,7 +3,6 @@ import { JollyTextField as TextField } from "@/components/ui/textfield";
 import { Badge } from "@/components/ui/badge";
 import { Checkbox } from "@/components/ui/checkbox";
 import { useFieldStore } from "@/store/useFieldStore";
-import { generateMockFields } from "@/lib/mock-data";
 import { SummaryBar } from "@/components/SummaryBar";
 import { BulkActionBar } from "@/components/BulkActionBar";
 import { TableVirtuoso } from "react-virtuoso";
@@ -103,10 +102,10 @@ export function FieldLedger() {
   );
 
   useEffect(() => {
-    if (fields.length === 0) {
-      setFields(generateMockFields(1000));
-    }
-  }, [fields.length, setFields]);
+    fetch("/mock-fields.json")
+      .then((res) => res.json())
+      .then((data) => setFields(data));
+  }, [setFields]);
 
   const filteredFields = useMemo(() => {
     return fields.filter(

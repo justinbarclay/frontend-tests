@@ -4,8 +4,9 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+    "dev": "npm run generate-data && vite",
+    "generate-data": "node scripts/generate-mock-data.js",
+    "build": "npm run generate-data && tsc -b && vite build",
     "lint": "oxlint .",
     "format": "oxfmt . --write",
     "preview": "vite preview"
