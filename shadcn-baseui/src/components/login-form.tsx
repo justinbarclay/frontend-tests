@@ -1,7 +1,7 @@
 "use client"
 
 import { useState } from "react"
-import { useAuthStore } from "@/store/use-auth-store"
+import { useAuthStore } from "@/store/useAuthStore"
 import { toast } from "@/lib/toast"
 import { Button } from "@/components/ui/button"
 import { Field, FieldLabel, FieldError } from "@/components/ui/field"

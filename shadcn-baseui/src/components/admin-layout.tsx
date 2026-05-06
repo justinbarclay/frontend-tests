@@ -1,6 +1,6 @@
 "use client"
 
-import { useAuthStore } from "@/store/use-auth-store"
+import { useAuthStore } from "@/store/useAuthStore"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { Button } from "@/components/ui/button"
 import { LogOutIcon } from "lucide-react"

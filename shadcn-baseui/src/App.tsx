@@ -1,6 +1,6 @@
 "use client"
 
-import { useAuthStore } from "@/store/use-auth-store"
+import { useAuthStore } from "@/store/useAuthStore"
 import { Toaster } from "@/components/ui/toaster"
 import { LoginForm } from "@/components/login-form"
 import { AdminLayout } from "@/components/admin-layout"

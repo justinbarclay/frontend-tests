@@ -1,6 +1,6 @@
 "use client"
 
-import { useFieldStore } from "@/store/use-field-store"
+import { useFieldStore } from "@/store/useFieldStore"
 import {
   Sheet,
   SheetContent,
@@ -9,6 +9,7 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet"
 import { Separator } from "@/components/ui/separator"
+import ConfigurationForm from "./ConfigurationForm"
 
 export function FieldBuilder() {
   const { isBuilderOpen, setIsBuilderOpen } = useFieldStore()
@@ -33,13 +34,7 @@ export function FieldBuilder() {
             </h3>
             <div className="space-y-6">
               <div className="rounded-lg border-2 border-dashed p-12 text-center">
-                <p className="text-muted-foreground italic">
-                  TODO: Developer Implementation [manual]
-
-                </p>
-                <p className="text-xs text-muted-foreground mt-2">
-                  Implement conditional form state for Label, Name, Type, etc.
-                </p>
+                <ConfigurationForm/>
               </div>
             </div>
           </div>

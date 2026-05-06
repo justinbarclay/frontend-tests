@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { useFieldStore, type Field } from "@/store/use-field-store"
+import { useFieldStore, type Field } from "@/store/useFieldStore"
 import { TableVirtuoso } from "react-virtuoso"
 import {
   Table,

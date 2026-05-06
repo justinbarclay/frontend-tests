@@ -1,6 +1,6 @@
 "use client"
 
-import { useFieldStore } from "@/store/use-field-store"
+import { useFieldStore } from "@/store/useFieldStore"
 import { Button } from "@/components/ui/button"
 import {
   AlertDialog,
