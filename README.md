@@ -1,117 +1,87 @@
-!# Sandbox Framework Outlines
+# Sandbox Framework Outlines
 
-This directory contains instructions and commands to quickly spin up different frontend framework environments using Vite and TypeScript.
+This directory contains three subprojects, each implementing the same [Schema Architect](./SPECIFICATION.md) spec using a different UI framework stack:
+
+| Directory | Framework | Styling |
+|---|---|---|
+| `mantine-v8/` | Mantine v8 | Mantine CSS (built-in) |
+| `shadcn-baseui/` | shadcn + Base UI | Tailwind CSS v4 |
+| `jolly-ui/` | JollyUI (React Aria Components) | Tailwind CSS v3 |
+
+Each project is a Vite + React + TypeScript app. The setup instructions below can be used to recreate each environment from scratch.
+
+---
 
 ## 1. Mantine v8
-
-To set up a fresh Mantine v8 environment:
 
 ### Step 1: Initialize Vite Project
 
 ```bash
-mkdir -p sandbox/mantine-v8
-cd sandbox/mantine-v8
 npm create vite@latest . -- --template react-ts
+npm install
 ```
 
 ### Step 2: Install Mantine v8 Dependencies
 
 ```bash
-npm install @mantine/core@8 @mantine/hooks@8 @mantine/dates@8 @mantine/notifications@8
+npm install @mantine/core@8 @mantine/hooks@8 @mantine/notifications@8
 ```
 
-### Step 3: Install PostCSS Dependencies
-
-Mantine requires PostCSS for its CSS variables and mixins.
-
-```bash
-npm install -D postcss postcss-preset-mantine@8 postcss-simple-vars
-```
-
-### Step 4: Configure PostCSS
-
-Create a `postcss.config.cjs` file in `sandbox/mantine-v8/`:
-
-```javascript
-module.exports = {
-  plugins: {
-    "postcss-preset-mantine": {},
-    "postcss-simple-vars": {
-      variables: {
-        "mantine-breakpoint-xs": "36em",
-        "mantine-breakpoint-sm": "48em",
-        "mantine-breakpoint-md": "62em",
-        "mantine-breakpoint-lg": "75em",
-        "mantine-breakpoint-xl": "88em",
-      },
-    },
-  },
-};
-```
-
-### Step 5: Basic Setup
+### Step 3: Basic Setup
 
 Update `src/main.tsx` to include styles and the `MantineProvider`:
 
 ```tsx
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { MantineProvider, createTheme } from "@mantine/core";
+import { MantineProvider } from "@mantine/core";
+import { Notifications } from "@mantine/notifications";
 import App from "./App";
 
-// Core styles
 import "@mantine/core/styles.css";
-// Optional package styles
-import "@mantine/dates/styles.css";
 import "@mantine/notifications/styles.css";
-
-const theme = createTheme({});
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    <MantineProvider theme={theme}>
+    <MantineProvider defaultColorScheme="auto">
+      <Notifications />
       <App />
     </MantineProvider>
   </React.StrictMode>,
 );
 ```
 
+> **Note:** Mantine v8 ships pre-built CSS and no longer requires PostCSS configuration.
+
 ---
 
-## 2. shadcn/ui
+## 2. shadcn + Base UI
 
-To set up a fresh shadcn/ui environment with Vite and Tailwind CSS v4:
+shadcn components backed by [Base UI](https://base-ui.com) primitives instead of Radix UI, using the `base-vega` style.
 
 ### Step 1: Initialize Vite Project
 
 ```bash
-mkdir -p sandbox/shadcn-ui
-cd sandbox/shadcn-ui
 npm create vite@latest . -- --template react-ts
 npm install
 ```
 
-### Step 2: Install Tailwind CSS
+### Step 2: Install Tailwind CSS v4 and Path Alias Support
 
 ```bash
 npm install tailwindcss @tailwindcss/vite
-```
-
-### Step 3: Configure Vite for Tailwind and Path Aliases
-
-Install Node types for path resolution:
-
-```bash
 npm install -D @types/node
 ```
+
+### Step 3: Configure Vite
 
 Update `vite.config.ts`:
 
 ```typescript
 import path from "path";
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import react from "@vitejs/plugin-react";
+import { defineConfig } from "vite";
 
 export default defineConfig({
   plugins: [react(), tailwindcss()],
@@ -124,143 +94,6 @@ export default defineConfig({
 ```
 
 ### Step 4: Configure Path Aliases in TypeScript
-
-Update `tsconfig.app.json` (or `tsconfig.json`):
-
-```json
-{
-  "compilerOptions": {
-    // ...
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./src/*"]
-    }
-  }
-}
-```
-
-### Step 5: Initialize shadcn/ui
-
-```bash
-npx shadcn@latest init
-```
-
-_Follow the prompts (Style: Default, Color: Slate, CSS Variables: Yes)._
-
-### Step 6: Add Components
-
-```bash
-npx shadcn@latest add button
-```
-
----
-
-## 3. React Aria Components + Tailwind CSS v4
-
-To set up a fresh environment with React Aria Components and Tailwind CSS v4:
-
-### Step 1: Initialize Vite Project
-
-```bash
-mkdir -p sandbox/react-aria-rac
-cd sandbox/react-aria-rac
-npm create vite@latest . -- --template react-ts
-npm install
-```
-
-### Step 2: Install Dependencies
-
-```bash
-npm install react-aria-components tailwindcss @tailwindcss/vite tailwindcss-react-aria-components
-```
-
-### Step 3: Configure Vite
-
-Update `vite.config.ts`:
-
-```typescript
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
-
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-});
-```
-
-### Step 4: Configure CSS
-
-In `src/index.css`, import Tailwind and the React Aria plugin:
-
-```css
-@import "tailwindcss";
-
-/* Register the React Aria Components plugin for state variants (hovered, pressed, etc.) */
-@plugin "tailwindcss-react-aria-components";
-```
-
-### Step 5: Usage Example
-
-Update `src/App.tsx` to test a button with state variants:
-
-```tsx
-import { Button } from "react-aria-components";
-
-export default function App() {
-  return (
-    <div className="p-8">
-      <Button className="bg-blue-600 pressed:bg-blue-700 hovered:bg-blue-500 text-white px-4 py-2 rounded-md transition-colors focus-visible:ring-2 ring-blue-300 outline-none">
-        Click Me
-      </Button>
-    </div>
-  );
-}
-```
-
----
-
-## 4. JollyUI
-
-JollyUI provides shadcn/ui-compatible components built on React Aria Components — same copy-paste workflow as shadcn, but with RAC accessibility primitives instead of Radix UI underneath.
-
-### Step 1: Initialize Vite Project
-
-```bash
-mkdir -p sandbox/jolly-ui
-cd sandbox/jolly-ui
-npm create vite@latest . -- --template react-ts
-npm install
-```
-
-### Step 2: Install Tailwind CSS
-
-```bash
-npm install tailwindcss @tailwindcss/vite
-```
-
-### Step 3: Configure Vite for Tailwind and Path Aliases
-
-```bash
-npm install -D @types/node
-```
-
-Update `vite.config.ts`:
-
-```typescript
-import path from "path";
-import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
-import tailwindcss from "@tailwindcss/vite";
-
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    },
-  },
-});
-```
 
 Update `tsconfig.app.json`:
 
@@ -275,24 +108,124 @@ Update `tsconfig.app.json`:
 }
 ```
 
-### Step 4: Install JollyUI Dependencies
+### Step 5: Install Base UI and Utilities
 
 ```bash
-npm install react-aria-components
-npm install tailwindcss-animate class-variance-authority clsx tailwind-merge lucide-react
+npm install @base-ui/react class-variance-authority clsx tailwind-merge lucide-react
 ```
 
-### Step 5: Initialize shadcn
-
-JollyUI uses the shadcn CLI to add components:
+### Step 6: Initialize shadcn with Base UI Style
 
 ```bash
 npx shadcn@latest init
 ```
 
-_Follow the prompts (Style: Default, Color: Zinc, CSS Variables: Yes)._
+_Follow the prompts and select **Style: base-vega** when asked._
 
-### Step 6: Add Components via JollyUI Registry
+### Step 7: Add Components
+
+```bash
+npx shadcn@latest add button
+```
+
+---
+
+## 3. JollyUI
+
+JollyUI provides shadcn/ui-compatible components built on [React Aria Components](https://react-spectrum.adobe.com/react-aria/) — same copy-paste workflow as shadcn, but with RAC accessibility primitives instead of Radix UI underneath.
+
+### Step 1: Initialize Vite Project
+
+```bash
+npm create vite@latest . -- --template react-ts
+npm install
+```
+
+### Step 2: Install Tailwind CSS v3 and Path Alias Support
+
+```bash
+npm install -D tailwindcss autoprefixer postcss @types/node
+```
+
+### Step 3: Configure PostCSS
+
+Create `postcss.config.js`:
+
+```javascript
+export default {
+  plugins: {
+    tailwindcss: {},
+    autoprefixer: {},
+  },
+};
+```
+
+### Step 4: Configure Vite for Path Aliases
+
+Update `vite.config.ts`:
+
+```typescript
+import path from "path";
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+
+export default defineConfig({
+  plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
+});
+```
+
+### Step 5: Configure TypeScript Path Aliases
+
+Update `tsconfig.app.json`:
+
+```json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+```
+
+### Step 6: Install JollyUI Dependencies
+
+```bash
+npm install react-aria-components tailwindcss-animate tailwindcss-react-aria-components
+npm install class-variance-authority clsx tailwind-merge lucide-react
+```
+
+### Step 7: Configure Tailwind
+
+Create `tailwind.config.js` with the required plugins:
+
+```javascript
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  darkMode: "class",
+  theme: {
+    extend: {},
+  },
+  plugins: [require("tailwindcss-animate"), require("tailwindcss-react-aria-components")],
+};
+```
+
+### Step 8: Initialize shadcn
+
+```bash
+npx shadcn@latest init
+```
+
+_Follow the prompts (Style: Default, Color: Slate, CSS Variables: Yes)._
+
+### Step 9: Add Components via JollyUI Registry
 
 ```bash
 npx shadcn@latest add https://jollyui.dev/default/button
