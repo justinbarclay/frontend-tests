@@ -6,6 +6,7 @@ import type {
   FieldConfig,
   VisibilityRule,
 } from "../types/schema";
+import { slugify } from "@/lib/utils";
 
 interface BuilderState {
   field: FieldSchema;
@@ -39,9 +40,9 @@ export const useBuilderStore = create<BuilderState>((set) => ({
     set((state) => {
       if (
         key === "label" &&
-        (state.field.name.length === 0 || state.field.name === state.field.label)
+        (state.field.name.length === 0 || state.field.name === slugify(state.field.label))
       ) {
-        return { field: { ...state.field, [key]: value, ["name"]: value } };
+        return { field: { ...state.field, [key]: value, name: slugify(value) } };
       } else {
         return { field: { ...state.field, [key]: value } };
       }

@@ -2,16 +2,15 @@ import { useBuilderStore } from "../store/useBuilderStore";
 import type { FieldSchema } from "../types/schema";
 import { useState } from "react";
 import { Switch } from "./ui/switch";
-import { Label } from "./ui/field";
 import { JollySelect, SelectItem } from "./ui/select";
 import { JollyNumberField } from "./ui/numberfield";
 import { JollyTextField } from "./ui/textfield";
 
 const NumberPreview = ({ field }: { field: FieldSchema }) => {
-  const [value, setValue] = useState<string>("");
+  const [value, setValue] = useState<number>(NaN);
 
-  // Handle required error
-  const error = field.validation.required && value === "" ? "This field is required" : undefined;
+  const error =
+    field.validation.required && isNaN(value) ? "This field is required" : undefined;
 
   return (
     <div className="flex flex-col gap-1">
@@ -24,8 +23,11 @@ const NumberPreview = ({ field }: { field: FieldSchema }) => {
           minimumFractionDigits: field.config.decimalPlaces || 0,
           maximumFractionDigits: field.config.decimalPlaces || 0,
         }}
+        isRequired={field.validation.required}
+        isDisabled={field.status === "inactive"}
         isInvalid={!!error}
-        onChange={(val) => setValue(val.toString())}
+        value={value}
+        onChange={setValue}
         errorMessage={error}
       />
     </div>
@@ -45,6 +47,8 @@ const TextPreview = ({ field }: { field: FieldSchema }) => {
         placeholder={field.config.placeholder || "Enter text"}
         onChange={(val) => setValue(val)}
         value={value}
+        isRequired={field.validation.required}
+        isDisabled={field.status === "inactive"}
         isInvalid={error}
         errorMessage={"Invalid format"}
       />
@@ -53,7 +57,12 @@ const TextPreview = ({ field }: { field: FieldSchema }) => {
 };
 
 const SelectPreview = ({ field }: { field: FieldSchema }) => (
-  <JollySelect label={field.label} placeholder={field.config.placeholder || "Select an option"}>
+  <JollySelect
+    label={field.label}
+    placeholder={field.config.placeholder || "Select an option"}
+    isRequired={field.validation.required}
+    isDisabled={field.status === "inactive"}
+  >
     {(field.config.options || []).map((option) => (
       <SelectItem key={option} id={option}>
         {option}
@@ -61,12 +70,18 @@ const SelectPreview = ({ field }: { field: FieldSchema }) => (
     ))}
   </JollySelect>
 );
-const BooleanPreview = ({ field }: { field: FieldSchema }) => (
-  <div className="flex items-center space-x-2">
-    <Label>{field.label}</Label>
-    <Switch onChange={() => {}} />
-  </div>
-);
+const BooleanPreview = ({ field }: { field: FieldSchema }) => {
+  const [checked, setChecked] = useState(false);
+  return (
+    <Switch
+      isSelected={checked}
+      onChange={setChecked}
+      isDisabled={field.status === "inactive"}
+    >
+      {field.label}
+    </Switch>
+  );
+};
 const preview = {
   number: (field: FieldSchema) => <NumberPreview field={field} />,
   text: (field: FieldSchema) => <TextPreview field={field} />,

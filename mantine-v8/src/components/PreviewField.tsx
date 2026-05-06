@@ -29,7 +29,10 @@ const TextPreview = ({ field }: { field: FieldSchema }) => {
       placeholder={field.config.placeholder || "Enter text"}
       onChange={(event) => setValue(event.currentTarget.value)}
       value={value}
-      error={field.validation.pattern ? !new RegExp(field.validation.pattern).test(value) : false}
+      error={
+        field.validation.pattern && !new RegExp(field.validation.pattern).test(value)
+          ? "Invalid format"
+          : null}
     />
   );
 };

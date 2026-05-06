@@ -34,25 +34,22 @@ const NumberConfigurator = () => {
         className="col-span-2"
         label="Min"
         description="Set min"
-        key="min"
-        value={field.validation.min}
-        onChange={(value) => updateValidation("min", value)}
+        value={field.validation.min ?? NaN}
+        onChange={(value) => updateValidation("min", isNaN(value) ? undefined : value)}
       />
       <JollyNumberField
         className="col-span-2"
         label="Max"
         description="Set max"
-        key="max"
-        value={field.validation.max}
-        onChange={(value) => updateValidation("max", value)}
+        value={field.validation.max ?? NaN}
+        onChange={(value) => updateValidation("max", isNaN(value) ? undefined : value)}
       />
       <JollyNumberField
         className="col-span-2"
         label="Decimal Places"
-        description={"2"}
-        key="decimal-places"
-        value={field.config.decimalPlaces || 2}
-        onChange={(value) => updateConfig("decimalPlaces", value)}
+        description="Number of decimal places"
+        value={field.config.decimalPlaces ?? NaN}
+        onChange={(value) => updateConfig("decimalPlaces", isNaN(value) ? undefined : value)}
       />
     </div>
   );
@@ -90,6 +87,7 @@ const SelectConfigurator = () => {
           onChange={(value) => setValue(value)}
         />
         <Button
+          aria-label="Add option"
           variant="secondary"
           size="icon"
           onPress={() => {
@@ -98,18 +96,17 @@ const SelectConfigurator = () => {
             setValue("");
           }}
         >
-          <PlusIcon className="size-4" />
+          <PlusIcon aria-hidden className="size-4" />
         </Button>
       </div>
     </div>
   );
 };
 
-const fieldConfigurator = {
-  number: <NumberConfigurator />,
-  select: <SelectConfigurator />,
-  text: <TextConfigurator />,
-  boolean: <div></div>,
+const fieldConfigurator: Partial<Record<FieldType, () => React.ReactElement>> = {
+  number: () => <NumberConfigurator />,
+  select: () => <SelectConfigurator />,
+  text: () => <TextConfigurator />,
 };
 const ConfigurationForm = () => {
   const field = useBuilderStore((state) => state.field);
@@ -118,7 +115,7 @@ const ConfigurationForm = () => {
   let validation = <div></div>;
   const maybeValidator = fieldConfigurator[field.type];
   if (maybeValidator) {
-    validation = maybeValidator;
+    validation = maybeValidator();
   }
   return (
     <>
@@ -151,7 +148,8 @@ const ConfigurationForm = () => {
           className="col-span-4"
           label="Field Type"
           placeholder="Pick a value"
-          onChange={(value: FieldType) => setType(value || "text")}
+          value={field.type}
+          onChange={(key) => setType((key as FieldType) || "text")}
         >
           <SelectItem id="number">number</SelectItem>
           <SelectItem id="select">select</SelectItem>
